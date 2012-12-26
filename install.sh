@@ -5,14 +5,22 @@ function slink {
   ln -f -s "$1" "$2"
 }
 
+echo "crontab:"
 ctab=cron/crontab-$(hostname)
 if [ -f $ctab ]; then
-  echo "Installing crontab $ctab"
+  echo "  $ctab"
   crontab "$ctab"
+else
+  echo "  (none)"
 fi
+echo
 
-echo "Installing scripts to $HOME/bin"
+echo "$HOME/bin:"
 mkdir -p "$HOME/bin";
 for s in bin/*; do
   slink "$(pwd)/$s" "$HOME/bin/$(basename $s)"
 done
+echo
+
+echo "configs:"
+slink "$(pwd)/git/gitconfig" "$HOME/.gitconfig"

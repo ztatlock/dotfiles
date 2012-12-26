@@ -1,0 +1,9 @@
+[user]
+  name  = Zach Tatlock
+  email = ztatlock@cs.ucsd.edu
+
+[color]
+  ui = auto
+
+[push]
+  default = tracking
