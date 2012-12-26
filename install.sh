@@ -1,9 +1,18 @@
 #!/usr/bin/env bash
 
-# install scripts
-mkdir -p ~/bin
+function slink {
+  echo "  $(basename "$1")"
+  ln -f -s "$1" "$2"
+}
+
+ctab=cron/crontab-$(hostname)
+if [ -f $ctab ]; then
+  echo "Installing crontab $ctab"
+  crontab "$ctab"
+fi
+
+echo "Installing scripts to $HOME/bin"
+mkdir -p "$HOME/bin";
 for s in bin/*; do
-  src=$(pwd)/$s
-  tgt=~/bin/$(basename $s)
-  ln -f -s "$src" "$tgt"
+  slink "$(pwd)/$s" "$HOME/bin/$(basename $s)"
 done
