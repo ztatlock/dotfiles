@@ -1,0 +1,59 @@
+" syntax highlighting
+if has("syntax")
+  syntax on
+endif
+
+if has("autocmd")
+  " jump to the most recent position when reopening a file
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+  " indentation rules and plugins according to the detected filetype.
+  filetype plugin indent on
+endif
+
+set ruler        " show line and column number
+set tabstop=2    " number of spaces a tab counts for
+set expandtab    " make tab characters spaces
+set shiftwidth=2 " 2 spaces for each step of autoindent
+set autoindent   " start new line at indentation level of previous line
+set ignorecase	 " case insensitive matching
+set smartcase    " smart case matching
+set incsearch    " incremental search
+set hlsearch     " highlight search matches
+set textwidth=75 " only 75 characters per line
+set showcmd      " command in status line
+set showmatch    " show matching brackets
+set autowrite    " auto save before commands like :next and :make
+set hidden       " do not require saving buffers to change between them
+set bg=dark      " assume a dark background
+
+" from insert mode jj will enter command mode
+imap jj <ESC>
+
+" space centers screen on cursor
+nmap <space> zz
+
+" enter and exit paste mode quickly
+nmap <Tab>q :set invpaste paste?<CR>
+
+" show list of currently open buffers and prompt for switch
+nmap <Tab>l :buffers<CR>:buffer<Space>
+
+" switch between next, previous, and most recently used buffers
+nmap <Tab>n     :bn<CR>
+nmap <Tab>p     :bp<CR>
+nmap <Tab><Tab> :b#<CR>
+
+" run Makefile in current dir
+nmap <Tab>m     :!make<CR>
+
+" filetype specific settings
+if has("autocmd")
+  " english
+  au BufRead,BufNewFile *.tex\|*.txt set spell
+  au BufRead,BufNewFile *.tex\|*.txt set keywordprg=~/bin/thesaurus.sh
+  au BufRead,BufNewFile *.tex\|*.txt set textwidth=75
+
+  " ocaml - lookup modules online
+  au BufRead,BufNewFile *.ml set keywordprg=~/bin/ocaml-lkup.sh
+endif

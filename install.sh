@@ -23,6 +23,7 @@ done
 echo
 
 echo "configs:"
-slink ssh/config      .ssh/config
+slink vim/vimrc       .vimrc
 slink git/gitconfig   .gitconfig
+slink ssh/config      .ssh/config
 slink tmux/tmux.conf  .tmux.conf
