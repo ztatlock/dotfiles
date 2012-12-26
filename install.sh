@@ -23,7 +23,18 @@ done
 echo
 
 echo "configs:"
+slink bash/bashrc     .bashrc
+slink bash/profile    .profile
 slink vim/vimrc       .vimrc
 slink git/gitconfig   .gitconfig
 slink ssh/config      .ssh/config
 slink tmux/tmux.conf  .tmux.conf
+echo
+
+echo "extras:"
+mkdir -p "$HOME/.dotfiles-config"
+slink bash/git-prompt.sh     .dotfiles-config/git-prompt.sh
+slink bash/git-completions   .dotfiles-config/git-completions
+slink bash/todo-completions  .dotfiles-config/todo-completions
+slink bash/alias-completions .dotfiles-config/alias-completions
+echo

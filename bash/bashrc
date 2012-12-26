@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+
+# if not interactive, stop
+if [ -z "$PS1" ]; then
+  return
+fi
+
+export PATH="$HOME/bin:/usr/local/bin:$PATH"
+export EDITOR="vim"
+
+# cygwin style prompt, show git info
+source ~/.dotfiles-config/git-prompt.sh
+export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[36m\]\$(__git_ps1 \"(%s) \")\[\e[33m\]\w\[\e[0m\]\n\$ "
+
+if [ "$(uname)" = "Darwin" ]; then
+  alias ls='ls -G'
+else
+  alias ls='ls --color=auto'
+fi
+alias ll='ls -lh'
+alias la='ls -A'
+alias lla='ls -lhA'
+
+alias grep='grep --color=auto'
+
+alias gs='git status'
+alias gd='git diff'
+alias gl='git log'
+alias gb='git branch'
+alias gwc='git whatchanged'
+alias gco='git checkout'
+alias gci='git commit'
+alias gdc='git diff --cached'
+alias gbv='git branch -a -vv'
+
+alias ocaml='rlwrap ocaml'
+alias coqtop='rlwrap coqtop'
+
+alias t='todo.sh'
+alias tls='todo.sh ls'
+
+alias ..='cd ..'
+
+export PATH="$PATH:/usr/local/Cellar/smlnj/110.73/libexec/bin" # smlnj
+export PATH="$PATH:/usr/local/Cellar/ruby/1.9.3-p194/bin"      # ruby gems
+export KRAKEN="$HOME/kraken"                                   # kraken
+
+source ~/.dotfiles-config/git-completions
+source ~/.dotfiles-config/todo-completions
+source ~/.dotfiles-config/alias-completions
+
+echo
+fortune.py
+important-dates.py
