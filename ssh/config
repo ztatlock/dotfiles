@@ -1,0 +1,15 @@
+Host goto
+  HostName goto.ucsd.edu
+  User ztatlock
+
+Host godel
+  HostName godel.ucsd.edu
+  User ztatlock
+
+Host hobo
+  HostName hobo.sysnet.ucsd.edu
+  User ztatlock
+
+Host cse
+  HostName csegrad.ucsd.edu
+  User ztatlock

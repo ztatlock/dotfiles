@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 function slink {
-  echo "  $(basename "$1")"
-  ln -f -s "$1" "$2"
+  echo "  $1"
+  ln -f -s "$(pwd)/$1" "$HOME/$2"
 }
 
 echo "crontab:"
@@ -18,9 +18,11 @@ echo
 echo "$HOME/bin:"
 mkdir -p "$HOME/bin";
 for s in bin/*; do
-  slink "$(pwd)/$s" "$HOME/bin/$(basename $s)"
+  slink "$s" "bin/$(basename $s)"
 done
 echo
 
 echo "configs:"
-slink "$(pwd)/git/gitconfig" "$HOME/.gitconfig"
+slink ssh/config      .ssh/config
+slink git/gitconfig   .gitconfig
+slink tmux/tmux.conf  .tmux.conf
