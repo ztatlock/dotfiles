@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 function main {
-  SRC=$(mktemp mt-XXXXX)
-  TST=$(mktemp mt-XXXXX)
+  SRC=$(mktemp mt-XXXXXX)
+  TST=$(mktemp mt-XXXXXX)
 
   find-src > $SRC
   grep -i 'test\|regression' $SRC > $TST
