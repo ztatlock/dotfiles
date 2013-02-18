@@ -42,6 +42,6 @@
 (load-file "~/.dotfiles-config/elisp/ProofGeneral-4.1/generic/proof-site.el")
 
 ; options
-(setq proof-keep-response-history t)
-(setq proof-shrink-windows-tofit  t)
-(setq proof-three-window-enable   t)
+;(setq proof-keep-response-history t)
+;(setq proof-shrink-windows-tofit  t)
+;(setq proof-three-window-enable   t)
