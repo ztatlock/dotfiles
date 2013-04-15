@@ -5,7 +5,7 @@ if [ -z "$PS1" ]; then
   return
 fi
 
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/bin:$HOME/local/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export EDITOR="vim"
 
 # cygwin style prompt, show git info
@@ -34,6 +34,8 @@ alias gdc='git diff --cached'
 alias gbv='git branch -a -vv'
 
 alias ocaml='rlwrap ocaml'
+alias ocamld='rlwrap ocamldebug'
+alias ocamldebug='rlwrap ocamldebug'
 alias coqtop='rlwrap coqtop'
 
 alias t='todo.sh'
