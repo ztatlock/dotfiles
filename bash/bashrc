@@ -53,5 +53,3 @@ source ~/.dotfiles-config/alias-completions
 
 echo
 fortune.py
-echo
-important-dates.py
