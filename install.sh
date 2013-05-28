@@ -25,6 +25,7 @@ echo
 echo "configs:"
 slink bash/bashrc     .bashrc
 slink bash/profile    .profile
+slink bash/logout     .logout
 slink vim/vimrc       .vimrc
 slink git/gitconfig   .gitconfig
 slink ssh/config      .ssh/config
