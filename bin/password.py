@@ -4,7 +4,7 @@
 
 from random import choice
 
-N = 10
+N = 15
 A = 'abcdefghijklmnopqrstuvwxyz' + \
     'ABCDEFGHIJKLMNOPQRSTUVWXYZ' + \
     '1234567890' + \
