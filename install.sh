@@ -37,7 +37,6 @@ echo "extras:"
 mkdir -p "$HOME/.dotfiles-config"
 slink bash/git-prompt.sh     .dotfiles-config/git-prompt.sh
 slink bash/git-completions   .dotfiles-config/git-completions
-slink bash/todo-completions  .dotfiles-config/todo-completions
 slink bash/alias-completions .dotfiles-config/alias-completions
 slink emacs/elisp            .dotfiles-config/elisp
 echo
