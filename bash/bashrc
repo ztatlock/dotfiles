@@ -5,7 +5,7 @@ if [ -z "$PS1" ]; then
   return
 fi
 
-export PATH="$HOME/bin:$HOME/local/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/bin:$HOME/local/bin:$HOME/.cabal/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export EDITOR="vim"
 
 # cygwin style prompt, show git info
