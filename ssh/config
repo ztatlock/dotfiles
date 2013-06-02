@@ -11,5 +11,5 @@ Host hobo
   User ztatlock
 
 Host cse
-  HostName csegrad.ucsd.edu
+  HostName login.eng.ucsd.edu
   User ztatlock
