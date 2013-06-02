@@ -5,7 +5,7 @@ if [ -z "$PS1" ]; then
   return
 fi
 
-export PATH="$HOME/bin:$HOME/local/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/bin:$HOME/local/bin:$HOME/.cabal/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export EDITOR="vim"
 
 # cygwin style prompt, show git info
@@ -50,6 +50,14 @@ export KRAKEN="$HOME/kraken"                                   # kraken
 source ~/.dotfiles-config/git-completions
 source ~/.dotfiles-config/todo-completions
 source ~/.dotfiles-config/alias-completions
+
+if [ "$(hostname)" = "goto" ]; then
+  AGENT=/usr/bin/ssh-agent
+  if [ -z "$SSH_AUTH_SOCK" -a -x "$AGENT" ]; then
+    eval `$AGENT -s`
+    trap "kill $SSH_AGENT_PID" 0
+  fi
+fi
 
 echo
 fortune.py
