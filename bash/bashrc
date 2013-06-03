@@ -7,6 +7,7 @@ fi
 
 PATH="/usr/local/sbin:$PATH"
 PATH="/usr/local/bin:$PATH"
+PATH="/usr/local/opt/ruby/bin:$PATH"
 PATH="$HOME/.cabal/bin:$PATH"
 PATH="$HOME/local/bin:$PATH"
 PATH="$HOME/bin:$PATH"
@@ -47,7 +48,6 @@ alias coqtop='rlwrap coqtop'
 alias ..='cd ..'
 
 export PATH="$PATH:/usr/local/Cellar/smlnj/110.73/libexec/bin" # smlnj
-export PATH="$PATH:/usr/local/Cellar/ruby/1.9.3-p194/bin"      # ruby gems
 export KRAKEN="$HOME/kraken"                                   # kraken
 
 source ~/.dotfiles-config/git-completions
