@@ -1,3 +1,19 @@
+Host barb
+  HostName barb.cs.washington.edu
+  User ztatlock
+
+Host recycle
+  HostName recycle.cs.washington.edu
+  User ztatlock
+
+Host bicycle
+  HostName bicycle.cs.washington.edu
+  User ztatlock
+
+Host tricycle
+  HostName tricycle.cs.washington.edu
+  User ztatlock
+
 Host goto
   HostName goto.ucsd.edu
   User ztatlock
@@ -6,10 +22,10 @@ Host godel
   HostName godel.ucsd.edu
   User ztatlock
 
-Host hobo
-  HostName hobo.sysnet.ucsd.edu
+Host ucsd-cse
+  HostName login.eng.ucsd.edu
   User ztatlock
 
-Host cse
-  HostName login.eng.ucsd.edu
+Host hobo
+  HostName hobo.sysnet.ucsd.edu
   User ztatlock
