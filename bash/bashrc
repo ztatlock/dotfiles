@@ -16,7 +16,7 @@ export PATH="$PATH"
 export EDITOR="vim"
 
 # cygwin style prompt, show git info
-export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[36m\]\$(__git_ps1)\[\e[33m\]\w\[\e[0m\]\n\$ "
+export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[36m\]\$(__git_ps1)\[\e[0m\]\n\$ "
 
 if [ "$(uname)" = "Darwin" ]; then
   if [ -f $(brew --prefix)/etc/bash_completion ]; then
