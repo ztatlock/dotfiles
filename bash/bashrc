@@ -9,7 +9,6 @@ PATH="/usr/local/sbin:$PATH"
 PATH="/usr/local/bin:$PATH"
 PATH="/usr/local/opt/ruby/bin:$PATH"
 PATH="/usr/local/share/npm/bin:$PATH"
-PATH="$HOME/.cabal/bin:$PATH"
 PATH="$HOME/local/bin:$PATH"
 PATH="$HOME/bin:$PATH"
 export PATH="$PATH"
@@ -18,6 +17,12 @@ export EDITOR="vim"
 
 # cygwin style prompt, show git info
 export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[36m\]\$(__git_ps1)\[\e[33m\]\w\[\e[0m\]\n\$ "
+
+if [ "$(uname)" = "Darwin" ]; then
+  if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    source $(brew --prefix)/etc/bash_completion
+  fi
+fi
 
 if [ "$(uname)" = "Darwin" ]; then
   alias ls='ls -G'
