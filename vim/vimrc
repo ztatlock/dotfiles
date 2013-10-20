@@ -9,6 +9,9 @@ if has("autocmd")
 
   " indentation rules and plugins according to the detected filetype.
   filetype plugin indent on
+
+  " spell check
+  au BufRead,BufNewFile *.tex\|*.html\|*.txt\|*.md set spell
 endif
 
 set ruler        " show line and column number
@@ -26,12 +29,12 @@ set showmatch    " show matching brackets
 set autowrite    " auto save before commands like :next and :make
 set hidden       " do not require saving buffers to change between them
 set bg=dark      " assume a dark background
+set backspace=2  " make backspace work as in most other apps
 
-" from insert mode jj will enter command mode
+
+" quickly enter command mode from insert
 imap jj <ESC>
-
-" space centers screen on cursor
-nmap <space> zz
+imap kk <ESC>
 
 " enter and exit paste mode quickly
 nmap <Tab>q :set invpaste paste?<CR>
@@ -47,13 +50,10 @@ nmap <Tab><Tab> :b#<CR>
 " run Makefile in current dir
 nmap <Tab>m     :!make<CR>
 
-" filetype specific settings
-if has("autocmd")
-  " english
-  au BufRead,BufNewFile *.tex\|*.txt set spell
-  au BufRead,BufNewFile *.tex\|*.txt set keywordprg=~/bin/thesaurus.sh
-  au BufRead,BufNewFile *.tex\|*.txt set textwidth=75
-
-  " ocaml - lookup modules online
-  au BufRead,BufNewFile *.ml set keywordprg=~/bin/ocaml-lkup.sh
-endif
+" highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()

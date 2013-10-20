@@ -6,4 +6,4 @@
   ui = auto
 
 [push]
-  default = tracking
+	default = simple
