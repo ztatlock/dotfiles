@@ -6,7 +6,7 @@ function slink {
 }
 
 echo "crontab:"
-ctab=cron/crontab-$(hostname)
+ctab=cron/crontab-$(hostname -s)
 if [ -f $ctab ]; then
   echo "  $ctab"
   crontab "$ctab"
@@ -25,18 +25,9 @@ echo
 echo "configs:"
 slink bash/bashrc     .bashrc
 slink bash/profile    .profile
-slink bash/logout     .logout
 slink vim/vimrc       .vimrc
 slink git/gitconfig   .gitconfig
 slink ssh/config      .ssh/config
 slink tmux/tmux.conf  .tmux.conf
 slink emacs/emacs     .emacs
-echo
-
-echo "extras:"
-mkdir -p "$HOME/.dotfiles-config"
-slink bash/git-prompt.sh     .dotfiles-config/git-prompt.sh
-slink bash/git-completions   .dotfiles-config/git-completions
-slink bash/alias-completions .dotfiles-config/alias-completions
-slink emacs/elisp            .dotfiles-config/elisp
 echo
