@@ -64,3 +64,5 @@ fi
 
 echo
 fortune.py
+export NSF_TOOLS=/Users/ztatlock/p/nsf-tools
+export PYTHONPATH=~/local/bread/bread:
