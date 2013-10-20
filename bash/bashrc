@@ -17,8 +17,7 @@ export PATH="$PATH"
 export EDITOR="vim"
 
 # cygwin style prompt, show git info
-source ~/.dotfiles-config/git-prompt.sh
-export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[36m\]\$(__git_ps1 \"(%s) \")\[\e[33m\]\w\[\e[0m\]\n\$ "
+export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[36m\]\$(__git_ps1)\[\e[33m\]\w\[\e[0m\]\n\$ "
 
 if [ "$(uname)" = "Darwin" ]; then
   alias ls='ls -G'
@@ -46,23 +45,5 @@ alias ocamld='rlwrap ocamldebug'
 alias ocamldebug='rlwrap ocamldebug'
 alias coqtop='rlwrap coqtop'
 
-alias ..='cd ..'
-
-export PATH="$PATH:/usr/local/Cellar/smlnj/110.73/libexec/bin" # smlnj
-export KRAKEN="$HOME/kraken"                                   # kraken
-
-source ~/.dotfiles-config/git-completions
-source ~/.dotfiles-config/alias-completions
-
-if [ "$(hostname)" = "goto" ]; then
-  AGENT=/usr/bin/ssh-agent
-  if [ -z "$SSH_AUTH_SOCK" -a -x "$AGENT" ]; then
-    eval `$AGENT -s`
-    trap "kill $SSH_AGENT_PID" 0
-  fi
-fi
-
 echo
 fortune.py
-export NSF_TOOLS=/Users/ztatlock/p/nsf-tools
-export PYTHONPATH=~/local/bread/bread:
