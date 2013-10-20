@@ -1,9 +1,9 @@
 [user]
   name  = Zach Tatlock
-  email = ztatlock@cs.ucsd.edu
+  email = ztatlock@cs.washington.edu
 
 [color]
   ui = auto
 
 [push]
-	default = simple
+  default = simple
