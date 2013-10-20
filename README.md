@@ -2,7 +2,7 @@
 
 ## Install
 
-Warning: this will overwrite many important configurations!
+**Warning:** this will overwrite several important configurations!
 
 ```
   $ git clone https://github.com/ztatlock/dotfiles.git
