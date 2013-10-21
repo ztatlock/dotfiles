@@ -7,11 +7,11 @@ if has("autocmd")
   " jump to the most recent position when reopening a file
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-  " indentation rules and plugins according to the detected filetype.
+  " indentation rules and plugins according to the detected filetype
   filetype plugin indent on
 
-  " spell check
-  au BufRead,BufNewFile *.tex\|*.html\|*.txt\|*.md set spell
+  " spell check appropriate doc types
+  au BufRead,BufNewFile *.tex\|*.txt set spell
 endif
 
 set ruler        " show line and column number
@@ -31,6 +31,23 @@ set hidden       " do not require saving buffers to change between them
 set bg=dark      " assume a dark background
 set backspace=2  " make backspace work as in most other apps
 
+" auto close curls
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap {{     {
+inoremap {}     {}
+
+" auto close squares
+inoremap [      []<Left>
+inoremap [<CR>  [<CR>]<Esc>O
+inoremap [[     [
+inoremap []     []
+
+" auto close parens
+inoremap (      ()<Left>
+inoremap (<CR>  (<CR>)<Esc>O
+inoremap ((     (
+inoremap ()     ()
 
 " quickly enter command mode from insert
 imap jj <ESC>

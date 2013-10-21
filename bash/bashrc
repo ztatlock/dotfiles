@@ -1,28 +1,24 @@
-#!/usr/bin/env bash
-
 # if not interactive, stop
 if [ -z "$PS1" ]; then
   return
 fi
 
-PATH="/usr/local/sbin:$PATH"
+# order important, last line searched first
 PATH="/usr/local/bin:$PATH"
-PATH="/usr/local/opt/ruby/bin:$PATH"
-PATH="/usr/local/share/npm/bin:$PATH"
 PATH="$HOME/local/bin:$PATH"
 PATH="$HOME/bin:$PATH"
 export PATH="$PATH"
 
 export EDITOR="vim"
 
-# cygwin style prompt, show git info
-export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[36m\]\$(__git_ps1)\[\e[0m\]\n\$ "
-
 if [ "$(uname)" = "Darwin" ]; then
   if [ -f $(brew --prefix)/etc/bash_completion ]; then
     source $(brew --prefix)/etc/bash_completion
   fi
 fi
+
+# cygwin style prompt with git branch info
+export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[36m\]\$(__git_ps1)\[\e[0m\]\n\$ "
 
 if [ "$(uname)" = "Darwin" ]; then
   alias ls='ls -G'
@@ -35,20 +31,18 @@ alias lla='ls -lhA'
 
 alias grep='grep --color=auto'
 
+alias ocaml='rlwrap ocaml'
+alias coqtop='rlwrap coqtop'
+
 alias gs='git status'
-alias gd='git diff'
 alias gl='git log'
+alias gd='git diff'
+alias gdc='git diff --cached'
 alias gb='git branch'
 alias gwc='git whatchanged'
 alias gco='git checkout'
 alias gci='git commit'
-alias gdc='git diff --cached'
 alias gbv='git branch -a -vv'
-
-alias ocaml='rlwrap ocaml'
-alias ocamld='rlwrap ocamldebug'
-alias ocamldebug='rlwrap ocamldebug'
-alias coqtop='rlwrap coqtop'
 
 echo
 fortune.py
