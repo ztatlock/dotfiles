@@ -2,8 +2,8 @@
 
 import sys, os.path, random
 
-jars = [ '~/Dropbox/quote.txt'
-       , '~/Dropbox/vocab.txt'
+jars = [ '~/dotfiles/content/quote.txt'
+       , '~/dotfiles/content/vocab.txt'
        ]
 jar = random.choice(jars)
 jar = os.path.expanduser(jar)

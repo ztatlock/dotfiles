@@ -1,0 +1,1972 @@
+It is amazing how complete is the delusion that beauty is goodness.
+
+-- Leo Tolstoy
+
+<<<>>>
+
+I have made this letter longer than usual,
+because I lack the time to make it short.
+
+-- Blaise Pascal
+
+<<<>>>
+
+The programmer, like the poet, works only slightly removed from pure
+thought-stuff.  He builds his castles in the air, from air, creating by
+exertion of the imagination.  Few media of creation are so flexible, so
+easy to polish and rework, so readily capable of realizing grand conceptual
+structures.  Yet the program construct, unlike the poet's words, is real in
+the sense that it moves and works, producing visible outputs separate from
+the construct itself.  The magic of myth and legend has been realized in
+our time.  One simply types the correct incantation on a keyboard, and a
+display screen comes to life, showing things that never were nor could be.
+
+-- Fred Brooks
+The Mythical Man-Month
+
+<<<>>>
+
+Christmas to a child is the first terrible proof that to travel hopefully
+is better than to arrive.
+
+-- Stephen Fry
+
+<<<>>>
+
+Consider the momentous event in architecture when the wall parted and the
+column became.
+
+-- Louis Kahn
+
+<<<>>>
+
+Only put off until tomorrow what you are willing to die having left undone.
+
+-- Pablo Picaso
+
+<<<>>>
+
+The purpose of an argument should not be victory, but progress.
+
+-- Fortune Cookie
+
+<<<>>>
+
+A weed is a plant whose virtues have not yet been discovered.
+
+-- Ralph Waldo Emerson
+
+<<<>>>
+
+The skyline was beautiful on fire
+All twisted metal stretching upwards
+Everything washed in a thin orange haze
+
+-- Godspeed You Black Emperor
+
+<<<>>>
+
+Beyond the very extreme of fatigue and distress, we may find amounts of
+ease and power we never dreamed ourselves to own; sources of strength never
+taxed at all because we never push through the obstruction.
+
+-- William James
+
+<<<>>>
+
+A smooth sea never made a skilled sailor.
+
+<<<>>>
+
++-------------------------------------------------------------+
+| CAUTION:                                                    |
+|                                                             |
+| If you have not already run "make check", then we strongly  |
+| recommend you do so.                                        |
+|                                                             |
+| GMP has been carefully tested by its authors, but compilers |
+| are all too often released with serious bugs.  GMP tends to |
+| explore interesting corners in compilers and has hit bugs   |
+| on quite a few occasions.                                   |
+|                                                             |
++-------------------------------------------------------------+
+
+<<<>>>
+
+There is no recipe and what it is.
+
+The basic problem in writing mathematics is the same as in writing biology,
+writing a novel, or writing directions for assembling a harpsichord: the
+problem is to communicate an idea. 
+
+To do so, and to do it clearly, you must:
+
+  have something to say, 
+
+  have someone to say it to, 
+
+  organize what you want to say, 
+
+  arrange it in the order you it said in, 
+
+  write it, rewrite it, and re-rewrite it several times, 
+
+  be willing to think hard about and 
+
+  work hard on mechanical details such as diction, notation, and punctuation
+
+That's all there is to it.
+
+P.R. Halmos
+
+<<<>>>
+
+TO A YOUNG SCIENTIST
+
+If you want to get published, then heed this advice:
+Cite your friends at least once and your enemies twice,
+The editor three times, yourself at least four,
+And write in a style that's intended to bore.
+If you want to get published, here's what you must do
+Above all: don't come up with anything new.
+
+Joel E. Cohen
+
+<<<>>>
+
+Journalism is printing what someone else does not want printed.
+Everything else is public relations.
+
+George Orwell
+
+<<<>>>
+
+The best things in life aren't things.
+
+<<<>>>
+
+A boy makes his girl jealous of other beautiful girls,
+whereas a gentleman makes other beautiful girls jealous of his girl.
+
+<<<>>>
+
+The public responds to new precedents and superlatives.
+
+Elon Musk
+
+<<<>>>
+
+If the only tool you have is a hammer,
+you tend to see every problem as a nail.
+
+Abraham Maslow
+The Psychology of Science, 1966.
+
+<<<>>>
+
+Positive impact on young lives and careers is the shortest description of a
+professor's job that I can think of.
+
+Mikhail Atallah
+
+
+<<<>>>
+
+Holding onto anger is like drinking poison,
+and expecting the other person to die.
+
+<<<>>>
+
+The nature of promises is that they remain immune to changing circumstances.
+
+<<<>>>
+
+The voyage of discovery is not in seeking new landscapes,
+but in having new eyes. 
+
+Marcel Proust
+
+<<<>>>
+
+LITANY AGAINST FEAR
+
+I must not fear.
+Fear is the mind-killer.
+Fear is the little-death that brings total obliteration.
+I will face my fear.
+I will permit it to pass over me and through me.
+And when it has gone past I will turn the inner eye to see its path.
+Where the fear has gone there will be nothing.
+Only I will remain.
+
+
+Bene Gesserit Litany Against Fear 
+by Frank Herbert's
+in Dune
+
+<<<>>>
+
+The headline you won't be reading after a terrible natural disaster:
+
+"Millions saved by good engineering and government building codes."
+
+But it's the truth.
+
+<<<>>>
+
+The fun is always on the other side of a yes.
+
+Tina Fey
+
+<<<>>>
+
+Wealth too often comes from doing what others consider insufferably boring
+or unendurably hard. Most people consider themselves above learning the
+gritty and relentless details of life that allow the creation of wealth.
+They leave it to the experts. But in general you join the one percent of
+the one percent not by leaving it to the experts but by creating new
+expertise, not by knowing what the experts know but by learning what they
+think is beneath them.
+
+George Gilder in Wealth and Poverty
+
+I believe Gilder's quote has in mind entrepreneurs. An employee who learns
+what is beneath his or her boss may have job security, but probably won't
+be paid that much.
+
+John Cook
+
+<<<>>>
+
+It's impossible to kick a field goal when they keep moving the goal posts.
+
+<<<>>>
+
+It's easy to get a bullseye when you shoot the arrow first and then paint a
+target around it.
+
+<<<>>>
+
+Everyone wants to go to heaven, but no one wants to die.
+
+<<<>>>
+
+If you don’t know where you’re going, any road will take you there.
+
+<<<>>>
+
+The Golden Rule:
+
+  Whoever has the gold makes the rules.
+
+<<<>>>
+
+If one tosses a coin twice in succession, one may obtain two heads, two
+tails, or one of each. To Jean Le Rond d'Alembert, a leading figure in
+eighteenth-century science, that made it obvious that the three were
+equally likely and that the probability of each must therefore be one in
+three.
+
+<<<>>>
+
+It takes a thousand men to invent a telegraph, or a steam engine, or a
+phonograph, or a photograph, or a telephone or any other important thing,
+and the last man gets the credit and we forget the others. He added his
+little mite, that is all he did. These object lessons should teach us that
+ninety-nine parts of all things that proceed from the intellect are
+plagiarisms, pure and simple; and the lesson ought to make us modest. But
+nothing can do that.
+
+Mark Twain
+
+<<<>>>
+
+People who live by the sea
+understand eternity.
+They copy the curves of the waves,
+their hearts beat with the tides,
+& the saltiness of their blood
+corresponds with the sea.
+
+They know that the house of flesh
+is only a sandcastle
+built on the shore,
+that skin breaks
+under the waves
+like sand under the soles
+of the first walker on the beach
+when the tide recedes.
+
+Each of us walks there once,
+watching the bubbles
+rise up through the sand
+like ascending souls,
+tracing the line of the foam,
+drawing our index fingers
+along the horizon
+pointing home.
+
+"People Who Live"
+by Erica Jong
+from Becoming Light (1981)
+
+<<<>>>
+
+Work like hell, tell everyone everything you know,
+close a deal with a handshake, and have fun.
+
+Harold "Doc" Edgerton
+
+<<<>>>
+
+I know a great UDP joke,
+but you might not get it.
+
+<<<>>>
+
+deja-you:
+  When you're pretty sure you've met this person,
+  but can't remember their name.
+
+<<<>>>
+
+Deciding what not to do is as important as deciding what to do.
+
+Steve Jobs
+
+<<<>>>
+
+If you’re not prepared to be wrong,
+you’ll never come up with anything original.
+
+Ken Robinson
+
+<<<>>>
+
+Government is what we do together that we can't do alone.
+
+Tim O'Reilly
+
+<<<>>>
+
+If you want to build a ship, don't drum up people to collect wood and don't
+assign them tasks and work, but rather teach them to long for the endless
+immensity of the sea.
+
+Antoine St. Exupery
+(via Neil DeGrasse Tyson)
+
+<<<>>>
+
+Are you quite sure that all those bells and whistles, all those wonderful
+facilities of your so called powerful programming languages, belong to the
+solution set rather than the problem set?
+
+Edsger Dijkstra
+
+<<<>>>
+
+Those who can make you believe absurdities
+can make you commit atrocities.
+
+Voltaire
+
+<<<>>>
+
+During a shipwreck, a passenger fastened a belt about him with two hundred
+pounds of gold, with which he was found afterwards at the bottom. Now, as
+he was sinking -- had he the gold? or the gold him?
+
+John Ruskin
+Unto This Last
+(seen in Moneyball)
+
+<<<>>>
+
+Parkinson shows how you can go in to the board of directors and
+get approval for building a multi-million or even billion dollar
+atomic power plant, but if you want to build a bike shed you will
+be tangled up in endless discussions.
+
+Parkinson explains that this is because an atomic plant is so
+vast, so expensive and so complicated that people cannot grasp
+it, and rather than try, they fall back on the assumption that
+somebody else checked all the details before it got this far.
+Richard P.  Feynmann gives a couple of interesting, and very much
+to the point, examples relating to Los Alamos in his books.
+
+A bike shed on the other hand.  Anyone can build one of those
+over a weekend, and still have time to watch the game on TV.  So
+no matter how well prepared, no matter how reasonable you are
+with your proposal, somebody will seize the chance to show that
+he is doing his job, that he is paying attention, that he is
+*here*.
+
+http://bikeshed.org/
+
+<<<>>>
+
+Russell's Ten Commandments
+
+1) Do not feel absolutely certain of anything.
+
+2) Do not think it worth while to proceed by concealing
+evidence, for the evidence is sure to come to light.
+
+3) Never try to discourage thinking for you are sure to
+succeed.
+
+4) When you meet with opposition, even if it should be from
+your spouse or your children, endeavour to overcome it by
+argument and not by authority, for a victory dependent upon
+authority is unreal and illusory.
+
+5) Have no respect for the authority of others, for there
+are always contrary authorities to be found.
+
+6) Do not use power to suppress opinions you think
+pernicious, for if you do the opinions will suppress you.
+
+7) Do not fear to be eccentric in opinion, for every opinion
+now accepted was once eccentric.
+
+8) Find more pleasure in intelligent dissent that in passive
+agreement, for, if you value intelligence as you should, the
+former implies a deeper agreement than the latter.
+
+9) Be scrupulously truthful, even if the truth is
+inconvenient, for it is more inconvenient when you try to
+conceal it.
+
+10) Do not feel envious of the happiness of those who live
+in a fool’s paradise, for only a fool will think that it is
+happiness.
+
+Bertrand Russell
+
+<<<>>>
+
+"You know what truth is?" said Karabekian. "It's some crazy
+thing my neighbor believes. If I want to make friends with
+him, I ask him what he believes. He tells me, and I say,
+'Yeah, yeah -- ain't it the truth?'"
+
+Kurt Vonnegut
+Breakfast of Champions
+
+<<<>>>
+
+Kilgore Trout once wrote a short story which was a dialogue
+between two pieces of yeast. They were discussing the possible
+purposes of life as they ate sugar and suffocated in their own
+excrement. Because of their limited intelligence, they never
+came close to guessing that they were making champagne.
+
+Kurt Vonnegut
+Breakfast of Champions
+
+<<<>>>
+
+A closed mouth gathers no foot.
+
+<<<>>>
+
+In mathematics you don't understand things.
+You just get used to them.
+
+John von Neumann
+
+<<<>>>
+
+When I was a novice programmer, I spent many hours trying to "speed up" my
+code. One day, after many agonizing attempts at this feat, my mentor
+approached and asked how things were going. Upon hearing of my troubles, he
+imparted this sage wisdom:
+
+"The CPU," he said, "runs at a certain speed. It can execute a fixed number
+of instructions per second, and no more.  There is a finite limit to how
+many instructions per second it can execute. Right?"
+
+"Right," I said.
+
+"So there is no way, really, to make code go faster, because there is no
+way to make instructions execute faster. There is only such a thing as
+making the machine do less."
+
+He paused for emphasis.
+
+"To go fast," he said slowly, "do less."
+
+<<<>>>
+
+A data structure is just a collection of elements,
+organized in a way that supports particular operations.
+
+<<<>>>
+
+We shape our tools.
+Afterward our tools shape us.
+
+<<<>>>
+
+Computer programming consists of implementing a desired set
+of high level operations in terms of a given set of
+primitive operations. Those high level operations become
+the primitive operations for coding the next level.
+
+Lawrence C. Paulson
+
+<<<>>>
+
+Simplicity is the ultimate sophistication.
+
+Leonardo da Vinci
+
+<<<>>>
+
+Simplicity is a prerequisite to reliability.
+
+Dijkstra
+
+<<<>>>
+
+Hierarchical systems have the property that something considered as an
+undivided entity on one level is considered as a composite object on the
+next lower level of greater detail; as a result the natural grain of space
+or time that is applicable at each level decreases by an order of magnitude
+when we shift our attention from one level to the next lower one.
+
+We understand walls in terms of bricks, bricks in terms of crystals,
+crystals in terms of molecules etc. As a result the number of levels that
+can be distinguished meaningfully in a hierarchical system is kind of
+proportional to the logarithm of the ratio between the largest and the
+smallest grain, and therefore, unless this ratio is very large, we cannot
+expect many levels.
+
+In computer programming our basic building block has an associated time
+grain of less than a nanosecond, but our program may take days of
+computation time. I do not know of any other technology covering a ratio of
+10^10 or more: the computer, by virtue of its fantastic speed, seems to be
+the first to provide us with an environment where highly hierarchical
+artifacts are both possible and necessary. 
+
+Dijkstra
+
+<<<>>>
+
+A warning to those who identify the difficulty of
+programming with the struggle against inadequate tools:
+
+  You might conclude that, once our tools are much improved,
+  programming will no longer be a problem. Programming will
+  remain very difficult; once we have freed ourselves from
+  the circumstantial cumbersomeness, we will find ourselves
+  free to tackle the problems that are now well beyond our
+  programming capacity.
+
+Dijkstra
+
+<<<>>>
+
+Consider how our tools influence our own thinking habits. I
+observe a cultural tradition to ignore this influence, to
+regard the human mind as the supreme and autonomous master
+of its artefacts.  But if I start to analyse the thinking
+habits of myself and of my fellow human beings, I come to a
+completely different conclusion, viz. that the tools we are
+trying to use and the language or notation we are using to
+express or record our thoughts, are the major factors
+determining what we can think or express at all!
+
+The way a programming language influences the thinking
+habits of its user and the recognition that brainpower is
+our scarcest resource together provide a new collection of
+metrics for comparing programming languages.
+
+The competent programmer is fully aware of the strictly
+limited size of his own skull; therefore he approaches the
+programming task in full humility, and among other things he
+avoids clever tricks like the plague. 
+
+Dijkstra
+
+<<<>>>
+
+If you want more effective programmers, you will discover
+that they should not waste their time debugging, and thus
+they should not introduce the bugs to start with.
+
+Dijkstra
+
+<<<>>>
+
+LISP has jokingly been described as "the most intelligent
+way to misuse a computer". I think that description a great
+compliment because it transmits the full flavour of
+liberation: it has assisted a number of our most gifted
+fellow humans in thinking previously impossible thoughts.
+
+Dijkstra
+
+<<<>>>
+
+One of the most important aspects of any computing tool
+is its influence on the thinking habits of its users.
+
+Dijkstra
+
+<<<>>>
+
+This is the Unix philosophy:
+
+  Write programs that do one thing and do it well.
+
+  Write programs to work together.
+
+  Write programs to handle text streams,
+  because that is a universal interface.
+
+Doug McIlroy
+
+<<<>>>
+
+It is absurd to make elaborate security checks on debugging
+runs, when no trust is put in the results, and then remove
+them in production runs, when an erroneous result could be
+expensive or disastrous. What would we think of a sailing
+enthusiast who wears his life-jacket when training on dry
+land but takes it off as soon as he goes to sea?
+
+C.A.R. Hoare
+
+<<<>>>
+
+When you grow up you tend to get told the world
+is the way it is and you're life is just to live
+your life inside the world. Try not to bash into
+the walls too much. Try to have a nice family,
+have fun, save a little money.
+
+That's a very limited life. Life can be much
+broader once you discover one simple fact:
+Everything around you that you call life was made
+up by people that were no smarter than you and you
+can change it, you can influence it, you can build
+your own things that other people can use.
+
+Once you learn that, you'll never be the same again.
+
+Steve Jobs
+
+<<<>>>
+
+The goal is not to live forever.
+It's to build something that will.
+
+<<<>>>
+
+An ounce of prevention
+is worth a pound of cure.
+
+<<<>>>
+
+The question is not who is going to let me;
+it's who is going to stop me.
+
+Ayn Rand
+
+<<<>>>
+
+A man is not old until regrets
+take the place of dreams.
+
+<<<>>>
+
+The essence of political tragedy is to make
+the perfect the enemy of the good.
+
+Aristotle
+
+<<<>>>
+
+What has made the state into hell is
+that man wanted to make it heaven.
+
+Friedrich Holderlin
+
+<<<>>>
+
+Anything that's *really* worth doing is worth doing badly.
+
+<<<>>>
+
+In research:
+
+  Struggle to build something crazy that's just good enough.
+
+  Do not struggle to build something normal that's perfect.
+
+<<<>>>
+
+Even people who want to go to heaven,
+don't want to die to get there.
+
+<<<>>>
+
+If you live each day as if it was your last,
+someday you'll most certainly be right.
+
+<<<>>>
+
+I skate to where the puck is going to be,
+not to where it's been.
+
+Wayne Gretzky
+
+<<<>>>
+
+If you're not paying for it,
+then you're not the customer.
+You're the product being sold.
+
+<<<>>>
+
+6 months in the lab can save you 6 hours in the library.
+
+<<<>>>
+
+If you want something done, ask someone busy.
+
+<<<>>>
+
+There are two kinds of dissertations:
+  a bad one and a finished one
+
+<<<>>>
+
+One way to make your old car run better
+is to look up the price of a new model.
+
+<<<>>>
+
+Nothing in the world can take the place of persistence.
+
+Talent will not;
+  unsuccessful men with talent are everywhere.
+
+Genius will not;
+  unrewarded genius is almost a proverb.
+
+Education will not;
+  the world is full of educated derelicts.
+
+Persistence and determination alone are omnipotent.
+
+The slogan "press on" has solved and always will solve
+the problems of the human race.
+
+Calvin Coolidge 
+
+<<<>>>
+
+The reasonable man adapts himself to the world;
+the unreasonable one persists in trying to adapt the
+world to himself.
+
+Therefore, all progress depends on the unreasonable man.
+
+George Bernard Shaw 
+
+<<<>>>
+
+Worrying about how best to do something often
+prevents anything from being done at all.
+
+<<<>>>
+
+Success is not the absence of failure.
+
+<<<>>>
+
+Leaders are not, as we are often led to think, people who go
+along with huge crowds following them. Leaders are people
+who go their own way without caring, or even looking to see,
+whether anyone is following them.
+
+"Leadership qualities" are not the qualities that enable
+people to attract followers, but those that enable them to
+do without them. They include, at the very least, courage,
+endurance, patience, humor, flexibility, resourcefulness,
+stubbornness, a keen sense of reality, and the ability to
+keep a cool and clear head, even when things are going
+badly.
+
+True leaders, in short, do not make people into followers,
+but into other leaders.
+
+John Holt
+
+<<<>>>
+
+I do not feel obliged to believe that the same God who has
+endowed us with senses, reason, and intellect has intended
+us to forgo their use.
+
+Galileo 
+
+<<<>>>
+
+The Bible tells us how to go to heaven, not how the heavens go.
+
+Galileo 
+
+<<<>>>
+
+I know that I am mortal by nature, and ephemeral; but when I
+trace at my pleasure the windings to and fro of the heavenly
+bodies I no longer touch the earth with my feet: I stand in
+the presence of Zeus himself and take my fill of ambrosia.
+
+Ptolemy
+
+<<<>>>
+
+Every day, stop and ask yourself:
+  "Why am I doing this?"
+
+<<<>>>
+
+"The greatest performance improvement of all is when a system goes from
+not-working to working."
+
+Programmers tend to worry too much and too soon about performance. Many
+college-level Computer Science classes focus on fancy algorithms to improve
+performance, but in real life performance rarely matters. Most real-world
+programs run plenty fast enough on today's machines without any particular
+attention to performance. The real challenges are getting programs
+completed quickly, ensuring their quality, and managing the complexity of
+large applications. Thus the primary design criterion for software should
+be simplicity, not speed.
+
+Occasionally there will be parts of a program where performance matters,
+but you probably won't be able to predict where the performance issues will
+occur. If you try to optimize the performance of an application during the
+initial construction you will add complexity that will impact the timely
+delivery and quality of the application and probably won't help performance
+at all; in fact, it could actually reduce the performance ("faster"
+algorithms often have larger constant factors, meaning they are slower at
+small scale and only become more efficient at large scale). I've found that
+in most situations the simplest code is also the fastest. So, don't worry
+about performance until the application is running; if it isn't fast
+enough, then go in and carefully measure to figure out where the
+performance bottlenecks are (they are likely to be in places you wouldn't
+have guessed). Tune only the places where you have measured that there is
+an issue.
+
+John Ousterhout
+Favorite Sayings
+
+<<<>>>
+
+"Use your intuition to ask questions, not to answer them."
+
+Intuition is a wonderful thing. Once you have acquired knowledge and
+experience in an area, you start getting gut-level feelings about the right
+way to handle certain situations or problems, and these intuitions can save
+large amounts of time and effort. However, it's easy to become
+overconfident and assume that your intuition is infallible, and this can
+lead to mistakes. So, I try to treat intuition as a hypothesis to be
+verified, not an edict to be followed blindly.
+
+For example, intuition works great when tracking down bugs; if I get a
+sense for where I think the problem is I can quickly go to the code and
+verify whether this really is the problem. For more abstract tasks such as
+design I find that intuition can also be valuable (I get a vague sense that
+a particular approach is good or bad), but the intuition needs to be
+followed up with a lot of additional analysis to expose all the underlying
+factors and verify whether the intuition was correct. The intuition helps
+me to focus my analysis, but it doesn't eliminate the need for analysis.
+
+One area where people frequently misuse their intuition is performance
+analysis. Developers often jump to conclusions about the source of a
+performance problem and run off to make changes without making measurements
+to be sure that the intuition is correct ("Of course it's the xyz that is
+slow"). More often than not they are wrong, and the change ends up making
+the system more complicated without fixing the problem.
+
+Another reason for constantly challenging and validating your intuitions is
+that over time this will sharpen your intuitions so that they work even
+better for you. Ironically, people who are most dogmatic about their
+intuitions often seem to have least well-developed intuitions. If they
+would challenge their intuitions more, they would find that their
+intuitions become more accurate.
+
+John Ousterhout
+Favorite Sayings
+
+<<<>>>
+
+"The most important component of evolution is death."
+
+Or, said another way, it's easier to create a new organism than to change
+an existing one. Most organisms are highly resistant to change, but when
+they die it becomes possible for new and improved organisms to take their
+place. This rule applies to social structures such as corporations as well
+as biological organisms: very few companies are capable of making
+significant changes in their culture or business model, so it is good for
+companies eventually to go out of business, thereby opening space for
+better companies in the future.
+
+Computer software is a counter-example to this rule, with ironic results.
+Software is incredibly malleable: it can be updated with new versions
+relatively easily to fix problems and add new features. It is easier to
+change existing software than to build new software, so software tends to
+live a long time. To a first approximation, software doesn't die (compare
+this to the hardware in a computer, which is completely repaced every few
+years). At the same time, it is difficult to make major structural
+improvements to software once it has been shipped, so mistakes in early
+versions of the program often live forever. As a result, software tends to
+live too long: just good enough to discourage replacement, but slowly
+rotting away with more and more problems that are hard to fix. I wonder if
+the overall quality of computer software would improve if there were a way
+of forcing all software to be replaced after some period of time.
+
+John Ousterhout
+Favorite Sayings
+
+<<<>>>
+
+"Facts precede concepts."
+
+A fact is a piece of information that can be observed or measured; a
+concept is a general rule that can be used to predict many facts or a
+solution to many problems. Concepts are powerful and valuable, and
+acquiring them is the goal of most learning processes. However, before you
+can appreciate or develop a concept you need to observe a large number of
+facts related to the concept. This has implications both for teaching and
+for working in unfamiliar areas.
+
+In teaching it's crucial to give lots of examples when introducing a new
+concept; otherwise the concept won't make sense to the students. Edward
+Tufte describes this process as "general-specific-general": start by
+explaining the concept, then give several specific examples to show where
+the concept does and does not apply, then reiterate the concept by showing
+how all the examples are related.
+
+I also apply this principle when I'm working in a new area and trying to
+derive the underlying concepts for that area. Initially my goal is just to
+get experience (facts). Once I have a collection of facts to work from,
+then I start looking for patterns or themes; eventually these lead to
+concepts. For example, a few years ago I started working on my first large
+Web application. My goal was to develop a library of reusable classes on
+which to base the application, but being new to Web development I had no
+idea what those classes should be. So, I built the first simple version of
+the application without any shared code, creating each page separately.
+Once I had developed a dozen pages I was able to identify areas of
+functionality that were repeated over and over in different pages, and from
+this I was able to develop a set of classes that implemented the the shared
+functionality. These classes represented the key concepts of that
+particular application.
+
+John Ousterhout
+Favorite Sayings
+
+<<<>>>
+
+"If you don't know what the problem was, you haven't fixed it."
+
+Here's a scenario that I have seen over and over:
+
+* A developer is tracking down a difficult problem, often one that is not
+  completely reproducible.
+
+* In a status meeting the developer announces that
+  the problem has been fixed.
+
+* I ask "what was the cause of the problem?".
+
+* The developer responds "I'm not really sure what the problem was, but I
+  changed xyz and the problem went away." 
+
+Nine times out of ten this approach doesn't really fix the problem; it just
+submerges it (for example, the system timing might have changed so that the
+problem doesn't happen as frequently). In a few weeks or months the problem
+will reappear. Don't ever assume that a problem has been fixed until you
+can identify the exact lines of code that caused it and convince yourself
+that the particular code really explains the behavior you have seen.
+Ideally you should create a test case that reliably reproduces the problem,
+make your fix, and then use that test case to verify that the problem is
+gone.
+
+If you do end up in a situation where you make a change and the problem
+mysteriously goes away, don't stop there. Undo the change and see if the
+problem recurs. If it doesn't, then the change is probably unrelated to the
+problem. If undoing the change causes the problem to recur, then figure out
+why. For example, try reducing the scope of the change to find the smallest
+possible modification that causes the problem to come and go. If this
+doesn't identify the source of the problem, add additional tracing to the
+system and compare the "before" and "after" traces to see how the change
+affected the behavior of the system. In my experience, once I have a code
+change that makes a problem come and go I can always find the source of the
+problem fairly quickly.
+
+John Ousterhout
+Favorite Sayings
+
+<<<>>>
+
+"If it hasn't been used, it doesn't work."
+
+This is one of the biggest frustrations of software development. You design
+and implement a new feature or application, you test it carefully, and you
+think you are done. Unfortunately you aren't. No matter how carefully you
+have tested, there will be problems as soon as QA gets their hands on it or
+someone tries to use the feature or application for real work. Either there
+will be bugs that you missed, or some of the features will be clumsy, or
+additional features will be needed. Sometimes the entire architecture turns
+out to be wrong. Unfortunately, the problems come out at a time when you
+are ready to move on to the next thing (or perhaps you already have moved
+on), so it's frustrating to go back and spend more time on a project that
+you thought was finished. And, of course, you didn't budget time for this
+so the cleanup work causes delays in your next project.
+
+I don't know any solution to this problem except to realize its
+inevitability and plan for it. My rule of thumb is that when you think you
+are finished with a software project (coded, tested, and documented, and
+ready for QA or production use) you are really only 50-75% done. In other
+words, if you spent 3 months in initial construction, plan on spending
+another 4-8 weeks in follow-up work. One way to minimize this problem is to
+get your new software in use as soon as possible. If you can create a
+skeletal version that is still useful, get people trying it out so you can
+find out about problems before you think you're finished. This is one of
+the ideas behind Agile Development. Sometimes people just refuse to do the
+follow-up work: "It's not my highest priority" or "I will get to it when I
+have time". If you take this approach you'll produce mediocre software. No
+software is ever gotten right the first time. The only way to produce
+high-quality software is to keep improving and improving it. There are 2
+kinds of software in the world: software that starts out crappy and
+eventually becomes great, and software that starts out crappy and stays
+that way.
+
+John Ousterhout
+Favorite Sayings
+
+<<<>>>
+
+"The only thing worse than a problem that happens all the time is a problem
+that doesn't happen all the time."
+
+Not much to say about this one: it's painful to debug a problem that isn't
+reproducible. I have spent as long as 6 months tracking down a single
+nondeterministic bug. Conversely, in my experience any problem that can be
+easily reproduced can also be tracked down pretty quickly.
+
+John Ousterhout
+Favorite Sayings
+
+<<<>>>
+
+"The three most powerful words for building credibility are 'I don't
+know'."
+
+Many people worry that not knowing something is a sign of weakness, and
+that if a leader seems not to have all the answers they will lose the
+confidence of their team. Such people try to pretend they have the answer
+in every situation, making things up if necessary and never admitting
+mistakes.
+
+However, this approach ultimately backfires. Sooner or later people learn
+the truth and figure out that the person never admits when they don't know.
+When this happens the person loses all credibility: no-one can tell whether
+the person is speaking from authority or making something up, so it isn't
+safe to trust anything they say.
+
+On the other hand, if you admit that you don't know the answer, or that you
+made a mistake, you build credibility. People are more likely to trust you
+when you say that you do have the answer, because they have seen that you
+don't make things up.
+
+John Ousterhout
+Favorite Sayings
+
+<<<>>>
+
+"Coherent systems are inherently unstable."
+
+A coherent system is one where everything is the same in some respect; the
+more things that are uniform or shared, the more coherent the system is.
+For example, a typical cornfield in Iowa is highly coherent: every corn
+stalk is from the same strain; they're all planted at the same time,
+fertilized at the same time, and harvested at the same time. The world of
+computing is also fairly coherent: most of the world's computers run one of
+a few versions of Windows, and almost any computer in the world can be
+reached using the IP/TCP protocol. Human-engineered systems tend to be
+coherent.
+
+Natural systems tend not to be coherent. For example, consider the
+ecosystem of a wetland: there are numerous different species of plant and
+animal sharing the same area, but behaving very differently with complex
+interrelationships. The behavior of the overall system is hard to predict
+from the behavior of any individual in it.
+
+Coherent systems often have advantages of efficiency, which is why humans
+gravitate towards them. For example, it's easier to plant the same seed
+everywhere in a cornfield, and given that some seeds are better than
+others, it's more efficient to use the best seed everywhere. It's also
+easier to harvest if all of the corn ripens at the same time. It's more
+efficient to have a single operating system running most of the world's
+computers: once a new facility is implemented for that system, everyone in
+the world can benefit from it. If there were dozens of different operating
+systems, then new applications would have to be reimplemented for each of
+them.
+
+Unfortunately, coherent systems are unstable: if a problem arises it can
+wipe out the whole system very quickly. For example, a new plant disease
+could quickly take out a large fraction of U.S. grain production. Computer
+viruses are another example: a virus that takes advantage of a bug in
+Windows can potentially impact most of the world's computers. The U.S.
+stock market exhibits a certain degree of coherency in the way people think
+and trade, which results in huge swings up and down as investors move en
+masse to buy the latest fad or sell when a recession looms.
+
+The incoherency of natural systems give them greater stability. For
+example, a particular plant disease could probably only affect a small
+fraction of the species in a wetland.
+
+John Ousterhout
+Favorite Sayings
+
+<<<>>>
+
+Security is mostly a superstition. It does not exist in
+nature, nor do the children of men as a whole experience it.
+Avoiding danger is no safer in the long run than outright
+exposure. Life is either a daring adventure, or nothing.
+
+Helen Keller
+
+<<<>>>
+
+The ant is a collectively intelligent and individually
+stupid animal; man is the opposite.
+
+Karl von Frisch
+
+<<<>>>
+
+The perfect is the enemy of the good.
+
+Voltaire
+Dictionnaire Philosophique
+
+<<<>>>
+
+Everyone knows that debugging is twice as hard as writing a
+program in the first place. So if you’re as clever as you
+can be when you write it, how will you ever debug it?
+
+Brian Kernighan
+
+<<<>>>
+
+The poet's aim is to inform and delight; to combine in what
+he says both pleasure and applicability to life.
+
+In instructing, be concise so that your readers understand
+quickly and retain faithfully. Superfluous words simply spill
+out when the mind is already full. Fiction invented to please
+should remain close to reality.
+
+The Art Of Poetry An Epistle To The Pisos
+Horace
+65 - 8 BCE
+
+<<<>>>
+
+When it comes to becoming an expert, interest will get you a
+lot further than intelligence.
+
+Matt Might
+
+<<<>>>
+
+The ability to feign seriousness in the face of absurdity is
+an essential survival skill in large organizations.
+
+Matt Might
+
+<<<>>>
+
+Where a new system concept or new technology is used, one
+has to build a system to throw away, for even the best
+planning is not so omniscient as to get it right the first
+time. Hence plan to throw one away; you will, anyhow. 
+
+Fred Brooks, The Mythical Man Month
+
+<<<>>>
+
+There’s a subtle reason that programmers always want to
+throw away the code and start over. The reason is that they
+think the old code is a mess. The reason that they think the
+old code is a mess is because of a cardinal, fundamental law
+of programming: It’s harder to read code than to write it.
+
+Joel Spolsky
+
+<<<>>>
+
+You see, ___ is like a god from ancient mythology: mighty,
+but very irritable. If you mess with it, it'll make you
+suffer in surprising ways.
+
+Xavier Leroy
+
+<<<>>>
+
+If nature has made any one thing less susceptible than all
+others of exclusive property, it is the action of the
+thinking power called an idea, which an individual may
+exclusively possess as long as he keeps it to himself; but
+the moment it is divulged, it forces itself into the
+possession of everyone, and the receiver cannot dispossess
+himself of it.
+
+Its peculiar character, too, is that no one possesses the
+less, because every other possesses the whole of it. He who
+receives an idea from me, receives instruction himself
+without lessening mine; as he who lights his taper at mine,
+receives light without darkening me. That ideas should
+freely spread from one to another over the globe, for the
+moral and mutual instruction of man, and improvement of his
+condition, seems to have been peculiarly and benevolently
+designed by nature, when she made them, like fire,
+expansible over all space, without lessening their density
+in any point, and like the air in which we breathe, move,
+and have our physical being, incapable of confinement or
+exclusive appropriation.
+
+Inventions then cannot, in nature, be a subject of property.
+
+Thomas Jefferson
+
+<<<>>>
+
+There can be no higher law in journalism than to tell the
+truth and to shame the devil.
+
+Walter Lippmann
+
+<<<>>>
+
+Nothing is as practical as a good theory.
+
+Kurt Lewin
+
+<<<>>>
+
+Socialism never took root in America because the poor
+see themselves not as an exploited proletariat but as
+temporarily embarrassed millionaires.
+
+John Steinbeck
+
+<<<>>>
+
+The Lecture:
+
+  A method whereby the professor's notes are transferred to
+  the student's notebooks without passing through the brains
+  of either.
+
+<<<>>>
+
+The plural of anecdotes is not data.
+
+<<<>>>
+
+The time you enjoy wasting is not wasted time.
+
+Bertrand Russell
+
+<<<>>>
+
+What you do speaks so loudly that I cannot hear what you say.
+
+Ralph Waldo Emerson
+
+<<<>>>
+
+A novice was trying to fix a broken Lisp machine by turning
+the power off and on.
+
+Knight, seeing what the student was doing, spoke sternly:
+"You cannot fix a machine by just power-cycling it with no
+understanding of what is going wrong."
+
+Knight turned the machine off and on.
+
+The machine worked.
+
+<<<>>>
+
+The review you want should appear in the paper.
+
+Griswold's Axiom
+
+<<<>>>
+
+The difference between a program analysis and a type system
+is that when a type system rejects a program it's the
+programmer's fault.
+
+Appel's Axiom
+
+<<<>>>
+
+An important side-effect of the hard times was the creation
+of a spiritual climate in which the distinction between pure
+and applied science had vanished: of all the things you
+could do, you just did the most urgent one, and the
+development of some urgently needed theory was often the
+most practical thing to do.
+
+It was my privilege to grow up in that spiritual climate,
+and the conviction that what is theoretically beautiful
+tends to be eminently useful has been an article of my faith
+ever since: in the design of sophisticated digital systems,
+elegance is not a dispensable luxury but a matter of life
+and death, being a major factor that decides between success
+and failure.
+
+E. W. Dijkstra
+
+<<<>>>
+
+BBN had a huge contract to implement TCP/IP, but their stuff
+didn't work, and Bill Joy's grad student stuff worked. So
+DARPA had this big meeting and this grad student in a tshirt
+shows up, and they said, 'How did you do this?' And Bill
+said, 'It's very simple -- you read the protocol and you
+write the code.'
+
+<<<>>>
+
+Bill Joy is very good at taking something, saying, 'OK, this
+is what I have, this is where I want to get to, what's the
+shortest path from here to there?' His code was ugly,
+unmaintainable, incomprehensible, but by golly it only took
+him two weeks to create an incredible amount of
+functionality.
+
+<<<>>>
+
+Have something to say and say it as clearly as you can.
+That is the only secret of style.
+
+Matthew Arnold
+
+<<<>>>
+
+Everything that can be thought at all can be thought clearly.
+Everything that can be said can be said clearly.
+
+Ludwig Wittgenstein
+
+<<<>>>
+
+Once a musician has enough ability to get into a top music
+school, the thing that distinguishes one performer from
+another is how hard he or she works. That's it. And what's
+more, the people at the very top don't work just harder or
+even much harder than everyone else. They work much, much
+harder.
+
+The idea that excellence at performing a complex task
+requires a critical minimum level of practice surfaces again
+and again in studies of expertise. In fact, researchers
+have settled on what they believe is the magic number for
+true expertise: ten thousand hours.
+
+Outliers: The Story of Success
+Malcom Gladwell
+
+<<<>>>
+
+When we look at any kind of cognitively complex field,
+for example, playing chess, writing fiction or being a
+neurosurgeon, you are unlikely to master it unless you
+have practiced for 10,000 hours.
+
+Outliers: The Story of Success
+Malcom Gladwell
+
+<<<>>>
+
+Those three things - autonomy, complexity, and a connection
+between effort and reward - are the three qualities that
+work has to have if it is to be satisfying.
+
+Outliers: The Story of Success
+Malcom Gladwell
+
+<<<>>>
+
+At the end of the day, a passage means not what the writer
+intended it to mean, but only what careful and competent
+readers think it does.
+
+Style: The Basics of Clarity and Grace
+Joseph Williams
+
+<<<>>>
+
+I called this focus on hardware a distortion because we know
+by now that electronic engineering can contribute no more
+than the machinery, and that the general purpose computer is
+no more than a handy device for implementing any thinkable
+mechanism without changing a single wire.
+
+That being so, the key question is what mechanisms we can
+think of without getting lost in the complexities of our own
+making. Not getting lost in the complexities of our own
+making and preferably reaching that goal by learning how to
+avoid the introduction of those complexities in the first
+place, that is the key challenge computing science has to
+meet.
+
+The Threats to Computing Science
+E. W. Dijkstra
+
+<<<>>>
+
+Since the Romans have taught us "Simplex Veri Sigillum" --
+that is: simplicity is the hallmark of truth -- we should
+know better, but complexity continues to have a morbid
+attraction.
+
+When you give for an academic audience a lecture that is
+crystal clear from alpha to omega, your audience feels
+cheated and leaves the lecture hall commenting to each
+other: "That was rather trivial, wasn't it?"
+
+The sore truth is that complexity sells better.
+
+The Threats to Computing Science
+E. W. Dijkstra
+
+<<<>>>
+
+Show me your flowcharts and conceal your tables, and I shall
+continue to be mystified. 
+
+Show me your tables, I won't usually need your flowcharts;
+they'll be obvious.
+
+The Mythical Man Month
+Frederick P. Brooks Jr.
+
+<<<>>>
+
+Show me your code and conceal your data structures, and I
+shall continue to be mystified.
+
+Show me your data structures, I won't usually need your
+code; it will be obvious.
+
+<<<>>>
+
+If he would inform, he must advance regularly from things
+known to things unknown, distinctly without confusion, and
+the lower he begins the better.
+
+It is a common fault in writers to allow their readers too
+much knowledge: They begin with what should be the middle,
+and skipping backwards and forwards, it is impossible for
+any one but he who is already perfect in the subject to
+understand their work, and such a one has no occasion to
+read it.
+
+Benjamin Franklin
+
+<<<>>>
+
+Before I built a wall I'd ask know
+What I was walling in or walling out,
+And to whom I was like to give offence.
+Something there is that doesn't love a wall,
+That wants it down.
+
+Mending Wall
+Robert Frost
+
+<<<>>>
+
+Great design does not come from great processes.
+It comes from great designers.
+
+Fred Brooks
+
+<<<>>>
+
+Any problem can be solved using the materials in the room. 
+
+Edwin Land 
+
+<<<>>>
+
+An essential aspect of creativity is
+not being afraid to fail. 
+
+Edwin Land 
+
+<<<>>>
+
+Politeness is the poison of collaboration. 
+
+Edwin Land 
+
+<<<>>>
+
+Don't undertake a project unless it is 
+manifestly important and nearly impossible. 
+
+Edwin Land 
+
+<<<>>>
+
+Science is a method to keep yourself from kidding yourself.
+
+Edwin Land 
+
+<<<>>>
+
+If you dream of something worth doing and then simply go to
+work on it and don't think anything of personalities, or
+emotional conflicts, or of money, or of family distractions;
+it is amazing how quickly you get through those 5,000 steps.
+
+Edwin Land
+
+<<<>>>
+
+Edwin Land, inventor of the Polaroid camera, once said that
+his method of design was to start with a vision of what you
+want and then, one by one, remove the technical obstacles
+until you have it.
+
+Start with a vision rather than a list of features.
+
+Fred Brooks on Apple's Design
+
+<<<>>>
+
+Easy code can have bugs if its familiarity causes us to let
+down our guard. Even when code is so simple you could write
+it in your sleep, don't fall asleep while writing it.
+
+The Practice of Programming
+Kerninghan & Pike
+
+<<<>>>
+
+Great scientists tolerate ambiguity very well.
+
+They believe the theory enough to go ahead, but they doubt
+it enough to notice the errors and faults so they can step
+forward and create the new replacement theory.
+
+Richard Hamming
+You and Your Research
+
+<<<>>>
+
+Experience is what you get when 
+you didn't get what you wanted.
+
+Randy Pausch
+
+<<<>>>
+
+This is, of course, the gospel of the mediocre man: to
+ridicule somebody who tries something difficult on the
+grounds that the effort was not a total success.
+
+NYT 'The Real McCain' 20080226 
+
+<<<>>>
+
+I have never let my schooling interfere with my education.
+
+Mark Twain
+
+<<<>>>
+
+I would rather write programs to help
+me write programs than write programs.
+
+Dick Sites
+
+<<<>>>
+
+If you do chose to use a computer, beware the temptation it
+offers to let manuscript preparation displace composition.
+
+They are two separate activities, best done separately.
+Hyphenation and exposition are at war with one another.
+Pagination vies with content. The mind busy fretting over
+point size has no time left over to consider clarity.
+
+If you need a break from the ardors of composition, try the
+time-honored ones like poking the fire or baking bread.
+They smell good, and they don't give you any illusion that
+your paper is making progress while you indulge in them.
+
+Mary-Claire van Leunen
+
+<<<>>>
+
+Computer Science is no more about computers
+than astronomy is about telescopes.
+
+E. W. Dijkstra
+
+<<<>>>
+
+We could begin with cleaning up our language and no longer
+call a bug "a bug" but call it an error.
+
+It is much more honest because it squarely puts the blame
+where it belongs, viz., with the programmer who made the
+error. The animistic metaphor of the bug that maliciously
+snuck in while the programmer was not looking is
+intellectually dishonest as it disguises the error
+as not being the programmer's own creation.
+
+The nice thing of this simple change in vocabulary is that
+it has such a profound effect. While, before, a program with
+only one bug used to be "almost correct," afterwards a
+program with an error is just "wrong."
+
+E. W. Dijkstra
+
+<<<>>>
+
+To say of what is, that it is,
+or of what is not, that it is not,
+is true.
+
+Aristotle
+
+<<<>>>
+
+Stopping by Woods on a Snowy Evening
+
+Whose woods these are I think I know.
+His house is in the village, though;
+He will not see me stopping here
+To watch his woods fill up with snow.
+
+My little horse must think it queer
+To stop without a farmhouse near
+Between the woods and frozen lake
+The darkest evening of the year.
+
+He gives his harness bells a shake
+To ask if there is some mistake.
+The only other sound's the sweep
+Of easy wind and downy flake.
+
+The woods are lovely, dark, and deep,
+But I have promises to keep,
+And miles to go before I sleep,
+And miles to go before I sleep. 
+
+Robert Frost
+
+<<<>>>
+
+There's nothing I'm afraid of like scared people.
+
+Robert Frost
+
+<<<>>>
+
+You see, the Caml garbage collector is like a god
+from ancient mythology: mighty, but very irritable.
+
+If you mess with it, it'll make you suffer in
+surprising ways.
+
+Xavier Leroy
+
+<<<>>>
+
+History teaches us that things that
+never happened before do happen.
+
+Nassim Nicholas Taleb
+
+<<<>>>
+
+Faith is a declaration of immunity to
+the powers of conversation.
+
+It is a reason why you do not have to
+give reasons for what you believe.
+
+Sam Harris
+
+<<<>>>
+
+People can stand what is true,
+for they are already enduring it.
+
+Eugene Gendlin
+
+<<<>>>
+
+The wireless telegraph is not difficult to understand. The
+ordinary telegraph is like a very long cat. You pull the
+tail in New York, and it meows in Los Angeles. The wireless
+is the same, only without the cat.
+
+Albert Einstein
+
+<<<>>>
+
+The First Rule of Optimization:
+  Don't.
+
+The Second Rule of Optimizations (for experts only):
+  Don't do it yet.
+
+<<<>>>
+
+Have nothing in your house that you do not know
+to be useful, or believe to be beautiful.
+
+William Morris
+
+<<<>>>
+
+As I would not be a slave,
+I would not be a master.
+
+Abraham Lincoln
+
+<<<>>>
+
+Less is more.
+
+<<<>>>
+
+We ascribe beauty to that which is simple;
+which has no superfluous parts;
+which exactly answers its end. 
+
+Ralph Waldo Emerson
+
+<<<>>>
+
+I am enthusiastic over humanity's extraordinary and
+sometimes very timely ingenuities.
+
+If you are in a shipwreck and all the boats are gone, a
+piano top buoyant enough to keep you afloat may come along
+and make a fortuitous life preserver.
+
+This is not to say, though, that the best way to design a
+life preserver is in the form of a piano top.
+
+I think we are clinging to a great many piano tops in
+accepting yesterday's fortuitous contrivings as constituting
+the only means for solving a given problem.
+
+R. Buckminster Fuller
+
+<<<>>>
+
+There is nothing simple or dull in achieving the transparent
+page. Vulgar ostentation is twice as easy as discipline.
+When you realise that ugly typography never effaces itself;
+you will be able to capture beauty as the wise men capture
+happiness by aiming at something else. The 'stunt
+typographer' learns the fickleness of rich men who hate to
+read. Not for them are long breaths held over serif and
+kern, they will not appreciate your splitting of
+hair-spaces. Nobody (save the other craftsmen) will
+appreciate half your skill. But you may spend endless years
+of happy experiment in devising that crystalline goblet
+which is worthy to hold the vintage of the human mind.
+
+The Crystal Goblet, or Printing Should Be Invisible 
+Beatrice Warde
+
+<<<>>>
+
+Engineers who don't care about how things look on the
+outside generally don't care too much about how they
+work on the inside either. 
+
+<<<>>>
+
+A complex system that works is invariably found to have
+evolved from a simple system that worked. A complex system
+designed from scratch never works and cannot be patched up
+to make it work. You have to start over, beginning with a
+working simple system.
+
+J. Gall
+
+<<<>>>
+
+The first rule is to keep an untroubled spirit.
+
+The second is to look things in the face and
+know them for what they are.
+
+Marcus Aurelius
+circa 150 AD
+
+<<<>>>
+
+There are two ways of constructing a software design: One
+way is to make it so simple that there are obviously no
+deficiencies, and the other way is to make it so complicated
+that there are no obvious deficiencies.
+
+C. A. R. Hoare
+
+<<<>>>
+
+Don't worry about people stealing an idea;
+if it's original, you'll have to shove it
+down their throats.
+
+<<<>>>
+
+People gave ear to an upstart astrologer who strove to show
+that the earth revolves, not the heavens or the firmament,
+the sun and the moon.
+
+This fool wishes to reverse the entire science of astronomy;
+but sacred scripture tells us that Joshua commanded the sun
+to stand still, and not the earth.
+
+Martin Luther
+
+<<<>>>
+
+Is God willing to prevent evil, but not able?
+  Then he is not omnipotent.
+
+Is he able, but not willing?
+  Then he is malevolent.
+
+Is he both able and willing?
+  Then whence cometh evil?
+
+Is he neither able nor willing?
+  Then why call him God? 
+
+Epicurus
+
+<<<>>>
+
+The Government of the United States is in
+no sense founded on the Christian religion. 
+
+  John Adams
+  2nd US President
+
+
+The United States is a Christian nation
+founded upon Christian principles and beliefs. 
+
+  George W. Bush
+  43rd US President
+
+(Adams quote is from the Treaty of Tripoli)
+
+<<<>>>
+
+Aristotle maintained that women have fewer teeth than men;
+although he was twice married, it never occurred to him to
+verify this statement by examining his wives' mouths.
+
+Bertrand Russell
+
+<<<>>>
+
+Men fear thought as they fear nothing else on earth, more
+than ruin, more even than death. Thought is subversive and
+revolutionary, destructive and terrible, thought is
+merciless to privilege, established institutions, and
+comfortable habit. Thought looks into the pit of hell and is
+not afraid. Thought is great and swift and free, the light
+of the world, and the chief glory of man.
+
+Bertrand Russell
+
+<<<>>>
+
+Work expands to fill the time available for its completion.
+
+Parkinson's Law
+
+<<<>>>
+
+A government that robs Peter to pay Paul
+can always depend on the support of Paul.
+
+Shaw's Political Principle
+
+<<<>>>
+
+In the days when Sussman was a novice, Minsky once came to
+him as he sat hacking at the PDP-6.
+
+"What are you doing?", asked Minsky.
+
+"I am training a randomly wired neural net to play
+Tic-Tac-Toe," Sussman replied.
+
+"Why is the net wired randomly?", asked Minsky.
+
+"I do not want it to have any preconceptions of how to
+play", Sussman said.
+
+Minsky shut his eyes.
+
+"Why do you close your eyes?", Sussman asked his teacher.
+
+"So that the room will be empty."
+
+At that moment, Sussman was enlightened.
+
+<<<>>>
+
+Controlling complexity is the essence
+of computer programming.
+
+Kerninghan
+
+<<<>>>
+
+I should like to ask the same question that Descartes asked.
+You are proposing to give a precise definition of logical
+correctness which is to be the same as my vague intuitive
+feeling for logical correctness. How do you intend to show
+that they are the same? The average mathematician should not
+forget that intuition is the final authority.
+
+J. Barkley Rosser
+
+<<<>>>
+
+A language that doesn't affect how you think
+about programming isn't worth knowing.
+
+Alan Perlis
+Epigrams in Programming

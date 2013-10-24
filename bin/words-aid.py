@@ -20,7 +20,7 @@ def test(word):
       return aux(nw, w, b[1:])
   return aux(0, sorted(word), BANK)
 
-p = os.path.expanduser('~/bin/words.txt')
+p = os.path.expanduser('~/dotfiles/content/dict.txt')
 f = open(p, 'r')
 words = f.read().split('\n')
 cands = filter(test, words)
