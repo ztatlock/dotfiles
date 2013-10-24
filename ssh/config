@@ -29,3 +29,7 @@ Host ucsd-cse
 Host hobo
   HostName hobo.sysnet.ucsd.edu
   User ztatlock
+
+Host tch
+  HostName totalcrazyhack.net
+  User ztatlock
