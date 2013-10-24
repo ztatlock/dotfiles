@@ -1,3 +1,13 @@
+I should like to ask the same question that Descartes asked. You are
+proposing to give a precise definition of logical correctness which is to
+be the same as my vague intuitive feeling for logical correctness. How do
+you intend to show that they are the same?  ... The average mathematician
+should not forget that intuition is the final authority.
+
+-- J. Barkley Rosser
+
+<<<>>>
+
 It is amazing how complete is the delusion that beauty is goodness.
 
 -- Leo Tolstoy
