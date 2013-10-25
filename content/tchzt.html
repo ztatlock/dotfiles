@@ -39,7 +39,6 @@
       function loop(s, goal) {
         if(s == goal) {
           wait(6, function(){
-            display(s); // used first iter
             loop(s, next(goal));
           });
         } else {
@@ -131,7 +130,9 @@
         return "zacharytatlock";
       }
     }
-    animate("totalcrazyhack", "totalcrazyhack", step, next);
+
+    display("totalcrazyhack");
+    animate("totalcrazyhack", "zacharytatlock", step, next);
   </script>
 </body>
 </html>
