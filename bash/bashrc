@@ -1,25 +1,33 @@
-# if not interactive, stop
-if [ -z "$PS1" ]; then
-  return
-fi
-
-# order important, last line searched first
 PATH="/usr/local/bin:$PATH"
 PATH="$HOME/local/bin:$PATH"
 PATH="$HOME/bin:$PATH"
 export PATH="$PATH"
 
+LD_LIBRARY_PATH="$HOME/local/lib:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH"
+
+# if not interactive, stop
+if [ -z "$PS1" ]; then
+  return
+fi
+
 export EDITOR="vim"
 
+# cygwin style prompt (no git branch info)
+export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ "
+
 if [ "$(uname)" = "Darwin" ]; then
+  # mac bash completion
   if [ -f $(brew --prefix)/etc/bash_completion ]; then
     source $(brew --prefix)/etc/bash_completion
+
+    # cygwin style prompt with git branch info
+    # __git_ps1 provided by bash_completion
+    export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[36m\]\$(__git_ps1)\[\e[0m\]\n\$ "
   fi
 fi
 
-# cygwin style prompt with git branch info
-export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[36m\]\$(__git_ps1)\[\e[0m\]\n\$ "
-
+# ls
 if [ "$(uname)" = "Darwin" ]; then
   alias ls='ls -G'
 else
