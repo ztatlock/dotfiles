@@ -33,6 +33,7 @@ alias grep='grep --color=auto'
 
 alias ocaml='rlwrap ocaml'
 alias coqtop='rlwrap coqtop'
+alias racket='rlwrap racket'
 
 alias gs='git status'
 alias gl='git log'
