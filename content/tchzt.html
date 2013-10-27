@@ -1,0 +1,138 @@
+<html>
+<head>
+  <title>totalcrazyhack - zacharytatlock</title>
+  <style>
+    body {
+      width: 800px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    #disp {
+      font-family: monospace;
+      font-size: 36pt;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div><p id='disp'>
+    <span id='c0'></span>
+    <span id='c1'></span>
+    <span id='c2'></span>
+    <span id='c3'></span>
+    <span id='c4'></span>
+    <span id='c5'></span>
+    <span id='c6'></span>
+    <span id='c7'></span>
+    <span id='c8'></span>
+    <span id='c9'></span>
+    <span id='c10'></span>
+    <span id='c11'></span>
+    <span id='c12'></span>
+    <span id='c13'></span>
+  </p></div>
+  <script>
+    function wait(n, f) {
+      setTimeout(f, n * 500);
+    }
+    function animate(s, goal, step, next) {
+      function loop(s, goal) {
+        if(s == goal) {
+          wait(6, function(){
+            loop(s, next(goal));
+          });
+        } else {
+          var x = step(s, goal);
+          var t = swap(s, x);
+          wait(1, function(){
+            highlight(x);
+          });
+          wait(2, function(){
+            display(t);
+          });
+          wait(3, function(){
+            unhighlight(x);
+          });
+          wait(4, function(){
+            loop(t, goal);
+          });
+        }
+      }
+      loop(s, goal);
+    }
+    function swap(s, x) {
+      var ca = s.charAt(x.a);
+      var cb = s.charAt(x.b);
+      s = setChar(s, x.a, cb);
+      s = setChar(s, x.b, ca);
+      return s;
+    }
+    function setChar(s, i, c) {
+      return s.substr(0, i) + c + s.substr(i+1);
+    }
+    function display(s) {
+      for(var i=0; i<s.length; i++) {
+        elem('c'+i).innerHTML = s.charAt(i);
+      }
+    }
+    function highlight(x) {
+      color(x.a, "red");
+      color(x.b, "red");
+    }
+    function unhighlight(x) {
+      color(x.a, "black");
+      color(x.b, "black");
+    }
+    function color(i, color) {
+      elem('c'+i).style.color = color;
+    }
+    function elem(id) {
+      return document.getElementById(id);
+    }
+
+    function step(s, goal) {
+      var r = permute(range(s.length));
+      var a = 0;
+      while(s.charAt(r[a]) == goal.charAt(r[a])) {
+        a++;
+      }
+      var b = a;
+      while(s.charAt(r[b]) != goal.charAt(r[a])) {
+        b++;
+      }
+      return {a: r[a], b: r[b]};
+    }
+    function range(n) {
+      var r = [];
+      for(var i=0; i<n; i++) {
+        r.push(i);
+      }
+      return r;
+    }
+    function randi(lo, hi) {
+      return Math.floor(Math.random() * (hi - lo) + lo);
+    }
+    function permute(a) {
+      var b = a.slice(0);
+      for(var i=0; i<b.length; i++) {
+        var x = i + randi(0, b.length - i);
+        var t = b[i];
+        b[i] = b[x];
+        b[x] = t;
+      }
+      return b;
+    }
+
+    function next(goal){
+      if(goal != "totalcrazyhack") {
+        return "totalcrazyhack";
+      } else {
+        return "zacharytatlock";
+      }
+    }
+
+    display("totalcrazyhack");
+    animate("totalcrazyhack", "zacharytatlock", step, next);
+  </script>
+</body>
+</html>
