@@ -16,43 +16,8 @@
 (set-language-environment "UTF-8")
 (windmove-default-keybindings)
 
-;; SML MODE
-;; http://www.iro.umontreal.ca/~monnier/elisp/
-;; http://www.smlnj.org/doc/Emacs/sml-mode.html
+;; proof general
+(load-file "/usr/local/share/emacs/site-lisp/ProofGeneral/generic/proof-site.el")
 
-; loading
-(add-to-list 'load-path "~/.dotfiles-config/elisp/sml-mode-4.1")
-(setq sml-mode-info "~/.dotfiles-config/elisp/sml-mode-4.1/sml-mode.info")
-(autoload 'sml-mode "sml-mode" "Major mode for editing SML." t)
-(autoload 'run-sml "sml-proc" "Run an inferior SML process." t)
-(add-to-list 'auto-mode-alist '("\\.\\(sml\\|sig\\)\\'" . sml-mode))
-
-; options
-(setq sml-program-name "/usr/local/Cellar/smlnj/110.73/libexec/bin/sml")
-(defun my-sml-mode-hook () "Local defaults for SML mode"
-  (setq sml-indent-level 2)        ; conserve on horizontal space
-  (setq words-include-escape t)    ; \ loses word break status
-  (setq indent-tabs-mode nil))     ; never ever indent with tabs
-(add-hook 'sml-mode-hook 'my-sml-mode-hook)
-
-;; PROOF GENERAL
-;; http://proofgeneral.inf.ed.ac.uk/
-
-; loading
-(load-file "~/.dotfiles-config/elisp/ProofGeneral-4.1/generic/proof-site.el")
-
-; options
-;(setq proof-keep-response-history t)
-;(setq proof-shrink-windows-tofit  t)
-;(setq proof-three-window-enable   t)
-
-
-;; scroll one line at a time (less "jumpy" than defaults)
-(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
-(setq mouse-wheel-progressive-speed nil)            ;; don't accelerate scrolling
-(setq mouse-wheel-follow-mouse 't)                  ;; scroll window under mouse
-(setq scroll-step 1)                                ;; keyboard scroll one line at a time
-
-(add-to-list 'load-path "~/.dotfiles-config/elisp")
-(require 'smooth-scroll)
-(smooth-scroll-mode t)
+;; bring window to front
+(x-focus-frame nil)
