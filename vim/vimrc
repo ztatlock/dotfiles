@@ -50,8 +50,9 @@ inoremap ((     (
 inoremap ()     ()
 
 " quickly enter command mode from insert
-imap jj <ESC>
-imap kk <ESC>
+imap jj  <ESC>
+imap kk  <ESC>
+imap lll <ESC>la
 
 " enter and exit paste mode quickly
 nmap <Tab>q :set invpaste paste?<CR>
