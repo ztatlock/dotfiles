@@ -21,3 +21,12 @@
 
 ;; bring window to front
 (x-focus-frame nil)
+
+;; auctex
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
+(require 'tex-site)
+
+(setq TeX-auto-save t)    ; parse on save
+(setq TeX-parse-self t)   ; parse on load
+(setq TeX-save-query nil) ; don't ask before saving
+(setq TeX-PDF-mode t)     ; use pdflatex
