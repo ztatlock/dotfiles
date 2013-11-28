@@ -1,4 +1,5 @@
 PATH="/usr/local/bin:$PATH"
+PATH="$HOME/.cabal/bin:$PATH"
 PATH="$HOME/local/bin:$PATH"
 PATH="$HOME/bin:$PATH"
 export PATH="$PATH"
