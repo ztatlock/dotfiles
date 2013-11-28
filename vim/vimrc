@@ -31,15 +31,8 @@ set hidden       " do not require saving buffers to change between them
 set bg=dark      " assume a dark background
 set backspace=2  " make backspace work as in most other apps
 
-" auto close curls
-" inoremap {      {}<Left>
-" inoremap {<CR>  {<CR>}<Esc>O
-" inoremap {{     {
-" inoremap {}     {}
-
 " quickly enter command mode from insert
 imap jj  <ESC>
-imap kk  <ESC>
 
 " enter and exit paste mode quickly
 nmap <Tab>q :set invpaste paste?<CR>
