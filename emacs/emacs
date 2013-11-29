@@ -1,35 +1,37 @@
-(global-font-lock-mode 1)  ;; syntax highlighting
-(show-paren-mode 1)        ;; highlight matching parens
-(column-number-mode t)     ;; column number
-(tool-bar-mode 0)          ;; hide toolbar
-(set-scroll-bar-mode nil)  ;; hide scrollbar
-
-;; no bell
-(setq ring-bell-function (lambda () (message "*beep*")))
-
-;; X copy/paste
-(setq x-select-enable-clipboard t)
-
-;; big font
-(set-face-attribute 'default nil :height 160)
-
-(ido-mode t)
-(setq ido-enable-flex-matching t)
-(transient-mark-mode 1)
-(set-language-environment "UTF-8")
-(windmove-default-keybindings)
+;; focus emacs on startup
+(x-focus-frame nil)
 
 ;; proof general
 (load-file "/usr/local/share/emacs/site-lisp/ProofGeneral/generic/proof-site.el")
 
-;; bring window to front
-(x-focus-frame nil)
-
 ;; auctex
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
-(require 'tex-site)
+(load "auctex.el" nil t t)
+(load "preview-latex.el" nil t t)
 
 (setq TeX-auto-save t)    ; parse on save
 (setq TeX-parse-self t)   ; parse on load
 (setq TeX-save-query nil) ; don't ask before saving
 (setq TeX-PDF-mode t)     ; use pdflatex
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(custom-enabled-themes (quote (wheatgrass)))
+ '(menu-bar-mode nil)
+ '(scroll-bar-mode nil)
+ '(tool-bar-mode nil)
+ '(visible-bell t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:height 190)))))
