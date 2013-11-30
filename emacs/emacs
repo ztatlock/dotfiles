@@ -1,5 +1,12 @@
-;; focus emacs on startup
+;; focus emacs when started from terminal
 (x-focus-frame nil)
+
+;; help emacs find useful utilities (e.g. ispell)
+(setq exec-path (append exec-path '("/usr/local/bin")))
+
+;; spell check most things
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
 ;; proof general
 (load-file "/usr/local/share/emacs/site-lisp/ProofGeneral/generic/proof-site.el")
