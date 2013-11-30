@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [ "$(uname)" = "Darwin" ]; then
+  /Applications/Emacs.app/Contents/MacOS/Emacs "$@"
+else
+  emacs "$@"
+fi
