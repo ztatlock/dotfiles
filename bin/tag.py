@@ -38,7 +38,7 @@ class mp3:
     cmd += ' --add-image="%s":FRONT_COVER' % self.art
     cmd += ' "%s"'          % self.path
     cmd += ' > /dev/null 2>&1'
-           
+
     if os.system(cmd) != 0:
       print 'TAG FAIL: %s\n\n%s\n' % (self.path, cmd)
       sys.exit(1)

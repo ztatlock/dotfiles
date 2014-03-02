@@ -37,8 +37,11 @@
 
 ;; AUCTEX
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
-(load "auctex.el" nil t t)
-(load "preview-latex.el" nil t t)
+(require 'tex-site)
+
+;;;; AUTeX says to use these, but they don't work in homebrew?
+;;;; (load "auctex.el" nil t t)
+;;;; (load "preview-latex.el" nil t t)
 
 (setq TeX-auto-save t)    ; parse on save
 (setq TeX-parse-self t)   ; parse on load
