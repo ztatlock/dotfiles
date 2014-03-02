@@ -5,7 +5,7 @@
 (setenv "PATH" (concat (getenv "PATH") ":/usr/texbin"))
 (setq exec-path (append exec-path '("/usr/texbin")))
 (setenv "PATH" (concat (getenv "PATH") ":~/.cabal/bin"))
-(setq exec-path (append exec-path '(":~/.cabal/bin")))
+(setq exec-path (append exec-path '("~/.cabal/bin")))
 
 ;; focus emacs when started from terminal
 (x-focus-frame nil)
@@ -16,6 +16,20 @@
 
 ;; PROOF GENERAL
 (load-file "/usr/local/share/emacs/site-lisp/ProofGeneral/generic/proof-site.el")
+
+;; prettify coq symbols
+(global-prettify-symbols-mode 1)
+(setq coq-symbols
+  '(("forall" ?∀)
+    ("->" ?→)
+    ("exists" ?∃)
+    ("=>" ?⇒)
+    ("False" ?⊥)
+    ("True" ?⊤)))
+
+(add-hook 'coq-mode-hook
+          (lambda ()
+            (setq prettify-symbols-alist coq-symbols)))
 
 ;; AGDA
 (load-file (let ((coding-system-for-read 'utf-8))
@@ -53,6 +67,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(LaTeX-enable-toolbar nil)
+ '(agda2-include-dirs (quote ("." "/Users/ztatlock/lib/agda/lib-0.7/src")))
  '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(bibtex-align-at-equal-sign t)
  '(column-number-mode t)
