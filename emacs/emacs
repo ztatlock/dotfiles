@@ -1,5 +1,5 @@
 ;; help emacs find extensions and external utilities
-(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 (setq exec-path (append exec-path '("/usr/local/bin")))
 (setenv "PATH" (concat (getenv "PATH") ":/usr/texbin"))
