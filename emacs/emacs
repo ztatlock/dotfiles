@@ -60,7 +60,7 @@
  '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(bibtex-align-at-equal-sign t)
  '(column-number-mode t)
- '(custom-enabled-themes (quote (wheatgrass)))
+ '(custom-enabled-themes (quote (whiteboard)))
  '(haskell-mode-hook (quote (turn-on-haskell-indent)))
  '(menu-bar-mode nil)
  '(scroll-bar-mode nil)
