@@ -1,3 +1,7 @@
+Host scara
+  HostName scara.cs.washington.edu
+  User zach
+
 Host barb
   HostName barb.cs.washington.edu
   User ztatlock
