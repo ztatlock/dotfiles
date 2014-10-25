@@ -1,3 +1,40 @@
+In the discrete world of computing, there is no meaningful metric in which
+"small" changes and "small" effects go hand in hand, and there never will
+be.
+
+Dijkstra
+
+<<<>>>
+
+When a distinguished but elderly scientist states that something is
+possible, he is almost certainly right. When he states that something is
+impossible, he is very probably wrong.
+
+Arthur C. Clarke
+
+<<<>>>
+
+Clarke's Three Laws of Prediction:
+
+  1. When a distinguished but elderly scientist states that something is
+  possible, he is almost certainly right. When he states that something is
+  impossible, he is very probably wrong.
+
+  2. The only way of discovering the limits of the possible is to venture a
+  little way past them into the impossible.
+
+  3. Any sufficiently advanced technology is indistinguishable from magic.
+
+Arthur C. Clarke
+
+<<<>>>
+
+When in doubt, use brute force.
+
+Ken Thompson
+
+<<<>>>
+
 To learn who rules over you,
 simply find out who you are not allowed to criticize.
 
