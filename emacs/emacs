@@ -1,44 +1,16 @@
-;; help emacs find extensions and external utilities
-(add-to-list 'load-path "~/.emacs.d/lisp/")
-(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
-(setq exec-path (append exec-path '("/usr/local/bin")))
-(setenv "PATH" (concat (getenv "PATH") ":/usr/texbin"))
-(setq exec-path (append exec-path '("/usr/texbin")))
-(setenv "PATH" (concat (getenv "PATH") ":~/.cabal/bin"))
-(setq exec-path (append exec-path '("~/.cabal/bin")))
-
 ;; focus emacs when started from terminal
 (x-focus-frame nil)
+
+;; sRGB
+(setq ns-use-srgb-colorspace t)
 
 ;; spell check most things
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
-;; PROOF GENERAL
-(load-file "/usr/local/share/emacs/site-lisp/ProofGeneral/generic/proof-site.el")
-
-;; AGDA
-(load-file (let ((coding-system-for-read 'utf-8))
-                (shell-command-to-string "agda-mode locate")))
-
-;; AUCTEX
-(add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
-(require 'tex-site)
-
-;;;; AUTeX says to use these, but they don't work in homebrew?
-;;;; (load "auctex.el" nil t t)
-;;;; (load "preview-latex.el" nil t t)
-
-(setq TeX-auto-save t)    ; parse on save
-(setq TeX-parse-self t)   ; parse on load
-(setq TeX-save-query nil) ; don't ask before saving
-(setq TeX-PDF-mode t)     ; use pdflatex
-
-;; MARKDOWN
-(autoload 'markdown-mode "markdown-mode"
-   "Major mode for editing Markdown files" t)
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+;; find ispell
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+(setq exec-path (append exec-path '("/usr/local/bin")))
 
 ;; package.el
 (require 'package)
@@ -46,34 +18,25 @@
   '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; auctex
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
+(require 'tex-site)
+
+;; proof general
+(load-file "/usr/local/share/emacs/site-lisp/ProofGeneral/generic/proof-site.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(LaTeX-enable-toolbar nil)
- '(agda2-include-dirs (quote ("." "/Users/ztatlock/lib/agda/lib-0.7/src")))
- '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
- '(bibtex-align-at-equal-sign t)
  '(column-number-mode t)
- '(custom-enabled-themes (quote (whiteboard)))
- '(haskell-mode-hook (quote (turn-on-haskell-indent)))
  '(menu-bar-mode nil)
  '(scroll-bar-mode nil)
- '(show-paren-mode t)
- '(tool-bar-mode nil)
- '(visible-bell t))
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:height 150)))))
-
-;; Local Variables:
-;; mode: emacs-lisp
-; End:
+ '(default ((t (:inherit nil :stipple nil :background "White" :foreground "Black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 160 :width normal :foundry "nil" :family "Menlo")))))
