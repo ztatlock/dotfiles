@@ -110,3 +110,6 @@ function alias_completion {
 
 echo
 fortune.py
+
+# OPAM configuration
+. /Users/ztatlock/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
