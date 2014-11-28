@@ -2,6 +2,10 @@ Host scara
   HostName scara.cs.washington.edu
   User zach
 
+Host robosalmon
+  HostName robosalmon.cs.washington.edu
+  User plse
+
 Host barb
   HostName barb.cs.washington.edu
   User ztatlock
