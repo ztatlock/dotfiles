@@ -1,3 +1,7 @@
+Host uwplse
+  HostName uwplse.org
+  User ztatlock
+
 Host scara
   HostName scara.cs.washington.edu
   User zach
@@ -41,3 +45,7 @@ Host hobo
 Host tch
   HostName totalcrazyhack.net
   User ztatlock
+
+Host plseaudio
+  HostName plseaudio.cs.washington.edu
+  User debian
