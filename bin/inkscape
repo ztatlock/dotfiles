@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [ "$(uname)" = "Darwin" ]; then
+  /Applications/Inkscape.app/Contents/Resources/bin/inkscape "$@"
+else
+  inkscape "$@"
+fi

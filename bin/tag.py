@@ -29,14 +29,14 @@ class mp3:
 
   def tag(self):
     cmd  = 'eyeD3'
-    cmd += ' --remove-all'  # nuke any prev tags
-    cmd += ' --artist="%s"' % self.artist
-    cmd += ' --year=%d'     % self.year
-    cmd += ' --album="%s"'  % self.album
-    cmd += ' --track=%d'    % self.track
-    cmd += ' --title="%s"'  % self.title
+    cmd += ' --remove-all'      # nuke any prev tags
+    cmd += ' --artist="%s"'     % self.artist
+    cmd += ' --release-year=%d' % self.year
+    cmd += ' --album="%s"'      % self.album
+    cmd += ' --track=%d'        % self.track
+    cmd += ' --title="%s"'      % self.title
     cmd += ' --add-image="%s":FRONT_COVER' % self.art
-    cmd += ' "%s"'          % self.path
+    cmd += ' "%s"'              % self.path
     cmd += ' > /dev/null 2>&1'
 
     if os.system(cmd) != 0:
