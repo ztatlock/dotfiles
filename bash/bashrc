@@ -1,10 +1,15 @@
+PATH="$HOME/local/mlton/usr/local/bin:$PATH"
 PATH="/usr/local/bin:$PATH"
 PATH="$HOME/local/mlton/usr/local/bin:$PATH"
 PATH="$HOME/Library/Haskell/bin:$PATH"
 PATH="$HOME/.cabal/bin:$PATH"
+PATH="/Users/ztatlock/Library/Haskell/bin:$PATH"
 PATH="$HOME/local/bin:$PATH"
 PATH="$HOME/bin:$PATH"
 export PATH="$PATH"
+
+# PEC
+export PEC="$HOME/pec/pec"
 
 LD_LIBRARY_PATH="$HOME/local/lib:$LD_LIBRARY_PATH"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH"
