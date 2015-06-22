@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
-case $1 in
-  "8.4pl4")
-    echo "PATH=/Applications/CoqIde_8.4pl4.app/Contents/Resources/bin:$PATH"
-    ;;
-  *)
-    for v in /Applications/CoqI*; do
-      echo $v
-    done
-    ;;
-esac
+# $ source switch-coq.sh
+
+i=0
+for p in /Applications/CoqIDE_*; do
+  echo $i : $p
+  v[$i]=$p
+  i=$(expr $i + 1)
+done
+echo -n "Switch to: "
+read i
+
+export "PATH=${v[i]}/Contents/Resources/bin:$PATH"
