@@ -2,6 +2,10 @@ Host uwplse
   HostName uwplse.org
   User ztatlock
 
+Host sysv
+  HostName 128.208.2.74
+  User ztatlock
+
 Host scara
   HostName scara.cs.washington.edu
   User zach
