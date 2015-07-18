@@ -28,7 +28,6 @@ slink bash/profile    .profile
 slink vim/vimrc       .vimrc
 slink git/gitconfig   .gitconfig
 slink ssh/config      .ssh/config
-slink ssh/rc          .ssh/rc
 slink tmux/tmux.conf  .tmux.conf
 slink emacs/emacs     .emacs
 echo
