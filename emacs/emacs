@@ -12,6 +12,10 @@
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 (setq exec-path (append exec-path '("/usr/local/bin")))
 
+;; homebrew packages
+(let ((default-directory "/usr/local/share/emacs/site-lisp/"))
+    (normal-top-level-add-subdirs-to-load-path))
+
 ;; package.el
 (require 'package)
 (add-to-list 'package-archives
@@ -23,7 +27,7 @@
 (require 'tex-site)
 
 ;; proof general
-(load-file "/usr/local/share/emacs/site-lisp/ProofGeneral/generic/proof-site.el")
+(load-file "/usr/local/share/emacs/site-lisp/proof-general/generic/proof-site.el")
 
 (defun unfill-paragraph ()
   "Replace newline chars in current paragraph by single spaces.
