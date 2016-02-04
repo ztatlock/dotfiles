@@ -1,9 +1,13 @@
+Host warfa
+  HostName warfa.cs.washington.edu
+  User ztatlock
+
 Host uwplse
   HostName uwplse.org
   User ztatlock
 
 Host sysv
-  HostName 128.208.2.74
+  HostName sysv.cs.washington.edu
   User ztatlock
 
 Host scara
@@ -32,18 +36,6 @@ Host tricycle
 
 Host goto
   HostName goto.ucsd.edu
-  User ztatlock
-
-Host godel
-  HostName godel.ucsd.edu
-  User ztatlock
-
-Host ucsd-cse
-  HostName login.eng.ucsd.edu
-  User ztatlock
-
-Host hobo
-  HostName hobo.sysnet.ucsd.edu
   User ztatlock
 
 Host tch

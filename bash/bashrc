@@ -1,10 +1,7 @@
-PATH="$HOME/local/mlton/usr/local/bin:$PATH"
 PATH="/usr/local/bin:$PATH"
-PATH="$HOME/local/mlton/usr/local/bin:$PATH"
-PATH="$HOME/Library/Haskell/bin:$PATH"
-PATH="$HOME/.cabal/bin:$PATH"
-PATH="/Users/ztatlock/Library/Haskell/bin:$PATH"
 PATH="$HOME/local/bin:$PATH"
+PATH="$HOME/local/mlton/usr/local/bin:$PATH"
+PATH="/Applications/Racket v6.3/bin:$PATH"
 PATH="$HOME/bin:$PATH"
 export PATH="$PATH"
 
@@ -47,6 +44,26 @@ else
   alias ls='ls --color=auto'
 fi
 alias grep='grep --color=auto'
+
+# adapted from https://gist.github.com/fieg/2357723
+function comp_ssh_hosts {
+  cat ~/.ssh/known_hosts \
+    | cut -f 1 -d ' ' \
+    | sed -e s/,.*//g \
+    | grep -v '^#' \
+    | uniq \
+    | grep -v "\["
+  cat ~/.ssh/config \
+    | grep "^Host " \
+    | awk '{print $2}'
+}
+function _complete_ssh_hosts {
+        COMPREPLY=()
+        cur="${COMP_WORDS[COMP_CWORD]}"
+        COMPREPLY=( $(compgen -W "$(comp_ssh_hosts)" -- $cur))
+        return 0
+}
+complete -F _complete_ssh_hosts ssh
 
 echo
 fortune.py
