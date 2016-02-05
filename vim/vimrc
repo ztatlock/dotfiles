@@ -11,7 +11,7 @@ if has("autocmd")
   filetype plugin indent on
 
   " spell check appropriate doc types
-  au BufRead,BufNewFile *.tex\|*.txt set spell
+  au BufRead,BufNewFile *.tex\|*.txt\|*.md set spell
 endif
 
 set ruler        " show line and column number
