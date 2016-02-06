@@ -58,12 +58,13 @@ function comp_ssh_hosts {
     | awk '{print $2}'
 }
 function _complete_ssh_hosts {
-        COMPREPLY=()
-        cur="${COMP_WORDS[COMP_CWORD]}"
-        COMPREPLY=( $(compgen -W "$(comp_ssh_hosts)" -- $cur))
-        return 0
+  COMPREPLY=()
+  cur="${COMP_WORDS[COMP_CWORD]}"
+  COMPREPLY=( $(compgen -W "$(comp_ssh_hosts)" -- $cur))
+  return 0
 }
 complete -F _complete_ssh_hosts ssh
+complete -F _complete_ssh_hosts mosh
 
 echo
 fortune.py
