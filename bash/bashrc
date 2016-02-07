@@ -3,6 +3,7 @@ PATH="$HOME/local/bin:$PATH"
 PATH="$HOME/local/mlton/usr/local/bin:$PATH"
 PATH="/Applications/Racket v6.3/bin:$PATH"
 PATH="$HOME/bin:$PATH"
+
 export PATH="$PATH"
 
 LD_LIBRARY_PATH="$HOME/local/lib:$LD_LIBRARY_PATH"
