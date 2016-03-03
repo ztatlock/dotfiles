@@ -6,6 +6,10 @@ Host uwplse
   HostName uwplse.org
   User ztatlock
 
+Host reincarnate
+  HostName reincarnate.cs.washington.edu
+  User ztatlock
+
 Host sysv
   HostName sysv.cs.washington.edu
   User ztatlock
