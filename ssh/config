@@ -49,3 +49,6 @@ Host tch
 Host plseaudio
   HostName plseaudio.cs.washington.edu
   User debian
+
+Host *
+    AddKeysToAgent yes
