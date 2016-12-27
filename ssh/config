@@ -1,3 +1,19 @@
+Host discoberry01
+  HostName discoberry01.duckdns.org
+  User pi
+
+Host discoberry02
+  HostName discoberry02.duckdns.org
+  User pi
+
+Host discoberry03
+  HostName discoberry03.duckdns.org
+  User pi
+
+Host discoberry04
+  HostName discoberry04.duckdns.org
+  User pi
+
 Host warfa
   HostName warfa.cs.washington.edu
   User ztatlock
