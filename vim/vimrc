@@ -55,3 +55,6 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+" remove trailing whitespace
+autocmd FileType tex,sh,v,ml autocmd BufWritePre <buffer> %s/\s\+$//e
