@@ -92,5 +92,9 @@ Host plseaudio
   HostName plseaudio.cs.washington.edu
   User debian
 
+Host klaatu
+  HostName klaatu.cs.washington.edu
+  User ztatlock
+
 Host *
     AddKeysToAgent yes
