@@ -2,10 +2,3 @@ if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
 
-# OPAM configuration
-. $HOME/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
-
-# on Linuxbrew machine
-if [ "$HOME" = '/homes/gws/ztatlock' ]; then
-  export PATH="$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin":"$PATH"
-fi
