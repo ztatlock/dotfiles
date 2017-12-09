@@ -14,22 +14,22 @@ if has("autocmd")
   au BufRead,BufNewFile *.tex\|*.txt\|*.md set spell
 endif
 
-set ruler        " show line and column number
-set tabstop=2    " number of spaces a tab counts for
-set expandtab    " make tab characters spaces
-set shiftwidth=2 " 2 spaces for each step of autoindent
-set autoindent   " start new line at indentation level of previous line
-set ignorecase	 " case insensitive matching
-set smartcase    " smart case matching
-set incsearch    " incremental search
-set hlsearch     " highlight search matches
-set textwidth=75 " only 75 characters per line
-set showcmd      " command in status line
-set showmatch    " show matching brackets
-set autowrite    " auto save before commands like :next and :make
-set hidden       " do not require saving buffers to change between them
-set bg=dark      " assume a dark background
-set backspace=2  " make backspace work as in most other apps
+set ruler          " show line and column number
+set tabstop=2      " number of spaces a tab counts for
+set expandtab      " make tab characters spaces
+set shiftwidth=2   " 2 spaces for each step of autoindent
+set autoindent     " start new line at indentation level of previous line
+set ignorecase     " case insensitive matching
+set smartcase      " smart case matching
+set incsearch      " incremental search
+set hlsearch       " highlight search matches
+set colorcolumn=80 " highlight lines over 80 characters
+set showcmd        " command in status line
+set showmatch      " show matching brackets
+set autowrite      " auto save before commands like :next and :make
+set hidden         " do not require saving buffers to change between them
+set bg=dark        " assume a dark background
+set backspace=2    " make backspace work as in most other apps
 
 " quickly enter command mode from insert
 imap jj  <ESC>
