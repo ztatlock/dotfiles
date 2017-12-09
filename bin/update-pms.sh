@@ -7,7 +7,7 @@ brew update
 brew upgrade
 
 # occasional clean up
-if [ "$(bc <<< "$(date +"%e") % 3" -eq 0 ]; then
+if [ "$(bc <<< $(date +"%e") % 3)" -eq 0 ]; then
   brew cleanup
   brew prune
   brew doctor
