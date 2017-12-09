@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+DROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+pushd "$DROOT"
+
 function slink {
   echo "  $1"
   ln -f -s "$(pwd)/$1" "$HOME/$2"
@@ -18,13 +21,14 @@ echo
 echo "$HOME/bin:"
 mkdir -p "$HOME/bin";
 for s in bin/*; do
-  slink "$s" "bin/$(basename $s)"
+  slink "$s" "bin/$(basename "$s")"
 done
 echo
 
 echo "configs:"
 slink bash/bashrc     .bashrc
 slink bash/profile    .profile
+slink bash/profile    .bash_profile
 slink vim/vimrc       .vimrc
 slink git/gitconfig   .gitconfig
 slink ssh/config      .ssh/config

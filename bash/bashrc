@@ -1,15 +1,7 @@
 PATH="/usr/local/bin:$PATH"
-PATH="$HOME/local/bin:$PATH"
-PATH="$HOME/local/mlton/usr/local/bin:$PATH"
-PATH="/Applications/Racket v6.4/bin:$PATH"
 PATH="$HOME/bin:$PATH"
 
-export PATH="$PATH"
-
-LD_LIBRARY_PATH="$HOME/local/lib:$LD_LIBRARY_PATH"
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH"
-
-export PYTHONPATH="$HOME/local/lib/python2.7/site-packages"
+export PATH
 
 # if not interactive, stop
 if [ -z "$PS1" ]; then
@@ -21,7 +13,7 @@ export EDITOR="vim"
 # cygwin style prompt (no git branch info)
 export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[0;35m\]\t \[\e[33m\]\w\[\e[0m\]\n\$ "
 
-if [ "$(uname)" = "Darwin" ] && [ -n "$(command -v brew)" ]; then
+if [ -n "$(command -v brew)" ]; then
   if [ -f $(brew --prefix)/etc/bash_completion ]; then
     source $(brew --prefix)/etc/bash_completion
 

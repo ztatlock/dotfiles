@@ -1,5 +1,5 @@
-if [ -f $HOME/Dropbox/.homebrew-github-token.sh ]; then
-  source $HOME/Dropbox/.homebrew-github-token.sh
+if [ -f $HOME/Dropbox/.brew-github-token.sh ]; then
+  source $HOME/Dropbox/.brew-github-token.sh
 fi
 
 if [ -f ~/.bashrc ]; then
