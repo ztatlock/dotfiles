@@ -1,14 +1,26 @@
 #!/usr/bin/env bash
 
-DROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-pushd "$DROOT"
+# exit on error
+set -e
+
+# determine physical directory of this script
+src="${BASH_SOURCE[0]}"
+while [ -L "$src" ]; do
+  dir="$(cd -P "$(dirname "$src")" && pwd)"
+  src="$(readlink "$src")"
+  [[ $src != /* ]] && src="$dir/$src"
+done
+MYDIR="$(cd -P "$(dirname "$src")" && pwd)"
+
+pushd "$MYDIR"
 
 function slink {
   echo "  $1"
   ln -f -s "$(pwd)/$1" "$HOME/$2"
 }
 
-echo "crontab:"
+echo
+echo "# CRONTAB"
 ctab=cron/crontab-$(hostname -s)
 if [ -f $ctab ]; then
   echo "  $ctab"
@@ -18,14 +30,16 @@ else
 fi
 echo
 
-echo "$HOME/bin:"
+echo
+echo "# $HOME/bin"
 mkdir -p "$HOME/bin";
 for s in bin/*; do
   slink "$s" "bin/$(basename "$s")"
 done
 echo
 
-echo "configs:"
+echo
+echo "# CONFIGS"
 slink bash/bashrc     .bashrc
 slink bash/profile    .profile
 slink bash/profile    .bash_profile
