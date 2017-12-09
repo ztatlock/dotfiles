@@ -56,6 +56,14 @@ Host sysv
   HostName sysv.cs.washington.edu
   User ztatlock
 
+Host hobo
+  HostName hobo.sysnet.ucsd.edu
+  User ztatlock
+
+Host goto
+  HostName goto.ucsd.edu
+  User ztatlock
+
 Host scara
   HostName scara.cs.washington.edu
   User zach
@@ -78,10 +86,6 @@ Host bicycle
 
 Host tricycle
   HostName tricycle.cs.washington.edu
-  User ztatlock
-
-Host goto
-  HostName goto.ucsd.edu
   User ztatlock
 
 Host tch
