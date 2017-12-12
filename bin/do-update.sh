@@ -53,19 +53,29 @@ function main {
   echo "# Dotfiles"
 
   pushd "$MYDIR/.."
-  # ensure working directory is clean
-  if ! git diff-index --quiet HEAD --; then
-    echo "${RED}"
-    echo "!!!"
-    echo "!!! ERROR: need to push dotfiles changes!"
-    echo "!!!"
-    echo "${CLR}"
+  git fetch
+  # ensure working directory is clean and up to date
+  if ! git diff-index --quiet HEAD \
+  || ! git diff --quiet origin/HEAD; then
+    echo "${RED}
+!!!
+!!! ERROR: dotfiles repo is not up to date
+!!!
+${CLR}"
     exit 1
   fi
   git pull
   ./install.sh
 }
 
-main \
-  && echo "Success." \
-  || echo "Failure."
+if main; then
+  echo "${GRN}
+Success.
+${CLR}"
+else
+  echo "${RED}
+!!!
+!!! ERROR: update did not complete
+!!!
+${CLR}"
+fi
