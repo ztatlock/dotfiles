@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# exit on error
-set -e
-
 # determine physical directory of this script
 src="${BASH_SOURCE[0]}"
 while [ -L "$src" ]; do
@@ -23,44 +20,52 @@ CYN=$'\033[1;36m' # cyan
 WHT=$'\033[1;37m' # white
 CLR=$'\033[0m'    # no color
 
-if command -v brew &> /dev/null; then
-  echo
-  echo "# Brew"
+function main {
+  # exit on error
+  set -e
 
-  brew update
-  brew upgrade
+  if command -v brew &> /dev/null; then
+    echo
+    echo "# Brew"
 
-  # occasional clean up
-  if [ $(($(date +%e) % 3)) -eq 0 ]; then
-    brew cleanup
-    brew prune
-    brew doctor
+    brew update
+    brew upgrade
+
+    # occasional clean up
+    if [ $(($(date +%e) % 3)) -eq 0 ]; then
+      brew cleanup
+      brew prune
+      brew doctor
+    fi
+    echo
   fi
+
+  if command -v opam &> /dev/null; then
+    echo
+    echo "# OPAM"
+
+    opam update
+    opam upgrade --yes
+    echo
+  fi
+
   echo
-fi
+  echo "# Dotfiles"
 
-if command -v opam &> /dev/null; then
-  echo
-  echo "# OPAM"
+  pushd "$MYDIR/.."
+  # ensure working directory is clean
+  if ! git diff-index --quiet HEAD --; then
+    echo "${RED}"
+    echo "!!!"
+    echo "!!! ERROR: need to push dotfiles changes!"
+    echo "!!!"
+    echo "${CLR}"
+    exit 1
+  fi
+  git pull
+  ./install.sh
+}
 
-  opam update
-  opam upgrade --yes
-  echo
-fi
-
-echo
-echo "# Dotfiles"
-
-pushd "$MYDIR/.."
-# ensure working directory is clean
-if ! git diff-index --quiet HEAD --; then
-  echo "${RED}"
-  echo "!!!"
-  echo "!!! ERROR: need to push dotfiles changes!"
-  echo "!!!"
-  echo "${CLR}"
-  exit 1
-fi
-git pull
-./install.sh
-
+main \
+  && echo "Success." \
+  || echo "Failure."
