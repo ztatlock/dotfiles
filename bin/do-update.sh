@@ -24,6 +24,25 @@ function main {
   # exit on error
   set -e
 
+  echo
+  echo "# Dotfiles"
+
+  pushd "$MYDIR/.."
+  git fetch
+  # ensure working directory is clean and up to date
+  if ! git diff-index --quiet HEAD \
+  || ! git diff --quiet origin/HEAD; then
+    echo "${RED}
+!!!
+!!! ERROR: dotfiles repo is not up to date
+!!!
+${CLR}"
+    exit 1
+  fi
+  git pull
+  ./install.sh
+  popd
+
   if command -v brew &> /dev/null; then
     echo
     echo "# Brew"
@@ -49,23 +68,6 @@ function main {
     echo
   fi
 
-  echo
-  echo "# Dotfiles"
-
-  pushd "$MYDIR/.."
-  git fetch
-  # ensure working directory is clean and up to date
-  if ! git diff-index --quiet HEAD \
-  || ! git diff --quiet origin/HEAD; then
-    echo "${RED}
-!!!
-!!! ERROR: dotfiles repo is not up to date
-!!!
-${CLR}"
-    exit 1
-  fi
-  git pull
-  ./install.sh
 }
 
 if main; then
