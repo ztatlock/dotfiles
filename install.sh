@@ -20,7 +20,7 @@ function slink {
 }
 
 function slinkv {
-  printf "%-14s  -->  %s\n" "$1" "~/$2"
+  printf "  %-14s  -->  %s\n" "$1" "~/$2"
   ln -f -s "$(pwd)/$1" "$HOME/$2"
 }
 
