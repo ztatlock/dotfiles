@@ -15,7 +15,7 @@ MYDIR="$(cd -P "$(dirname "$src")" && pwd)"
 pushd "$MYDIR"
 
 function slink {
-  echo "  $1"
+  printf "%-15s -> %s\n" "$1" "~/$2"
   ln -f -s "$(pwd)/$1" "$HOME/$2"
 }
 
