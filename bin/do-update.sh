@@ -7,7 +7,7 @@ while [ -L "$src" ]; do
   src="$(readlink "$src")"
   [[ $src != /* ]] && src="$dir/$src"
 done
-MYDIR="$(cd -P "$(dirname "$src")" && pwd)"
+export MYDIR="$(cd -P "$(dirname "$src")" && pwd)"
 
 # ANSI color codes
 BLK=$'\033[1;30m' # black
@@ -30,8 +30,8 @@ function main {
   pushd "$MYDIR/.."
   git fetch
   # ensure working directory is clean and up to date
-  if ! git diff-index --quiet HEAD \
-  || ! git diff --quiet origin/HEAD; then
+  if ! git merge-base --isancestor master origin/master \
+  || ! git diff-index --quiet HEAD; then
     echo "${RED}
 !!!
 !!! ERROR: dotfiles repo is not up to date
@@ -67,13 +67,10 @@ ${CLR}"
     opam upgrade --yes
     echo
   fi
-
 }
 
 if main; then
-  echo "${GRN}
-Success.
-${CLR}"
+  echo "${GRN}Success.${CLR}"
 else
   echo "${RED}
 !!!
