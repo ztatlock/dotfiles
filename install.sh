@@ -15,6 +15,11 @@ MYDIR="$(cd -P "$(dirname "$src")" && pwd)"
 pushd "$MYDIR"
 
 function slink {
+  echo "  $1"
+  ln -f -s "$(pwd)/$1" "$HOME/$2"
+}
+
+function slinkv {
   printf "%-14s  -->  %s\n" "$1" "~/$2"
   ln -f -s "$(pwd)/$1" "$HOME/$2"
 }
@@ -40,12 +45,12 @@ echo
 
 echo
 echo "# CONFIGS"
-slink bash/bashrc     .bashrc
-slink bash/profile    .profile
-slink bash/profile    .bash_profile
-slink vim/vimrc       .vimrc
-slink git/gitconfig   .gitconfig
-slink ssh/config      .ssh/config
-slink tmux/tmux.conf  .tmux.conf
-slink emacs/emacs     .emacs
+slinkv bash/bashrc     .bashrc
+slinkv bash/profile    .profile
+slinkv bash/profile    .bash_profile
+slinkv vim/vimrc       .vimrc
+slinkv git/gitconfig   .gitconfig
+slinkv ssh/config      .ssh/config
+slinkv tmux/tmux.conf  .tmux.conf
+slinkv emacs/emacs     .emacs
 echo
