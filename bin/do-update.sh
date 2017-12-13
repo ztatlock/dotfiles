@@ -30,7 +30,7 @@ function main {
   pushd "$MYDIR/.."
   git fetch
   # ensure working directory is clean and up to date
-  if ! git merge-base --isancestor master origin/master \
+  if ! git merge-base --is-ancestor master origin/master \
   || ! git diff-index --quiet HEAD; then
     echo "${RED}
 !!!
