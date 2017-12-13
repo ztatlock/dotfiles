@@ -20,6 +20,17 @@ CYN=$'\033[1;36m' # cyan
 WHT=$'\033[1;37m' # white
 CLR=$'\033[0m'    # no color
 
+function fail {
+  echo "${RED}
+!!!
+!!! ERROR: update did not complete
+!!!
+${CLR}"
+  exit 1
+}
+export -f fail
+trap fail SIGINT
+
 function main {
   # exit on error
   set -e
@@ -72,9 +83,5 @@ ${CLR}"
 if main; then
   echo "${GRN}Success.${CLR}"
 else
-  echo "${RED}
-!!!
-!!! ERROR: update did not complete
-!!!
-${CLR}"
+  fail
 fi
