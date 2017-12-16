@@ -5,10 +5,10 @@ export LANGUAGE=en_US.UTF-8
 PATH="/usr/local/bin:$PATH"
 
 # OPAM configuration
-source $HOME/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+source "$HOME/.opam/opam-init/init.sh" &> /dev/null || true
 
 # on dept machine
-if [ "$HOME" = '/homes/gws/ztatlock' ]; then
+if [ "$HOME" = "/homes/gws/ztatlock" ]; then
   PATH="$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH"
 
   # makes linuxbrew doctor happy
@@ -17,6 +17,24 @@ if [ "$HOME" = '/homes/gws/ztatlock' ]; then
   # for gnuplot 5
   export LD_LIBRARY_PATH="$HOME/local/lib:$LD_LIBRARY_PATH"
   PATH="$HOME/local/bin:$PATH"
+fi
+
+# on macOS
+if [ "$(uname)" = "Darwin" ]; then
+  function latest_racket {
+    local lr="$(       \
+      ls /Applications \
+        | grep Racket  \
+        | sort -Vr     \
+        | head -n 1)"
+
+    [ "$lr" != "" ] \
+      && echo "/Applications/$r"
+  }
+
+  lr="$(latest_racket)"
+  [ "$lr" != "" ] \
+    && PATH="$lr/bin:$PATH"
 fi
 
 PATH="$HOME/bin:$PATH"
@@ -58,24 +76,28 @@ else
 fi
 alias grep='grep --color=auto'
 
-# adapted from https://gist.github.com/fieg/2357723
+# ssh completion adapted from https://gist.github.com/fieg/2357723
+
 function comp_ssh_hosts {
   cat ~/.ssh/known_hosts \
-    | cut -f 1 -d ' ' \
-    | sed -e s/,.*//g \
-    | grep -v '^#' \
-    | uniq \
+    | cut -f 1 -d ' '    \
+    | sed -e s/,.*//g    \
+    | grep -v '^#'       \
+    | uniq               \
     | grep -v "\["
-  cat ~/.ssh/config \
-    | grep "^Host " \
+
+  cat ~/.ssh/config  \
+    | grep "^Host "  \
     | awk '{print $2}'
 }
+
 function _complete_ssh_hosts {
   COMPREPLY=()
   cur="${COMP_WORDS[COMP_CWORD]}"
   COMPREPLY=( $(compgen -W "$(comp_ssh_hosts)" -- $cur))
   return 0
 }
+
 complete -F _complete_ssh_hosts ssh
 complete -F _complete_ssh_hosts mosh
 
