@@ -7,7 +7,7 @@ while [ -L "$src" ]; do
   src="$(readlink "$src")"
   [[ $src != /* ]] && src="$dir/$src"
 done
-export MYDIR="$(cd -P "$(dirname "$src")" && pwd)"
+MYDIR="$(cd -P "$(dirname "$src")" && pwd)"
 
 # ANSI color codes
 BLK=$'\033[1;30m' # black
@@ -25,19 +25,16 @@ function fail {
 !!!
 !!! ERROR: update did not complete
 !!!
-${CLR}"
+${CLR}" >&2
   exit 1
 }
-export -f fail
-trap fail SIGINT
 
 function main {
-  # exit on error
-  set -e
+  trap fail ERR
+  trap fail SIGINT
 
   echo
   echo "# Dotfiles"
-
   pushd "$MYDIR/.."
   git fetch
   # ensure working directory is clean and up to date
@@ -47,7 +44,7 @@ function main {
 !!!
 !!! ERROR: dotfiles repo is not up to date
 !!!
-${CLR}"
+${CLR}" >&2
     exit 1
   fi
   git pull
@@ -57,7 +54,6 @@ ${CLR}"
   if command -v brew &> /dev/null; then
     echo
     echo "# Brew"
-
     brew update
     brew upgrade
 
@@ -73,15 +69,12 @@ ${CLR}"
   if command -v opam &> /dev/null; then
     echo
     echo "# OPAM"
-
     opam update
     opam upgrade --yes
     echo
   fi
+
+  echo "${GRN}Success.${CLR}"
 }
 
-if main; then
-  echo "${GRN}Success.${CLR}"
-else
-  fail
-fi
+main
