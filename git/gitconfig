@@ -9,4 +9,4 @@
   default = simple
 
 [alias]
-    diffw = diff --color-words
+  diffw = diff --color-words
