@@ -5,6 +5,8 @@ warfa.cs.washington.edu
 recycle.cs.washington.edu
 bicycle.cs.washington.edu
 tricycle.cs.washington.edu
+boom.cs.washington.edu
+bam.cs.washington.edu
 barb.cs.washington.edu
 buffalo.cs.washington.edu
 caribou.cs.washington.edu

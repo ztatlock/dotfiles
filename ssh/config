@@ -88,6 +88,14 @@ Host tricycle
   HostName tricycle.cs.washington.edu
   User ztatlock
 
+Host boom
+  HostName boom.cs.washington.edu
+  User ztatlock
+
+Host bam
+  HostName bam.cs.washington.edu
+  User ztatlock
+
 Host tch
   HostName totalcrazyhack.net
   User ztatlock
