@@ -24,18 +24,6 @@ function slinkv {
   ln -f -s "$(pwd)/$1" "$HOME/$2"
 }
 
-echo
-echo "# CRONTAB"
-ctab=cron/crontab-$(hostname -s)
-if [ -f $ctab ]; then
-  echo "  $ctab"
-  crontab "$ctab"
-else
-  echo "  (none)"
-fi
-echo
-
-echo
 echo "# $HOME/bin"
 mkdir -p "$HOME/bin";
 for s in bin/*; do
@@ -43,7 +31,6 @@ for s in bin/*; do
 done
 echo
 
-echo
 echo "# CONFIGS"
 slinkv bash/bashrc     .bashrc
 slinkv bash/profile    .profile
@@ -53,4 +40,14 @@ slinkv git/gitconfig   .gitconfig
 slinkv ssh/config      .ssh/config
 slinkv tmux/tmux.conf  .tmux.conf
 slinkv emacs/emacs     .emacs
+echo
+
+echo "# CRONTAB"
+ctab="cron/crontab-$(hostname -s)"
+if [ -f $ctab ]; then
+  echo "  $ctab"
+  crontab "$ctab"
+else
+  echo "  (none)"
+fi
 echo

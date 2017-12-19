@@ -1,0 +1,4 @@
+#30 2 * * * /bin/bash $HOME/herbie/infra/run.sh
+
+0  0 * * * cd $HOME/reincarnate && git pull
+30 0 * * * /bin/bash $HOME/reincarnate/src/script/nightly.sh -c medium -j 4
