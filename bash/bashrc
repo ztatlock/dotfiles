@@ -2,10 +2,13 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
-PATH="/usr/local/bin:$PATH"
-
 # OPAM configuration
 source "$HOME/.opam/opam-init/init.sh" &> /dev/null || true
+
+# parallel configuration
+source "$(which env_parallel).bash" &> /dev/null || true
+
+PATH="/usr/local/bin:$PATH"
 
 # on dept machine
 if [ "$HOME" = "/homes/gws/ztatlock" ]; then

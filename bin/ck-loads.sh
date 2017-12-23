@@ -13,31 +13,46 @@ caribou.cs.washington.edu
 plover.cs.washington.edu
 "
 
-function main {
-  local h
-  for h in $HOSTS; do
-    local name="$(echo "$h" | cut -d '.' -f 1)"
-    local proc="$(get_proc $h)"
-    local load="$(get_load $h)"
+export CURFEW=10
 
-    printf "%10s %4d %s\n" \
-      "$name" "$proc" "$load"
-  done
+export TIMEOUT="timeout $CURFEW"
+if command -v gtimeout > /dev/null 2>&1; then
+  TIMEOUT="gtimeout $CURFEW"
+fi
+
+function main {
+  parallel host_report ::: $HOSTS
 }
+
+function host_report {
+  local host="$1"
+  local name="$(echo "$host" | cut -d '.' -f 1)"
+
+  source "$(which env_parallel).bash"
+  parset proc,load \
+    ::: get_proc get_load ::: "$host"
+  printf "%10s %4s %s\n" \
+    "$name" "$proc" "$load"
+}
+export -f host_report
 
 function get_proc {
   local host="$1"
 
-  ssh "$host" "nproc --all"
+  $TIMEOUT \
+    ssh "$host" "nproc --all"
 }
+export -f get_proc
 
 function get_load {
   local host="$1"
 
-  ssh "$host" uptime   \
-    | sed 's/.*://' \
-    | sed 's/,//g'  \
-    | xargs printf "%7.2f"
+  $TIMEOUT \
+    ssh "$host" uptime \
+      | sed 's/.*://'  \
+      | sed 's/,//g'   \
+      | xargs printf "%7.2f"
 }
+export -f get_load
 
-main
+main "$@"
