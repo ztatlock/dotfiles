@@ -15,9 +15,9 @@ plover.cs.washington.edu
 
 export CURFEW=10
 
-export TIMEOUT="timeout $CURFEW"
+export TIMEOUT="timeout"
 if command -v gtimeout > /dev/null 2>&1; then
-  TIMEOUT="gtimeout $CURFEW"
+  TIMEOUT="gtimeout"
 fi
 
 function main {
@@ -28,9 +28,16 @@ function host_report {
   local host="$1"
   local name="$(echo "$host" | cut -d '.' -f 1)"
 
+  # parset is still pretty new, check availability
   source "$(which env_parallel).bash"
-  parset proc,load \
-    ::: get_proc get_load ::: "$host"
+  if type parset > /dev/null 2>&1; then
+    parset proc,load \
+      ::: get_proc get_load ::: "$host"
+  else
+    local proc="$(get_proc "$host")"
+    local load="$(get_load "$host")"
+  fi
+
   printf "%10s %4s %s\n" \
     "$name" "$proc" "$load"
 }
@@ -39,7 +46,7 @@ export -f host_report
 function get_proc {
   local host="$1"
 
-  $TIMEOUT \
+  $TIMEOUT $CURFEW \
     ssh "$host" "nproc --all"
 }
 export -f get_proc
@@ -47,7 +54,7 @@ export -f get_proc
 function get_load {
   local host="$1"
 
-  $TIMEOUT \
+  $TIMEOUT $CURFEW \
     ssh "$host" uptime \
       | sed 's/.*://'  \
       | sed 's/,//g'   \
