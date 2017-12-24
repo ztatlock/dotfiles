@@ -13,11 +13,19 @@ caribou.cs.washington.edu
 plover.cs.washington.edu
 "
 
-export CURFEW=10
-
+export CURFEW=5
 export TIMEOUT="timeout"
-if command -v gtimeout > /dev/null 2>&1; then
+command -v gtimeout > /dev/null 2>&1 && \
   TIMEOUT="gtimeout"
+export SSHOPTS="-oStrictHostKeyChecking=no"
+export DOSSH="$TIMEOUT $CURFEW ssh $SSHOPTS"
+
+export PARSET=false
+if which env_parallel > /dev/null 2>&1; then
+  source "$(which env_parallel).bash"
+  if type parset > /dev/null 2>&1; then
+    PARSET=true
+  fi
 fi
 
 function main {
@@ -28,9 +36,8 @@ function host_report {
   local host="$1"
   local name="$(echo "$host" | cut -d '.' -f 1)"
 
-  # parset is still pretty new, check availability
-  source "$(which env_parallel).bash"
-  if type parset > /dev/null 2>&1; then
+  if $PARSET; then
+    source "$(which env_parallel).bash"
     parset proc,load \
       ::: get_proc get_load ::: "$host"
   else
@@ -46,19 +53,20 @@ export -f host_report
 function get_proc {
   local host="$1"
 
-  $TIMEOUT $CURFEW \
-    ssh "$host" "nproc --all"
+  $DOSSH "$host" "nproc --all"
 }
 export -f get_proc
 
 function get_load {
   local host="$1"
 
-  $TIMEOUT $CURFEW \
-    ssh "$host" uptime \
+  local uptime="$($DOSSH "$host" "uptime")"
+  if [ -n "$uptime" ]; then
+    echo "$uptime"     \
       | sed 's/.*://'  \
       | sed 's/,//g'   \
       | xargs printf "%7.2f"
+  fi
 }
 export -f get_load
 
