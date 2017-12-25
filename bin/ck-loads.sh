@@ -13,7 +13,7 @@ caribou.cs.washington.edu
 plover.cs.washington.edu
 "
 
-export CURFEW=5
+export CURFEW=10
 export TIMEOUT="timeout"
 command -v gtimeout > /dev/null 2>&1 && \
   TIMEOUT="gtimeout"
