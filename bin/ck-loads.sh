@@ -108,14 +108,14 @@ export -f host_report
 function get_proc {
   local host="$1"
 
-  $DOSSH "$host" "nproc --all"
+  $DOSSH "$host" "nproc --all" || true
 }
 export -f get_proc
 
 function get_load {
   local host="$1"
 
-  local uptime="$($DOSSH "$host" "uptime")"
+  local uptime="$($DOSSH "$host" "uptime" || true)"
   if [ -n "$uptime" ]; then
     echo "$uptime"     \
       | sed 's/.*://'  \
