@@ -1,6 +1,35 @@
 #!/usr/bin/env bash
 
-readonly HOSTS="
+# exit on error
+set -e
+
+# determine physical directory of this script
+src="${BASH_SOURCE[0]}"
+while [ -L "$src" ]; do
+  dir="$(cd -P "$(dirname "$src")" && pwd)"
+  src="$(readlink "$src")"
+  [[ $src != /* ]] && src="$dir/$src"
+done
+MYDIR="$(cd -P "$(dirname "$src")" && pwd)"
+
+# include my bash library
+source "$MYDIR/include.sh"
+
+function usage {
+  echo "
+$(basename $0) -h -t N -l DIR
+
+Report average loads for cycle servers.
+
+OPTIONS:
+
+  -h      print this usage information and exit
+  -t N    timeout after N seconds for each host (default 10)
+  -l DIR  log 5-minute average loads per host to CSVs in DIR
+"
+}
+
+HOSTS="
 recycle.cs.washington.edu
 bicycle.cs.washington.edu
 tricycle.cs.washington.edu
@@ -13,22 +42,40 @@ caribou.cs.washington.edu
 plover.cs.washington.edu
 "
 
-export CURFEW=10
-export TIMEOUT="timeout"
-command -v gtimeout > /dev/null 2>&1 && \
-  TIMEOUT="gtimeout"
-export SSHOPTS="-oStrictHostKeyChecking=no"
-export DOSSH="$TIMEOUT $CURFEW ssh $SSHOPTS"
+CURFEW=10
+LOG=""
 
-export PARSET=false
-if which env_parallel > /dev/null 2>&1; then
-  source "$(which env_parallel).bash"
-  if type parset > /dev/null 2>&1; then
-    PARSET=true
+function parse_args {
+  while getopts ":ht:l:" OPT; do
+    case "$OPT" in
+      h) usage; exit 0  ;;
+      t) CURFEW=$OPTARG ;;
+      l) LOG=$OPTARG    ;;
+      :) usage_error "-$OPTARG requires an argument" ;;
+      *) usage_error "bogus option '-$OPTARG'"       ;;
+    esac
+  done
+
+  assert_nonnegi "timeout" "$CURFEW"
+
+  PARSET=false
+  if which env_parallel > /dev/null 2>&1; then
+    source "$(which env_parallel).bash"
+    if type parset > /dev/null 2>&1; then
+      PARSET=true
+    fi
   fi
-fi
+
+  SSHOPTS="-oStrictHostKeyChecking=no"
+  DOSSH="$TIMEOUT $CURFEW ssh $SSHOPTS"
+
+  # prevent changing arg globals + share with subshells
+  readonly HOSTS CURFEW LOG PARSET SSHOPTS DOSSH
+  export   HOSTS CURFEW LOG PARSET SSHOPTS DOSSH
+}
 
 function main {
+  parse_args "$@"
   parallel host_report ::: $HOSTS
 }
 
@@ -45,8 +92,16 @@ function host_report {
     local load="$(get_load "$host")"
   fi
 
-  printf "%10s %4s %s\n" \
-    "$name" "$proc" "$load"
+  if [ "$LOG" = "" ]; then
+    printf "%10s %4s %s\n" \
+      "$name" "$proc" "$load"
+  else
+    mkdir -p "$LOG"
+    local log="$LOG/$name.csv"
+    local al5="$(echo "$load" | $AWK '{ print $2 }')"
+    echo "$($DATE +%s),$al5" >> "$log"
+    clean_log "$log"
+  fi
 }
 export -f host_report
 
@@ -69,5 +124,13 @@ function get_load {
   fi
 }
 export -f get_load
+
+function clean_log {
+  local log="$1"
+
+  #TODO
+  return 0
+}
+export -f clean_log
 
 main "$@"
