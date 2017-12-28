@@ -97,7 +97,7 @@ function host_report {
       "$name" "$proc" "$load"
   else
     local log="$LOG/$name.csv"
-    local hdr="host,cores,load1,load5,load15"
+    local hdr="date,cores,load1,load5,load15"
 
     mkdir -p "$LOG"
     [ ! -f "$log" ] \
