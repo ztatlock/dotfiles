@@ -1,7 +1,5 @@
 SHELL=/bin/bash
 
-*/5 * * * * $HOME/bin/ck-loads.sh -l $HOME/public_html
-
 #30 2 * * * $HOME/herbie/infra/run.sh
 
 0  0 * * * cd $HOME/reincarnate && git pull --quiet

@@ -96,10 +96,14 @@ function host_report {
     printf "%10s %4s %s\n" \
       "$name" "$proc" "$load"
   else
-    mkdir -p "$LOG"
     local log="$LOG/$name.csv"
-    local al5="$(echo "$load" | $AWK '{ print $2 }')"
-    echo "$($DATE +%s),$al5" >> "$log"
+    local hdr="host,cores,load1,load5,load15"
+
+    mkdir -p "$LOG"
+    [ ! -f "$log" ] \
+      && echo "$hdr" > "$log"
+
+    csvify "$proc" "$load" >> "$log"
     clean_log "$log"
   fi
 }
@@ -125,11 +129,21 @@ function get_load {
 }
 export -f get_load
 
+function csvify {
+  local proc="$1"
+  local load="$2"
+
+  echo -n "$($DATE +%s),"
+  echo -n "${proc},"
+  echo "$load" | $AWK 'BEGIN {OFS=","} {print $1,$2,$3}'
+}
+export -f csvify
+
 function clean_log {
   local log="$1"
 
-  #TODO
-  return 0
+  #TODO remove entries older than... a month?
+  return  0
 }
 export -f clean_log
 
