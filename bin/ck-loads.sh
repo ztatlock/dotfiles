@@ -24,7 +24,7 @@ Report average loads for cycle servers.
 OPTIONS:
 
   -h      print this usage information and exit
-  -t N    timeout after N seconds for each host (default 10)
+  -t N    timeout after N seconds for each host (default 15)
   -l DIR  log 5-minute average loads per host to CSVs in DIR
 "
 }
@@ -43,7 +43,7 @@ plover.cs.washington.edu
 uwplse.org
 "
 
-CURFEW=10
+CURFEW=15
 LOG=""
 
 function parse_args {
@@ -86,25 +86,26 @@ function host_report {
 
   if $PARSET; then
     source "$(which env_parallel).bash"
-    parset proc,load \
-      ::: get_proc get_load ::: "$host"
+    parset proc,load,disk \
+      ::: get_proc get_load get_disk ::: "$host"
   else
     local proc="$(get_proc "$host")"
     local load="$(get_load "$host")"
+    local disk="$(get_disk "$host")"
   fi
 
   if [ "$LOG" = "" ]; then
-    printf "%10s %4s %s\n" \
-      "$name" "$proc" "$load"
+    printf "%10s %4s %11s %4s\n" \
+      "$name" "$proc" "$load" "$disk"
   else
     local log="$LOG/$name.csv"
-    local hdr="date,cores,load1,load5,load15"
+    local hdr="date,cores,load1,load5,load15,disk"
 
     mkdir -p "$LOG"
     [ ! -f "$log" ] \
       && echo "$hdr" > "$log"
 
-    csvify "$proc" "$load" >> "$log"
+    csvify "$proc" "$load" "$disk" >> "$log"
     clean_log "$log"
   fi
 }
@@ -130,13 +131,30 @@ function get_load {
 }
 export -f get_load
 
+function get_disk {
+  local host="$1"
+
+  local df="$($DOSSH "$host" "df -h" || true)"
+  if [ -n "$df" ]; then
+    echo "$df" \
+      | $AWK '$6 == "/" { print $5 }'
+  fi
+}
+export -f get_disk
+
 function csvify {
   local proc="$1"
   local load="$2"
+  local disk="$3"
 
-  echo -n "$($DATE +%s),"
-  echo -n "${proc},"
-  echo "$load" | $AWK 'BEGIN {OFS=","} {print $1,$2,$3}'
+  local l1="$($AWK '{print $1}' <<< "$load")"
+  local l2="$($AWK '{print $2}' <<< "$load")"
+  local l3="$($AWK '{print $3}' <<< "$load")"
+  local dp="$($SED 's/%//' <<< "$disk")"
+
+  printf "%s,%d,%0.2f,%0.2f,%0.2f,%d\n" \
+    "$($DATE +%s)"                      \
+    "$proc" "$l1" "$l2" "$l3" "$dp"
 }
 export -f csvify
 

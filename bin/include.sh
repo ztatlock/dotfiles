@@ -78,20 +78,31 @@ export -f prompt_continue
 
 # use GNU utils if available
 
-export DATE="date"
-command -v gdate > /dev/null 2>&1 && \
-  DATE="gdate"
+command -v gdate > /dev/null 2>&1 \
+  && DATE="gdate" \
+  || DATE="date"
 
-export TIME="command time"
-command -v gtime > /dev/null 2>&1 && \
-  TIME="command gtime"
+command -v gtime > /dev/null 2>&1 \
+  && TIME="command gtime" \
+  || TIME="command time"
 
-export AWK="awk -W lint=fatal"
-command -v gawk > /dev/null 2>&1 && \
-  AWK="gawk -W lint=fatal"
+command -v gawk > /dev/null 2>&1 \
+  && AWK="gawk" \
+  || AWK="awk"
 
-export TIMEOUT="timeout"
-command -v gtimeout > /dev/null 2>&1 && \
-  TIMEOUT="gtimeout"
+command -v gnu-sed > /dev/null 2>&1 \
+  && SED="gnu-sed" \
+  || SED="sed"
 
+command -v gtimeout > /dev/null 2>&1 \
+  && TIMEOUT="gtimeout" \
+  || TIMEOUT="timeout"
+
+command -v gdf > /dev/null 2>&1 \
+  && DF="gdf" \
+  || DF="df"
+
+export DATE TIME AWK SED TIMEOUT DF
+
+# ensure exit status 0
 true
