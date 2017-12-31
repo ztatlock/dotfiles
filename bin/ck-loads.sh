@@ -40,6 +40,7 @@ warfa.cs.washington.edu
 buffalo.cs.washington.edu
 caribou.cs.washington.edu
 plover.cs.washington.edu
+uwplse.org
 "
 
 CURFEW=10
