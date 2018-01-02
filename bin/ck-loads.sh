@@ -115,7 +115,7 @@ function host_report {
     ; echo                     \
     ; echo '# free -h'         \
     ; $DOSSH "$host" 'free -h' \
-    ; } > "$LOG/${host}-stats.txt"
+    ; } > "$LOG/${name}-stats.txt"
   fi
 }
 export -f host_report
