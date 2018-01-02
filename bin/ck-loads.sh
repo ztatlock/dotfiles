@@ -107,6 +107,15 @@ function host_report {
 
     csvify "$proc" "$load" "$disk" >> "$log"
     clean_log "$log"
+
+    { echo '# lscpu'           \
+    ; echo                     \
+    ; $DOSSH "$host" 'lscpu'   \
+    ; echo                     \
+    ; echo                     \
+    ; echo '# free -h'         \
+    ; $DOSSH "$host" 'free -h' \
+    ; } > "$LOG/${host}-stats.txt"
   fi
 }
 export -f host_report
@@ -114,14 +123,14 @@ export -f host_report
 function get_proc {
   local host="$1"
 
-  $DOSSH "$host" "nproc --all" || true
+  $DOSSH "$host" 'nproc --all' || true
 }
 export -f get_proc
 
 function get_load {
   local host="$1"
 
-  local uptime="$($DOSSH "$host" "uptime" || true)"
+  local uptime="$($DOSSH "$host" 'uptime' || true)"
   if [ -n "$uptime" ]; then
     echo "$uptime"     \
       | sed 's/.*://'  \
