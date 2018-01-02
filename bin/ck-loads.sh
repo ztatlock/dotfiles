@@ -108,7 +108,9 @@ function host_report {
     csvify "$proc" "$load" "$disk" >> "$log"
     clean_log "$log"
 
-    { echo '# lscpu'           \
+    { echo "$host stats:"      \
+    ; echo                     \
+    ; echo '# lscpu'           \
     ; echo                     \
     ; $DOSSH "$host" 'lscpu'   \
     ; echo                     \
