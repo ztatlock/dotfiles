@@ -98,26 +98,28 @@ function host_report {
     printf "%10s %4s %11s %4s\n" \
       "$name" "$proc" "$load" "$disk"
   else
-    local log="$LOG/$name.csv"
+    local log="$LOG/${name}.csv"
     local hdr="date,cores,load1,load5,load15,disk"
 
     mkdir -p "$LOG"
-    [ ! -f "$log" ] \
-      && echo "$hdr" > "$log"
+    [ ! -f "$log" ] && \
+      echo "$hdr" > "$log"
 
     csvify "$proc" "$load" "$disk" >> "$log"
     clean_log "$log"
 
-    { echo "$host stats:"      \
-    ; echo                     \
-    ; echo '# lscpu'           \
-    ; echo                     \
-    ; $DOSSH "$host" 'lscpu'   \
-    ; echo                     \
-    ; echo                     \
-    ; echo '# free -h'         \
-    ; $DOSSH "$host" 'free -h' \
-    ; } > "$LOG/${name}-stats.txt"
+    local stats="$LOG/${name}-stats.txt"
+    [ ! -f "$stats" ] && \
+      { echo "$host stats on $($DATE):"  \
+      ; echo                             \
+      ; echo '# lscpu'                   \
+      ; echo                             \
+      ; $DOSSH "$host" 'lscpu' || true   \
+      ; echo                             \
+      ; echo                             \
+      ; echo '# free -h'                 \
+      ; $DOSSH "$host" 'free -h' || true \
+      ; } > "$LOG/${name}-stats.txt"
   fi
 }
 export -f host_report
