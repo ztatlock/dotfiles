@@ -120,12 +120,12 @@ function host_report {
 export -f host_report
 
 function host_report_aux {
-  avg01="$(uptime | awk '{print $(NF - 2) }' | sed 's/,//')"
-  avg05="$(uptime | awk '{print $(NF - 1) }' | sed 's/,//')"
-  avg15="$(uptime | awk '{print $(NF - 0) }' | sed 's/,//')"
-  disku="$(df | awk '$6 == "/" { print $5 }' | sed 's/%//')"
-  chaos="$(cat /proc/sys/kernel/random/entropy_avail)"
-  procs="$(nproc --all)"
+  avg01="$(uptime | awk '{print $(NF - 2) }' | sed 's/,//' || echo '-1')"
+  avg05="$(uptime | awk '{print $(NF - 1) }' | sed 's/,//' || echo '-1')"
+  avg15="$(uptime | awk '{print $(NF - 0) }' | sed 's/,//' || echo '-1')"
+  disku="$(df | awk '$6 == "/" { print $5 }' | sed 's/%//' || echo '-1')"
+  chaos="$(cat /proc/sys/kernel/random/entropy_avail       || echo '-1')"
+  procs="$(nproc --all                                     || echo '-1')"
 
   printf "%s,%s,%s,%s,%s,%s\n" \
     $avg01 $avg05 $avg15       \
