@@ -1,15 +1,16 @@
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+export   LC_ALL=en_US.UTF-8
+export     LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
 PATH="/usr/local/bin:$PATH"
 
 # on dept machine
 if [ "$HOME" = "/homes/gws/ztatlock" ]; then
-  PATH="$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH"
-
-  # makes linuxbrew doctor happy
-  export XDG_DATA_DIRS="$HOME/.linuxbrew/share:$XDG_DATA_DIRS"
+  LBREW="$HOME/.linuxbrew"
+  export     PATH="$LBREW/sbin:$PATH"
+  export     PATH="$LBREW/bin:$PATH"
+  export  MANPATH="$LBREW/share/man:$MANPATH"
+  export INFOPATH="$LBREW/share/info:$INFOPATH"
 
   # for gnuplot 5
   export LD_LIBRARY_PATH="$HOME/local/lib:$LD_LIBRARY_PATH"
