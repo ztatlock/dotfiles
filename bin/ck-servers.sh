@@ -104,17 +104,13 @@ function host_report {
     clean_log "$log"
 
     local stats="$LOG/${name}-stats.txt"
-    [ ! -f "$stats" ] && \
-      { echo "$host stats on $($DATE):"  \
-      ; echo                             \
-      ; echo '# lscpu'                   \
-      ; echo                             \
-      ; $DOSSH "$host" 'lscpu' || true   \
-      ; echo                             \
-      ; echo                             \
-      ; echo '# free -h'                 \
-      ; $DOSSH "$host" 'free -h' || true \
-      ; } > "$LOG/${name}-stats.txt"
+    if [ ! -f "$stats" ] \
+    || [ $(stat --format=%Y "$stats") -le $(($($DATE +%s) - 3600)) ]; then
+      { echo "$host stats on $($DATE):"                         \
+      ; $DOSSH "$host" "$(typeset -f host_status); host_status" \
+          || echo "FAILED"                                      \
+      ; } > "$stats"
+    fi
   fi
 }
 export -f host_report
@@ -133,11 +129,44 @@ function host_report_aux {
 }
 export -f host_report_aux
 
+function host_status {
+  echo '# uptime'
+  uptime
+  echo
+
+  echo '# lscpu'
+  lscpu
+  echo
+
+  echo '# free -h'
+  free -h
+  echo
+}
+export -f host_status
+
 function clean_log {
   local log="$1"
 
+  awk -F',' '
+    # keep header
+    NR < 2 {
+      print $0
+      next
+    }
+
+    # drop bad rows
+    NF < 7 {
+      next
+    }
+
+    # print everything else
+    {
+      print $0
+    }
+  ' "$log" > "$log.tmp"
+  mv "$log.tmp" "$log"
+
   #TODO remove entries older than... a month?
-  return  0
 }
 export -f clean_log
 
