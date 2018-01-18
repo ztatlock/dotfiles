@@ -89,23 +89,15 @@ function host_report {
     local procs="$(echo "$report" | cut -d ',' -f 6)"
 
     printf "%-10s  %7.2f  %7.2f  %7.2f  %2d%%  %5d  %3d\n" \
-      $name \
+      $name                \
       $avg01 $avg05 $avg15 \
       $disku $chaos $procs
-
   else
-    local log="$LOG/${name}.csv"
-    local hdr="date,load1,load5,load15,disk,entropy,cores"
-
-    mkdir -p "$LOG"
-    [ ! -f "$log" ] && \
-      echo "$hdr" > "$log"
-    echo "$($DATE +%s),$report" >> "$log"
-    clean_log "$log"
+    update_log "$LOG/${name}.csv" "$report"
 
     local stats="$LOG/${name}-stats.txt"
     if [ ! -f "$stats" ] \
-    || [ $(stat --format=%Y "$stats") -le $(($($DATE +%s) - 3600)) ]; then
+    || [ $($STAT --format=%Y "$stats") -le $(($($DATE +%s) - 3600)) ]; then
       { echo "$host stats on $($DATE):"                         \
       ; $DOSSH "$host" "$(typeset -f host_status); host_status" \
           || echo "FAILED"                                      \
@@ -130,27 +122,35 @@ function host_report_aux {
 export -f host_report_aux
 
 function host_status {
+  echo
   echo '# uptime'
   uptime
-  echo
 
+  echo
   echo '# lscpu'
   lscpu
-  echo
 
+  echo
   echo '# free -h'
   free -h
-  echo
 }
 export -f host_status
 
-function clean_log {
+function update_log {
   local log="$1"
+  local row="$2"
+  local hdr="date,load1,load5,load15,disk,entropy,cores"
 
-  awk -F',' '
-    # keep header
+  # ensure log exists
+  mkdir -p "$LOG"
+  [ ! -s "$log" ] && \
+    echo "$hdr" > "$log"
+
+  awk -F',' "
+    # keep header and add new row
     NR < 2 {
-      print $0
+      print \"$hdr\"
+      print \"$($DATE +%s),$row\"
       next
     }
 
@@ -159,15 +159,18 @@ function clean_log {
       next
     }
 
+    # drop old rows
+    NR > 1024 {
+      next
+    }
+
     # print everything else
     {
-      print $0
+      print \$0
     }
-  ' "$log" > "$log.tmp"
+  " "$log" > "$log.tmp"
   mv "$log.tmp" "$log"
-
-  #TODO remove entries older than... a month?
 }
-export -f clean_log
+export -f update_log
 
 main "$@"

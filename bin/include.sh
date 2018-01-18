@@ -102,7 +102,11 @@ command -v gdf > /dev/null 2>&1 \
   && DF="gdf" \
   || DF="df"
 
-export DATE TIME AWK SED TIMEOUT DF
+command -v gstat > /dev/null 2>&1 \
+  && STAT="gstat" \
+  || STAT="stat"
+
+export DATE TIME AWK SED TIMEOUT DF STAT
 
 # ensure exit status 0
 true
