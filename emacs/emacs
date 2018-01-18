@@ -2,9 +2,13 @@
 ;; Do not use tabs
 (setq-default indent-tabs-mode nil)
 
-;; Do not show start up buffer
+;; Do not show start up buffer or toolbar
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-message t)
+(tool-bar-mode -1)
+
+;; show matching parens
+(show-paren-mode 1)
 
 ;; Open .v files with Proof General's Coq mode
 (load "~/.emacs.d/lisp/PG/generic/proof-site")
