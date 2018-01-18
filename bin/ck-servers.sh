@@ -80,6 +80,9 @@ function host_report {
   local report="$($DOSSH "$host" \
     "$(typeset -f host_report_aux); host_report_aux")"
 
+  [ -z "$report" ] && \
+    error "no response from $name"
+
   if [ "$LOG" = "" ]; then
     local avg01="$(echo "$report" | cut -d ',' -f 1)"
     local avg05="$(echo "$report" | cut -d ',' -f 2)"
@@ -108,12 +111,12 @@ function host_report {
 export -f host_report
 
 function host_report_aux {
-  avg01="$(uptime | awk '{print $(NF - 2) }' | sed 's/,//' || echo '-1')"
-  avg05="$(uptime | awk '{print $(NF - 1) }' | sed 's/,//' || echo '-1')"
-  avg15="$(uptime | awk '{print $(NF - 0) }' | sed 's/,//' || echo '-1')"
-  disku="$(df | awk '$6 == "/" { print $5 }' | sed 's/%//' || echo '-1')"
-  chaos="$(cat /proc/sys/kernel/random/entropy_avail       || echo '-1')"
-  procs="$(nproc --all                                     || echo '-1')"
+  avg01="$(uptime | awk '{print $(NF - 2) }' | sed 's/,//')"
+  avg05="$(uptime | awk '{print $(NF - 1) }' | sed 's/,//')"
+  avg15="$(uptime | awk '{print $(NF - 0) }' | sed 's/,//')"
+  disku="$(df | awk '$6 == "/" { print $5 }' | sed 's/%//')"
+  chaos="$(cat /proc/sys/kernel/random/entropy_avail      )"
+  procs="$(nproc --all                                    )"
 
   printf "%s,%s,%s,%s,%s,%s\n" \
     $avg01 $avg05 $avg15       \
