@@ -55,6 +55,15 @@ function assert_nonnegi {
 }
 export -f assert_nonnegi
 
+function assert_nonemptys {
+  local name="$1"
+  local val="$2"
+
+  [ -z "$val" ] && \
+    usage_error "$name must be a non-empty string, got '$val'"
+}
+export -f assert_nonemptys
+
 function prompt_yn {
   local msg="$1"
   local response
