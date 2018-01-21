@@ -39,6 +39,8 @@ function parse_args {
       *) usage_error "bogus option '-$OPTARG'"       ;;
     esac
   done
+  [ $OPTIND -le $# ] && \
+    usage_error "bogus option '$(eval echo \$$OPTIND)' (\$$OPTIND)"
 
   assert_nonnegi "sleep" "$NAP"
 
