@@ -1,6 +1,6 @@
 SHELL=/bin/bash
 
-#30 2 * * * $HOME/herbie/infra/run.sh
+30 2 * * * $HOME/herbie/infra/run.sh
 
 0  0 * * * cd $HOME/reincarnate && git pull --quiet
 30 0 * * * $HOME/reincarnate/src/script/nightly.sh -c medium -j 4
