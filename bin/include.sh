@@ -59,8 +59,9 @@ function assert_nonemptys {
   local name="$1"
   local val="$2"
 
-  [ -z "$val" ] && \
+  if [ -z "$val" ]; then
     usage_error "$name must be a non-empty string, got '$val'"
+  fi
 }
 export -f assert_nonemptys
 
