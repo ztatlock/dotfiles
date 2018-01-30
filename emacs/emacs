@@ -15,7 +15,8 @@
 
 ;; Highlight tabs, lines over 80 columns, and trailing whitespace
 (require 'whitespace)
-(setq whitespace-style '(face tabs lines-tail trailing))
+;(setq whitespace-style '(face tabs lines-tail trailing))
+(setq whitespace-style '(face tabs lines-tail))
 (global-whitespace-mode t)
 
 ;; Open .v files with Proof General's Coq mode
