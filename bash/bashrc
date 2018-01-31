@@ -3,6 +3,7 @@ export     LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
 PATH="/usr/local/bin:$PATH"
+PATH="$HOME/local/bin:$PATH"
 
 # on dept machine
 if [ "$HOME" = "/homes/gws/ztatlock" ]; then
@@ -14,7 +15,6 @@ if [ "$HOME" = "/homes/gws/ztatlock" ]; then
 
   # for gnuplot 5
   export LD_LIBRARY_PATH="$HOME/local/lib:$LD_LIBRARY_PATH"
-  PATH="$HOME/local/bin:$PATH"
 fi
 
 # on macOS
@@ -33,6 +33,13 @@ if [ "$(uname)" = "Darwin" ]; then
   lr="$(latest_racket)"
   [ "$lr" != "" ] \
     && PATH="$lr/bin:$PATH"
+fi
+
+# HOL
+HOLDIR="$HOME/local/src/HOL"
+if [ -d "$HOLDIR" ]; then
+  export HOLDIR
+  PATH="$HOLDIR/bin:$PATH"
 fi
 
 # OPAM configuration
