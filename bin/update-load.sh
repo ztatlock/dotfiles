@@ -16,6 +16,7 @@ readonly MYDIR="$(cd -P "$(dirname "$src")" && pwd)"
 source "$MYDIR/include.sh"
 
 LOG=""
+NAP=250
 
 function usage {
   echo "
@@ -26,29 +27,35 @@ Update load log csv.
 OPTIONS:
 
   -h      print this usage information and exit
+  -d N    randomly delay up to N seconds (default 250)
   -l DIR  log results to per host CSVs in DIR (required)
 "
 }
 
 function parse_args {
-  while getopts ":hl:" OPT; do
+  while getopts ":hd:l:" OPT; do
     case "$OPT" in
-      h) usage; exit 0  ;;
-      l) LOG=$OPTARG    ;;
+      h) usage; exit 0 ;;
+      d) NAP=$OPTARG   ;;
+      l) LOG=$OPTARG   ;;
       :) usage_error "-$OPTARG requires an argument" ;;
       *) usage_error "bogus option '-$OPTARG'"       ;;
     esac
   done
 
+  assert_nonnegi "delay" "$NAP"
   assert_nonemptys "log" "$LOG"
 
   # prevent changing arg globals + share with subshells
-  readonly LOG
-  export   LOG
+  readonly NAP LOG
+  export   NAP LOG
 }
 
 function main {
   parse_args "$@"
+
+  # random delay to avoid hammering NFS
+  sleep $(expr $RANDOM \% $NAP)
 
   local host="$(hostname)"
   local name="$(echo "$host" | cut -d '.' -f 1)"
