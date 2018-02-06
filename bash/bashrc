@@ -42,6 +42,12 @@ if [ -d "$HOLDIR" ]; then
   PATH="$HOLDIR/bin:$PATH"
 fi
 
+# CakeML
+CAKEMLDIR="$HOME/research/cakeml"
+if [ -d "$CAKEMLDIR" ]; then
+  export CAKEMLDIR
+fi
+
 # OPAM configuration
 source "$HOME/.opam/opam-init/init.sh" &> /dev/null || true
 
