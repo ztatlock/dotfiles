@@ -1,6 +1,6 @@
 SHELL=/bin/bash
 
-LOCAL_LOADS=$HOME/loads/
+LOCAL_LOADS=/home/ztatlock/loads/
 
 30 2 * * * $HOME/herbie/infra/run.sh
 
