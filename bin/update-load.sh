@@ -94,6 +94,9 @@ function host_status {
 
   echo '# free -h'
   free -h
+
+  echo '# df -h'
+  df -h
 }
 
 function update_log {
