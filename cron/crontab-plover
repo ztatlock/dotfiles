@@ -4,4 +4,4 @@ LOCAL_LOADS=/cse/web/homes/ztatlock/loads/
 
 */5 * * * * source $HOME/.bashrc; $HOME/bin/update-load.sh -l  $LOCAL_LOADS 2> /dev/null
 
-17  * * * * scp 'warfa.cs.washington.edu:~/loads/warfa*' $LOCAL_LOADS
+*/10 * * * * sleep `expr $RANDOM \% 720`; scp 'warfa.cs.washington.edu:~/loads/warfa*' $LOCAL_LOADS
