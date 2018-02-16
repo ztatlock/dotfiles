@@ -27,7 +27,7 @@ if [ "$(uname)" = "Darwin" ]; then
         | head -n 1)"
 
     [ "$lr" != "" ] \
-      && echo "/Applications/$r"
+      && echo "/Applications/$lr"
   }
 
   lr="$(latest_racket)"
