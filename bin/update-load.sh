@@ -125,7 +125,7 @@ function update_log {
     }
 
     # drop old rows
-    NR > 1024 {
+    NR > 10000 {
       next
     }
 
