@@ -5,4 +5,4 @@ REINCARNATE=/scratch/ztatlock/reincarnate
 */5 * * * * source $HOME/.bashrc; $HOME/bin/update-load.sh -l $LOCAL_LOADS/ 2> /dev/null
 
 0  0 * * * cd $REINCARNATE && git pull --quiet
-30 0 * * * $REINCARNATE/src/script/nightly.sh -c medium -j 4
+30 0 * * * cd $REINCARNATE && $REINCARNATE/src/script/nightly.sh -c medium -j 4
