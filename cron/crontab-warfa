@@ -2,7 +2,7 @@ SHELL=/bin/bash
 LOCAL_LOADS=/home/ztatlock/loads
 HERBIE=/home/ztatlock/herbie
 
-30 2 * * * $HERBIE/infra/run.sh
+#30 2 * * * $HERBIE/infra/run.sh
 
 */5 * * * * source $HOME/.bashrc; $HOME/bin/update-load.sh -l $LOCAL_LOADS/ 2> /dev/null
 
