@@ -13,4 +13,4 @@ cookies = f.read().split('<<<>>>')
 f.close()
 
 c = random.choice(cookies)
-print c.strip()
+print(c.strip())
