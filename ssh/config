@@ -48,29 +48,17 @@ Host uwplse
   HostName uwplse.org
   User ztatlock
 
-Host reincarnate
-  HostName reincarnate.cs.washington.edu
+Host caribou
+  HostName caribou.cs.washington.edu
   User ztatlock
 
-Host sysv
-  HostName sysv.cs.washington.edu
+Host buffalo
+  HostName buffalo.cs.washington.edu
   User ztatlock
 
-Host hobo
-  HostName hobo.sysnet.ucsd.edu
+Host plover
+  HostName plover.cs.washington.edu
   User ztatlock
-
-Host goto
-  HostName goto.ucsd.edu
-  User ztatlock
-
-Host scara
-  HostName scara.cs.washington.edu
-  User zach
-
-Host robosalmon
-  HostName robosalmon.cs.washington.edu
-  User plse
 
 Host barb
   HostName barb.cs.washington.edu
@@ -106,6 +94,10 @@ Host plseaudio
 
 Host klaatu
   HostName klaatu.cs.washington.edu
+  User ztatlock
+
+Host goto
+  HostName goto.ucsd.edu
   User ztatlock
 
 Host *
