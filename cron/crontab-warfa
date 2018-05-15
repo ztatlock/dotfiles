@@ -2,8 +2,3 @@ SHELL=/bin/bash
 LOCAL_LOADS=/home/ztatlock/loads
 
 */5 * * * * source $HOME/.bashrc; $HOME/bin/update-load.sh -l $LOCAL_LOADS/ 2> /dev/null
-
-# NOTE: moved reincarnate nightlies to caribou
-# REINCARNATE=/home/ztatlock/reincarnate
-# 0  0 * * * cd $HOME/reincarnate && git pull --quiet
-# 30 0 * * * $HOME/reincarnate/src/script/nightly.sh -c medium -j 4

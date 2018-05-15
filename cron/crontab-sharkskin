@@ -1,0 +1,5 @@
+SHELL=/bin/bash
+REINCARNATE=/Users/ztatlock/research/reincarnate
+
+0   0 * * * source $HOME/.bashrc; cd $REINCARNATE && git pull --quiet
+30  0 * * * source $HOME/.bashrc; cd $REINCARNATE && $REINCARNATE/src/script/nightly.sh -c medium -j 7

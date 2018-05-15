@@ -1,8 +1,8 @@
 SHELL=/bin/bash
 LOCAL_LOADS=/cse/web/homes/ztatlock/loads
-REINCARNATE=/scratch/ztatlock/reincarnate
 
 */5 * * * * source $HOME/.bashrc; $HOME/bin/update-load.sh -l $LOCAL_LOADS/ 2> /dev/null
 
-0   0 * * * source $HOME/.bashrc; cd $REINCARNATE && git pull --quiet
-30  0 * * * source $HOME/.bashrc; cd $REINCARNATE && $REINCARNATE/src/script/nightly.sh -c medium -j 4
+# caribou fetches group machine loads
+*/20 * * * * sleep `expr $RANDOM \% 600`; scp 'warfa.cs.washington.edu:~/loads/warfa*' $LOCAL_LOADS
+*/20 * * * * sleep `expr $RANDOM \% 600`; scp             'uwplse.org:~/loads/uwplse*' $LOCAL_LOADS
