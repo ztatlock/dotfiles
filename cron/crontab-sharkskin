@@ -1,5 +1,6 @@
 SHELL=/bin/bash
 REINCARNATE=/Users/ztatlock/research/reincarnate
+RNIGHTLY=/Users/ztatlock/research/reincarnate/src/script/nightly.sh
 
-0   0 * * * source $HOME/.bashrc; cd $REINCARNATE && git pull --quiet
-30  0 * * * source $HOME/.bashrc; cd $REINCARNATE && $REINCARNATE/src/script/nightly.sh -c medium -j 7
+0   0 * * * source $HOME/.bashrc; cd $REINCARNATE && $RNIGHTLY -u
+10  0 * * * source $HOME/.bashrc; cd $REINCARNATE && $RNIGHTLY -c medium -j 8
