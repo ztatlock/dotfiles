@@ -44,6 +44,10 @@ Host warfa
   HostName warfa.cs.washington.edu
   User ztatlock
 
+Host pipsqueak
+  HostName pipsqueak.cs.washington.edu
+  User ztatlock
+
 Host uwplse
   HostName uwplse.org
   User ztatlock
