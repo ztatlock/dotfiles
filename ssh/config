@@ -47,6 +47,7 @@ Host warfa
 Host pipsqueak
   HostName pipsqueak.cs.washington.edu
   User ztatlock
+  ProxyJump warfa
 
 Host uwplse
   HostName uwplse.org
