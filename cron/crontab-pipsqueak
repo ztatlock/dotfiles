@@ -1,0 +1,7 @@
+SHELL=/bin/bash
+REINCARNATE=/home/ztatlock/research/reincarnate-nightlies
+RNIGHTLY=/home/ztatlock/research/reincarnate-nightlies/src/script/nightly.sh
+
+0   0 * * * source $HOME/.bashrc; cd $REINCARNATE && $RNIGHTLY -u
+10  0 * * * source $HOME/.bashrc; cd $REINCARNATE && $RNIGHTLY -c small -j 24
+#10  0 * * * source $HOME/.bashrc; cd $REINCARNATE && $RNIGHTLY -c medium -j 24
