@@ -39,7 +39,8 @@ function main {
   git fetch
   # ensure working directory is clean and up to date
   if ! git merge-base --is-ancestor master origin/master \
-  || ! git diff-index --quiet HEAD; then
+  || ! git diff-index --quiet HEAD \
+  || [ $(git ls-files --exclude-standard --others | wc -c) -ne 0 ]; then
     echo "${RED}
 !!!
 !!! ERROR: dotfiles repo is not up to date
