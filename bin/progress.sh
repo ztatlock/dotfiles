@@ -3,7 +3,7 @@
 P="$HOME/Dropbox/progress"
 T="$P/TEMPLATE.md"
 
-if [ "$(gdate +'%A' -eq 'Saturday')"]; then
+if [ "$(gdate +'%A')" = 'Saturday' ]; then
   W="$P/$(gdate +'%y%m%d').md"
 else
   W="$P/$(gdate +'%y%m%d' -d 'last saturday').md"
