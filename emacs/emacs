@@ -14,10 +14,10 @@
 (setq-default indent-tabs-mode nil)
 
 ;; Highlight tabs, lines over 80 columns, and trailing whitespace
-(require 'whitespace)
-;(setq whitespace-style '(face tabs lines-tail trailing))
-(setq whitespace-style '(face tabs lines-tail))
-(global-whitespace-mode t)
+;(require 'whitespace)
+;;(setq whitespace-style '(face tabs lines-tail trailing))
+;(setq whitespace-style '(face tabs lines-tail))
+;(global-whitespace-mode t)
 
 ;; Open .v files with Proof General's Coq mode
 (load "~/.emacs.d/lisp/PG/generic/proof-site")
