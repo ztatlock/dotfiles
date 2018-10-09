@@ -1,17 +1,28 @@
 #!/usr/bin/env bash
 
-X="$(mktemp)"
+CODELINE="$(mktemp)"
 
-cat > "$X"
+cat > "$CODELINE"
 
-echo -n 'Working: '
-cat "$X" \
-  | fold -w 1 \
-  | grep W \
-  | awk 'END {print NR / 4}'
+function tally {
+  t=$(cat "$CODELINE" \
+      | fold -w 1 \
+      | grep "$1" \
+      | awk 'END {print NR / 4}')
+  if [ $(echo "$t > 0" | bc -l) = "1" ]; then
+    printf "  %0.2f - %s\n" "$t" "$2"
+  fi
+}
 
-echo -n 'Meeting: '
-cat "$X" \
-  | fold -w 1 \
-  | grep m \
-  | awk 'END {print NR / 4}'
+echo "Breakdown:"
+tally A "Advising"
+tally R "Research Team"
+tally r "Research Solo"
+tally E "Education Group"
+tally e "Education Solo"
+tally C "Communication"
+tally M "Management"
+tally L "Logistics"
+tally S "Service"
+
+rm -f "$CODELINE"
