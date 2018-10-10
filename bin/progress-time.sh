@@ -15,14 +15,16 @@ function tally {
 }
 
 echo "Breakdown:"
-tally A "Advising"
-tally R "Research Team"
 tally r "Research Solo"
-tally E "Education Group"
-tally e "Education Solo"
-tally C "Communication"
-tally M "Management"
-tally L "Logistics"
+tally R "Research Confab"
+tally a "Advising Tasks"
+tally A "Advising Confab"
+tally L "Learning"
+tally T "Teaching"
+tally E "Education"
+tally C "Comms"
 tally S "Service"
+tally M "Management"
+tally m "Misc."
 
 rm -f "$CODELINE"
