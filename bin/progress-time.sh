@@ -1,13 +1,29 @@
 #!/usr/bin/env bash
 
-MODE="PROGRESS"
-if [ "$1" = "-s" ]; then
+# exit on error
+set -e
+
+# save stdin to make multiple passes over it
+CODELINE="$(mktemp)"
+cat > "$CODELINE"
+
+MODE="BOTH"
+if [ "$1" = "-b" ]; then
+  MODE="BREAKDOWN"
+elif [ "$1" = "-s" ]; then
   MODE="SPREADSHEET"
 fi
 
-CODELINE="$(mktemp)"
-
-cat > "$CODELINE"
+# yuck
+if [ "$MODE" = "BOTH" ]; then
+  cat "$CODELINE"
+  echo
+  $0 -b < "$CODELINE"
+  echo
+  $0 -s < "$CODELINE"
+  rm "$CODELINE"
+  exit 0
+fi
 
 FIRST=true
 function tally {
@@ -16,7 +32,7 @@ function tally {
       | grep "$1" \
       | awk 'END {print NR / 4}')
   case "$MODE" in
-    "PROGRESS")
+    "BREAKDOWN")
       if [ $(echo "$t > 0" | bc -l) = "1" ]; then
         printf "  %0.2f - %s\n" "$t" "$2"
       fi
@@ -38,7 +54,7 @@ function tally {
   esac
 }
 
-if [ "$MODE" = "PROGRESS" ]; then
+if [ "$MODE" = "BREAKDOWN" ]; then
   echo "Breakdown:"
 fi
 
@@ -58,4 +74,4 @@ if [ "$MODE" = "SPREADSHEET" ]; then
   echo
 fi
 
-rm -f "$CODELINE"
+rm "$CODELINE"
