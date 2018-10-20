@@ -58,6 +58,7 @@ if [ "$MODE" = "BREAKDOWN" ]; then
   echo "Breakdown:"
 fi
 
+tally H "Research Hacking"
 tally r "Research Solo"
 tally R "Research Confab"
 tally a "Advising Tasks"
