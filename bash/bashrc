@@ -3,6 +3,7 @@ export     LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
 PATH="/usr/local/bin:$PATH"
+PATH="/usr/local/smlnj/bin:$PATH"
 PATH="$HOME/local/bin:$PATH"
 
 # on dept machine
