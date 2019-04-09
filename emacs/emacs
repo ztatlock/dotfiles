@@ -7,7 +7,7 @@
 (show-paren-mode 1)
 
 ;; big font for lecture
-(set-face-attribute 'default nil :height 320)
+(set-face-attribute 'default nil :height 240)
 
 ;; Show line and column numbers
 (setq line-number-mode t)
