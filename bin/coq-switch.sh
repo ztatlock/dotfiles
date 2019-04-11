@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# $ source switch-coq.sh
+# $ source coq-switch.sh
 
 if [ "$(uname)" = "Darwin" ]; then
   i=0
