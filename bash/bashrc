@@ -5,6 +5,7 @@ export LANGUAGE=en_US.UTF-8
 PATH="/usr/local/sbin:$PATH"
 PATH="/usr/local/bin:$PATH"
 PATH="/usr/local/smlnj/bin:$PATH"
+PATH="/usr/local/opt/ruby/bin:$PATH"
 PATH="$HOME/local/bin:$PATH"
 
 # on dept machine
