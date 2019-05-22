@@ -6,4 +6,4 @@ pdfnup \
   --frame true \
   --scale 0.95 \
   --quiet \
-  $1
+  "$1"
