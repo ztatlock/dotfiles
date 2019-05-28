@@ -6,20 +6,28 @@ set -e
 TO_READ="$HOME/Dropbox/to-read"
 
 function main {
-  echo "Doug thesis"
-  doug_thesis &> /dev/null
+  prompt "Doug thesis" doug_thesis
+  prompt "James thesis" james_thesis
+  prompt "Pavel thesis" pavel_thesis
+  prompt "Shumo thesis" shumo_thesis
+  prompt "BRASS report" brass_report
+}
 
-  echo "James thesis"
-  james_thesis &> /dev/null
+function prompt {
+  name="$1"
+  func="$2"
 
-  echo "Pavel thesis"
-  pavel_thesis &> /dev/null
-
-  echo "Shumo thesis"
-  shumo_thesis &> /dev/null
-
-  echo "BRASS report"
-  brass_report &> /dev/null
+  echo
+  read -p "Update $name (y/n)? " yn
+  case $yn in
+    y)
+      $func &> /dev/null
+      echo "Updated $name."
+      ;;
+    *)
+      echo "Skipping $name."
+      ;;
+  esac
 }
 
 function install {
