@@ -10,6 +10,7 @@ function main {
   prompt "James thesis" james_thesis
   prompt "Pavel thesis" pavel_thesis
   prompt "Shumo thesis" shumo_thesis
+  prompt "Heiko preconditions report" heiko_report
   prompt "BRASS report" brass_report
 }
 
@@ -63,6 +64,14 @@ function shumo_thesis {
   wget "https://homes.cs.washington.edu/~chushumo/files/thesis.pdf"
   install thesis.pdf shumo-thesis.pdf
   rm thesis.pdf
+}
+
+function heiko_report {
+  cd "$HOME/research/CakeML_fastmath_Notes/Preconditions"
+  git pull
+  make clean
+  make
+  install introduction.pdf heiko-report.pdf
 }
 
 function brass_report {
