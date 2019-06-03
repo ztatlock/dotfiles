@@ -12,6 +12,7 @@ function main {
   prompt "Shumo thesis" shumo_thesis
   prompt "Heiko preconditions report" heiko_report
   prompt "BRASS report" brass_report
+  prompt "Josh Theia draft" josh_theia
 }
 
 function prompt {
@@ -80,6 +81,14 @@ function brass_report {
   make clean
   make
   install main.pdf herbie-brass-report.pdf
+}
+
+function josh_theia {
+  cd "$HOME/research/theia-internal/splashe19v3"
+  git pull
+  make clean
+  make
+  install paper.pdf josh-theia-draft.pdf
 }
 
 main
