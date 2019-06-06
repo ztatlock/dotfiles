@@ -3,7 +3,7 @@
 # exit on error
 set -e
 
-TO_READ="$HOME/Dropbox/to-read"
+TO_READ="$HOME/Desktop/to-read"
 
 function main {
   prompt "Doug thesis" doug_thesis
