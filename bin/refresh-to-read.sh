@@ -23,11 +23,11 @@ function prompt {
   read -p "Update $name (y/n)? " yn
   case $yn in
     y)
-      $func &> /dev/null
-      echo "Updated $name."
+      echo "Updating $name ..."
+      $func &> /dev/null &
       ;;
     *)
-      echo "Skipping $name."
+      echo "Skipping $name"
       ;;
   esac
 }
