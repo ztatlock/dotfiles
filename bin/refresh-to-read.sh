@@ -6,10 +6,10 @@ set -e
 TO_READ="$HOME/Desktop/to-read"
 
 function main {
-  prompt "Doug thesis" doug_thesis
+  #prompt "Doug thesis" doug_thesis
   prompt "James thesis" james_thesis
-  prompt "Pavel thesis" pavel_thesis
-  prompt "Shumo thesis" shumo_thesis
+  #prompt "Pavel thesis" pavel_thesis
+  #prompt "Shumo thesis" shumo_thesis
   prompt "Heiko preconditions report" heiko_report
   prompt "BRASS report" brass_report
   prompt "Josh Theia draft" josh_theia
@@ -24,7 +24,8 @@ function prompt {
   case $yn in
     y)
       echo "Updating $name ..."
-      $func &> /dev/null &
+      #$func &> /dev/null &
+      $func
       ;;
     *)
       echo "Skipping $name"
