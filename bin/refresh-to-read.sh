@@ -6,13 +6,15 @@ set -e
 TO_READ="$HOME/Desktop/to-read"
 
 function main {
-  #prompt "Doug thesis" doug_thesis
+  prompt "Relay ASPLOS" relay_asplos
+  prompt "BRASS report" brass_report
+  prompt "Heiko preconditions report" heiko_report
   prompt "James thesis" james_thesis
+
+  #prompt "Josh Theia draft" josh_theia
+  #prompt "Doug thesis" doug_thesis
   #prompt "Pavel thesis" pavel_thesis
   #prompt "Shumo thesis" shumo_thesis
-  prompt "Heiko preconditions report" heiko_report
-  prompt "BRASS report" brass_report
-  prompt "Josh Theia draft" josh_theia
 }
 
 function prompt {
@@ -38,6 +40,14 @@ function install {
   name="$2"
   dt=$(date '+%y%m%d-%H%M-')
   cp "$path" "$TO_READ/${dt}${name}"
+}
+
+function relay_asplos {
+  cd "$HOME/research/pl4ml/asplos20"
+  git pull
+  make clean
+  make
+  install paper.pdf relay-asplos-draft.pdf
 }
 
 function doug_thesis {
