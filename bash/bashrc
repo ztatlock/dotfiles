@@ -67,7 +67,9 @@ if [ -d "$CAKEMLDIR" ]; then
 fi
 
 # OPAM configuration
-source "$HOME/.opam/opam-init/init.sh" &> /dev/null || true
+test -r "$HOME/.opam/opam-init/init.sh" \
+  && source "$HOME/.opam/opam-init/init.sh" &> /dev/null \
+  || true
 
 # parallel configuration
 source "$(which env_parallel).bash" &> /dev/null || true
