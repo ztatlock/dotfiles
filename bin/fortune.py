@@ -4,6 +4,7 @@ import sys, os.path, random
 
 jars = [ '~/dotfiles/content/quote.txt'
        , '~/dotfiles/content/vocab.txt'
+       , '~/dotfiles/content/jokes.txt'
        ]
 jar = random.choice(jars)
 jar = os.path.expanduser(jar)
