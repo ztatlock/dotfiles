@@ -1,5 +1,8 @@
-export   LC_ALL=en_US.UTF-8
-export     LANG=en_US.UTF-8
+# don't tell me how to live my life
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
 PATH="/usr/local/sbin:$PATH"
@@ -18,21 +21,6 @@ if [ "$HOME" = "/homes/gws/ztatlock" ]; then
 
   # for gnuplot 5
   export LD_LIBRARY_PATH="$HOME/local/lib:$LD_LIBRARY_PATH"
-fi
-
-# on pipsquesk
-if [ "$(hostname)" = "pipsqueak" ]; then
-  export TVM_HOME="$HOME/research/tvm-relay"
-  export TOPI_HOME="$TVM_HOME/topi"
-  export NNVM_HOME="$TVM_HOME/nnvm"
-  export RELAY_HOME="$TVM_HOME/relay"
-
-  PP="$PYTHONPATH"
-  PP="$NNVM_HOME/python:${PP}"
-  PP="$TOPI_HOME/python:${PP}"
-  PP="$RELAY_HOME/python:${PP}"
-  PP="$TVM_HOME/python:${PP}"
-  export PYTHONPATH="${PP}"
 fi
 
 # on macOS
