@@ -3,13 +3,13 @@
 function status-bg {
   case $1 in
     houndstooth)
-      echo colour178 ;;
+      echo colour039 ;;
     sharkskin)
       echo colour001 ;;
     warfa)
       echo colour041 ;;
     pipsqueak)
-      echo colour033 ;;
+      echo colour206 ;;
     uwplse)
       echo colour098 ;;
     tatlock)
