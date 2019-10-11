@@ -52,6 +52,11 @@ ${CLR}" >&2
   ./install.sh
   popd
 
+  echo "# tmux Plugin Manager"
+  pushd "$HOME/.tmux/plugins/tpm"
+  git pull
+  popd
+
   if command -v brew &> /dev/null; then
     echo
     echo "# Brew"
