@@ -53,9 +53,9 @@ ${CLR}" >&2
   popd
 
   echo "# tmux Plugin Manager"
-  pushd "$HOME/.tmux/plugins/tpm"
+  pushd "$HOME/.tmux/plugins/tpm" &> /dev/null
   git pull
-  popd
+  popd &> /dev/null
 
   if command -v brew &> /dev/null; then
     echo
