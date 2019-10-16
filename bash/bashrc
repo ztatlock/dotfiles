@@ -73,24 +73,19 @@ fi
 
 export EDITOR="vim"
 
-# cygwin style prompt (no git branch info)
-PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[0;35m\]\t \[\e[33m\]\w\[\e[0m\]\n\$ "
+# cygwin style prompt with git branch info
+# __git_ps1 provided by bash_completion
+PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \e[0;35m\]\t \[\e[33m\]\w\[\e[36m\]\$(__git_ps1)\[\e[0m\]\n\$ "
 if [ -n "$(command -v brew)" ]; then
-  if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    source $(brew --prefix)/etc/bash_completion
-
-    # cygwin style prompt with git branch info
-    # __git_ps1 provided by bash_completion
-    PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \e[0;35m\]\t \[\e[33m\]\w\[\e[36m\]\$(__git_ps1)\[\e[0m\]\n\$ "
-  fi
+  [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ] && \
+    source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+  [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ] && \
+    source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
+elif [ -f /etc/bash_completion ]; then
+  source /etc/bash_completion
 else
-  if [ -f /etc/bash_completion ]; then
-    source /etc/bash_completion
-
-    # cygwin style prompt with git branch info
-    # __git_ps1 provided by bash_completion
-    PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \e[0;35m\]\t \[\e[33m\]\w\[\e[36m\]\$(__git_ps1)\[\e[0m\]\n\$ "
-  fi
+  # no git branch info
+  PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[0;35m\]\t \[\e[33m\]\w\[\e[0m\]\n\$ "
 fi
 export PS1
 
