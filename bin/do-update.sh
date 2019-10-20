@@ -35,7 +35,7 @@ function main {
 
   echo
   echo "# Dotfiles"
-  pushd "$MYDIR/.."
+  pushd "$MYDIR/.." &> /dev/null
   git fetch
   # ensure working directory is clean and up to date
   if ! git merge-base --is-ancestor master origin/master \
@@ -50,7 +50,7 @@ ${CLR}" >&2
   fi
   git pull
   ./install.sh
-  popd
+  popd &> /dev/null
 
   echo "# tmux Plugin Manager"
   pushd "$HOME/.tmux/plugins/tpm" &> /dev/null
