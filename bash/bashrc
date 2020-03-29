@@ -54,6 +54,14 @@ if [ -d "$CAKEMLDIR" ]; then
   export CAKEMLDIR
 fi
 
+# Go
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/opt/go/libexec
+PATH="$PATH:$GOPATH/bin"
+PATH="$PATH:$GOROOT/bin"
+
+alias gmailctl_uw='gmailctl --config=$HOME/.gmailctl-uw'
+
 # OPAM configuration
 test -r "$HOME/.opam/opam-init/init.sh" \
   && source "$HOME/.opam/opam-init/init.sh" &> /dev/null \
