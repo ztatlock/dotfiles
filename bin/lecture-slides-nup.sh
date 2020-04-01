@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-pdfnup \
+pdfjam \
   --nup 2x2 \
+  --landscape \
   --suffix '4up' \
   --frame true \
-  --scale 0.95 \
+  --scale 0.9 \
   --quiet \
   "$1"
