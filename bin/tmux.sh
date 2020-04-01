@@ -4,6 +4,8 @@ function status-bg {
   case $1 in
     houndstooth)
       echo colour039 ;;
+    chevron)
+      echo colour039 ;;
     sharkskin)
       echo colour001 ;;
     warfa)
