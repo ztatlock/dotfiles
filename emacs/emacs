@@ -7,7 +7,7 @@
 (show-paren-mode 1)
 
 ;; big font for lecture
-(set-face-attribute 'default nil :height 320)
+;(set-face-attribute 'default nil :height 320)
 
 ;; Show line and column numbers
 (setq line-number-mode t)
@@ -17,17 +17,20 @@
 (setq-default indent-tabs-mode nil)
 
 ;; Highlight tabs, lines over 80 columns, and trailing whitespace
-;(require 'whitespace)
-;;(setq whitespace-style '(face tabs lines-tail trailing))
+(require 'whitespace)
+(setq whitespace-style '(face tabs lines-tail trailing))
 ;(setq whitespace-style '(face tabs lines-tail))
-;(global-whitespace-mode t)
+(global-whitespace-mode t)
 
 ;; Open .v files with Proof General's Coq mode
 ;;(load "~/.emacs.d/lisp/PG/generic/proof-site")
 
+;; Load company-coq when opening Coq files
+(add-hook 'coq-mode-hook #'company-coq-mode)
+
 ;; SML setup
-(setenv "PATH" (concat "/usr/local/smlnj/bin:" (getenv "PATH")))
-(setq exec-path (cons "/usr/local/smlnj/bin" exec-path))
+;(setenv "PATH" (concat "/usr/local/smlnj/bin:" (getenv "PATH")))
+;(setq exec-path (cons "/usr/local/smlnj/bin" exec-path))
 
 ;; Use MELPA Emacs package manager
 (require 'package)
@@ -43,7 +46,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (sml-mode proof-general tuareg boogie-friends))))
+ '(package-selected-packages
+   (quote
+    (company-coq proof-general))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
