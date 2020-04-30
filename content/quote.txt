@@ -1,3 +1,12 @@
+In economics, the Jevons paradox occurs when technological progress or
+government policy increases the efficiency with which a resource is used
+(reducing the amount necessary for any one use), but the rate of consumption
+of that resource rises due to increasing demand.
+
+https://en.wikipedia.org/wiki/Jevons_paradox
+
+<<<>>>
+
 Learn how to learn from those you disagree with, or even offend you.
 See if you can find the truth in what they believe.
 
