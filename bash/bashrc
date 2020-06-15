@@ -24,21 +24,9 @@ if [ "$HOME" = "/homes/gws/ztatlock" ]; then
 fi
 
 # on macOS
-if [ "$(uname)" = "Darwin" ]; then
-  function latest_racket {
-    local lr="$(       \
-      ls /Applications \
-        | grep Racket  \
-        | sort -Vr     \
-        | head -n 1)"
-
-    [ "$lr" != "" ] \
-      && echo "/Applications/$lr"
-  }
-
-  lr="$(latest_racket)"
-  [ "$lr" != "" ] \
-    && PATH="$lr/bin:$PATH"
+if [ "$(uname)" = 'Darwin' ] && [ -d /Applications/Racket* ]; then
+  rv="$(ls '/Applications' | grep 'Racket' | sort -Vr | head -n 1)"
+  PATH="/Applications/${rv}/bin:$PATH"
 fi
 
 # HOL
