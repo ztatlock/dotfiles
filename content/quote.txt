@@ -1,3 +1,223 @@
+The Three Virtues of the Computer Programmer:
+
+Laziness:
+
+  The quality that makes you go to great effort to reduce overall energy
+  expenditure. It makes you write labor-saving programs that other people will
+  find useful, and document what you wrote so you don't have to answer so many
+  questions about it. Hence, the first great virtue of a programmer.
+
+Impatience:
+
+  The anger you feel when the computer is being lazy. This makes you write
+  programs that don't just react to your needs, but actually anticipate them.
+  Or at least that pretend to. Hence, the second great virtue of a programmer.
+
+Hubris:
+
+  Excessive pride, the sort of thing Zeus zaps you for. Also the quality that
+  makes you write (and maintain) programs that other people won't want to say
+  bad things about. Hence, the third great virtue of a programmer.
+
+
+<<<>>>
+
+The Three Techniques of the Computer Programmer:
+1. Hashing
+2. Caching
+3. Adding a level of indirection
+
+<<<>>>
+
+C++ is like an octopus made by nailing extra legs onto a dog.
+
+Steve Taylor
+
+<<<>>>
+
+The C language combines the power and flexibility of assembly language
+with the ease and readability of assembly language.
+
+<<<>>>
+
+Please don't fall into the trap of believing that I am terribly dogmatical
+about [the goto statement]. I have the uncomfortable feeling that others
+are making a religion out of it, as if the conceptual problems of programming
+could be solved by a single trick, by a simple form of coding discipline!
+
+Edsger Dijkstra
+
+<<<>>>
+
+First learn computer science and all the theory.
+Next develop a programming style.
+Then forget all that and just hack."
+
+George Carrette
+
+<<<>>>
+
+You can either have software quality or you can have pointer arithmetic,
+but you cannot have both at the same time.
+
+Bertrand Meyer
+
+<<<>>>
+
+Imagine if every Thursday your shoes exploded if you tied them the usual way.
+This happens to us all the time with computers,
+and nobody thinks of complaining.
+
+Jeff Raskin
+
+<<<>>>
+
+Computers are useless.
+They can only give you answers.
+
+Pablo Picasso
+
+<<<>>>
+
+Theory is when you know something, but it doesn't work.
+Practice is when something works, but you don't know why.
+Programmers combine theory and practice:
+Nothing works and they don't know why.
+
+<<<>>>
+
+For every complex problem, there is an algorithm that is
+simple, elegant, and wrong.
+
+<<<>>>
+
+Programs must be written for people to read,
+and only incidentally for machines to execute.
+
+H. Abelson and G. Sussman
+
+<<<>>>
+
+All programmers are playwrights and all computers are lousy actors.
+
+<<<>>>
+
+At the source of every error which is blamed on the computer,
+you will find at least two human errors,
+one of which is the error of blaming it on the computer.
+
+<<<>>>
+
+When a programming language is created that allows programmers to program
+in simple English, it will be discovered that programmers cannot speak English.
+
+<<<>>>
+
+Walking on water and developing software from a specification
+are easy if both are frozen.
+
+E. Berard
+
+<<<>>>
+
+The first 90% of the code accounts for the first 90% of the development time.
+The remaining 10% of the code accounts for the other 90% of the development time.
+
+T. Cargill
+
+<<<>>>
+
+The sooner you start to code, the longer the program will take.
+
+R. Carlson
+
+<<<>>>
+
+A most important, but also most elusive, aspect of any tool is its influence
+on the habits of those who train themselves in its use. If the tool is a
+programming language this influence is, whether we like it or not, an
+influence on our thinking habits.... A programming language is a tool that
+has profound influence on our thinking habits.
+
+Edsger Dijkstra
+
+<<<>>>
+
+Besides a mathematical inclination, an exceptionally good mastery of one's
+native tongue is the most vital asset of a competent programmer.
+
+Edsger Dijkstra
+
+<<<>>>
+
+Computer Science is no more about computers than astronomy is about telescopes.
+
+Edsger Dijkstra
+
+<<<>>>
+
+Testing can show the presence of errors, but not their absence.
+
+Edsger Dijkstra
+
+<<<>>>
+
+A great lathe operator commands several times the wage of
+an average lathe operator, but a great writer of software code
+is worth 10,000 times the price of an average software writer.
+
+Bill Gates
+
+<<<>>>
+
+Never put off until run time what can be done at compile time.
+
+A. Glew
+
+<<<>>>
+
+Premature optimization is the root of all evil in programming.
+
+C.A.R. Hoare
+
+<<<>>>
+
+The fastest algorithm can frequently be replaced by one that is
+almost as fast and much easier to understand.
+
+D. Jones
+
+<<<>>>
+
+Should array indices start at 0 or 1?
+My compromise of 0.5 was rejected without, I thought, proper consideration.
+
+S. Kelly-Bootle
+
+<<<>>>
+
+Debugging is twice as hard as writing the code in the first place.
+Therefore, if you write the code as cleverly as possible,
+you are, by definition, not smart enough to debug it.
+
+Brian W. Kernighan
+
+<<<>>>
+
+The Best 10 Algorithms of the 20th Century
+1. The Monte Carlo Method - John von Neumann, Stan Ulam, and Nick Metropolis
+2. The Simplex Method for Linear Programming - George Dantzig
+3. Krylov Subspace Iteration Methods - Magnus Hestenes, Eduard Stiefel, Cornelius Lanczos
+4. Decompositional Approach to Matrix Computations - Alston Householder
+5. The Fortran Optimizing Compiler - John Backus
+6. The QR Algorithm - J.G.F Francis
+7. Quicksort - Tony Hoare
+8. Fast Fourier Transform - James Cooley and John Tukey
+9. Integer Relation Detection Algorithm - Helaman Ferguson and Rodney Forcade
+10. Fast Multipole Algorithm - Leslie Greengard and Vladimir Rokhlin
+
+<<<>>>
+
 Early to bed early to rise,
 Work like hell and advertise.
 
