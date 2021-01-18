@@ -122,4 +122,4 @@ complete -F _complete_ssh_hosts ssh
 complete -F _complete_ssh_hosts mosh
 
 echo
-fortune.py
+# fortune.py
