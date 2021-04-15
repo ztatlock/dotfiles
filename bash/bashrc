@@ -62,6 +62,11 @@ source "$(which env_parallel).bash" &> /dev/null || true
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
 
+# Rust
+test -r "$HOME/.cargo/env" \
+  && source "$HOME/.cargo/env" &> /dev/null \
+  || true
+
 PATH="$HOME/bin:$PATH"
 
 export PATH
