@@ -1,3 +1,9 @@
+function source-if {
+  if [ -r "$1" ]; then
+    source "$1" &> /dev/null
+  fi
+}
+
 # don't tell me how to live my life
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
@@ -22,6 +28,8 @@ if [ "$HOME" = "/homes/gws/ztatlock" ]; then
   # for gnuplot 5
   export LD_LIBRARY_PATH="$HOME/local/lib:$LD_LIBRARY_PATH"
 fi
+
+
 
 ## # on macOS
 ## if [ "$(uname)" = 'Darwin' ] && [ -d /Applications/Racket* ]; then
@@ -50,22 +58,14 @@ PATH="$PATH:$GOROOT/bin"
 
 alias gmailctl_uw='gmailctl --config=$HOME/.gmailctl-uw'
 
-# OPAM configuration
-test -r "$HOME/.opam/opam-init/init.sh" \
-  && source "$HOME/.opam/opam-init/init.sh" &> /dev/null \
-  || true
+# OCaml OPAM
+source-if "$HOME/.opam/opam-init/init.sh"
 
-# parallel configuration
-source "$(which env_parallel).bash" &> /dev/null || true
-
-# Ruby
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
+# GNU parallel
+source-if "$(which env_parallel).bash"
 
 # Rust
-test -r "$HOME/.cargo/env" \
-  && source "$HOME/.cargo/env" &> /dev/null \
-  || true
+source-if "$HOME/.cargo/env"
 
 PATH="$HOME/bin:$PATH"
 
@@ -77,6 +77,9 @@ if [ -z "$PS1" ]; then
 fi
 
 export EDITOR="vim"
+
+# z  https://github.com/rupa/z
+source-if "$HOME/local/z/z.sh"
 
 # cygwin style prompt with git branch info
 # __git_ps1 provided by bash_completion
