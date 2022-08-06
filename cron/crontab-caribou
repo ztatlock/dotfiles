@@ -1,8 +1,0 @@
-SHELL=/bin/bash
-LOCAL_LOADS=/cse/web/homes/ztatlock/loads
-
-#*/5 * * * * source $HOME/.bashrc; $HOME/bin/update-load.sh -l $LOCAL_LOADS/ 2> /dev/null
-
-# caribou fetches group machine loads
-#00,20,40 * * * * sleep `expr $RANDOM \% 500`; scp 'warfa.cs.washington.edu:~/loads/warfa*' $LOCAL_LOADS/
-#10,30,50 * * * * sleep `expr $RANDOM \% 500`; scp             'uwplse.org:~/loads/uwplse*' $LOCAL_LOADS/

@@ -6,6 +6,7 @@ ls | while read f; do
   g=$(echo $f | sed "$1")
   echo $f
   echo $g
+  echo
   if [ "$2" = "--commit" ]; then
     mv "$f" "$g"
   fi

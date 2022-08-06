@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 echo
-echo "About to delete any existing ssh keys."
-read -p "Cool (y/n)? " yn
+echo "Deleting existing ssh keys."
+read -p "OK (y/n)? " yn
 
 case $yn in
   y)

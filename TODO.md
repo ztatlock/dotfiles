@@ -1,1 +1,0 @@
-- shellcheck bash scripts
