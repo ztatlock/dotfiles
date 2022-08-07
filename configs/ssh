@@ -1,3 +1,11 @@
+Host ztatlock
+  HostName ztatlock.net
+  User ztatlock
+
+Host uwplse
+  HostName uwplse.org
+  User ztatlock
+
 Host warfa
   HostName warfa.cs.washington.edu
   User ztatlock
@@ -12,24 +20,20 @@ Host pipsqueak
   User ztatlock
   ProxyJump warfa
 
-Host uwplse
-  HostName uwplse.org
-  User ztatlock
-
-Host caribou
-  HostName caribou.cs.washington.edu
+Host tern
+  HostName tern.cs.washington.edu
   User ztatlock
 
 Host buffalo
   HostName buffalo.cs.washington.edu
   User ztatlock
 
-Host plover
-  HostName plover.cs.washington.edu
+Host caribou
+  HostName caribou.cs.washington.edu
   User ztatlock
 
-Host barb
-  HostName barb.cs.washington.edu
+Host plover
+  HostName plover.cs.washington.edu
   User ztatlock
 
 Host recycle
@@ -52,8 +56,12 @@ Host bam
   HostName bam.cs.washington.edu
   User ztatlock
 
-Host ztatlock.net
-  HostName ztatlock.net
+Host barb
+  HostName barb.cs.washington.edu
+  User ztatlock
+
+Host attu
+  HostName attu.cs.washington.edu
   User ztatlock
 
 Host *
