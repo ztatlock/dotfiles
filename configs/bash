@@ -1,0 +1,78 @@
+function source-if {
+  if [ -r "$1" ]; then
+    source "$1" &> /dev/null
+  fi
+}
+
+# suppress macOS bash warning
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+
+export PATH="/usr/local/sbin:$PATH" # homebrew
+export PATH="/usr/local/bin:$PATH"  # homebrew
+export PATH="$HOME/local/bin:$PATH" # personal builds
+export PATH="$HOME/bin:$PATH"       # personal scripts
+
+# if not interactive, stop
+if [ -z "$PS1" ]; then
+  return
+fi
+
+export EDITOR="vim"
+
+source-if "$HOME/.opam/opam-init/init.sh" # ocaml opam
+source-if "$(which env_parallel).bash"    # gnu parallel
+source-if "$HOME/.cargo/env"              # rust cargo
+source-if "$HOME/local/z/z.sh"            # https://github.com/rupa/z
+
+# cygwin-style prompt
+if [ -n "$(command -v brew)" ]; then
+  # __git_ps1 provided by bash_completion
+  source-if "$(brew --prefix)/etc/bash_completion.d/git-completion.bash"
+  source-if "$(brew --prefix)/etc/bash_completion.d/git-prompt.sh"
+  export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \e[0;35m\]\t \[\e[33m\]\w\[\e[36m\]\$(__git_ps1)\[\e[0m\]\n\$ "
+elif [ -f /etc/bash_completion ]; then
+  # __git_ps1 provided by bash_completion
+  source /etc/bash_completion
+  export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \e[0;35m\]\t \[\e[33m\]\w\[\e[36m\]\$(__git_ps1)\[\e[0m\]\n\$ "
+else
+  # no git branch info
+  export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[0;35m\]\t \[\e[33m\]\w\[\e[0m\]\n\$ "
+fi
+
+if [ "$(uname)" = "Darwin" ]; then
+  alias ls='ls -G'
+else
+  alias ls='ls --color=auto'
+fi
+alias grep='grep --color=auto'
+
+# ssh completion adapted from https://gist.github.com/fieg/2357723
+
+function comp_ssh_hosts {
+  cat ~/.ssh/known_hosts \
+    | cut -f 1 -d ' '    \
+    | sed -e s/,.*//g    \
+    | grep -v '^#'       \
+    | uniq               \
+    | grep -v "\["
+
+  cat ~/.ssh/config  \
+    | grep "^Host "  \
+    | awk '{print $2}'
+}
+
+function _complete_ssh_hosts {
+  COMPREPLY=()
+  cur="${COMP_WORDS[COMP_CWORD]}"
+  COMPREPLY=( $(compgen -W "$(comp_ssh_hosts)" -- $cur))
+  return 0
+}
+
+complete -F _complete_ssh_hosts ssh
+complete -F _complete_ssh_hosts mosh
+
+echo

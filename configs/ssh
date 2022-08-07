@@ -2,14 +2,15 @@ Host warfa
   HostName warfa.cs.washington.edu
   User ztatlock
 
+Host leviathan
+  HostName 73.97.28.180
+  User ztatlock
+  ProxyJump warfa
+
 Host pipsqueak
   HostName pipsqueak.cs.washington.edu
   User ztatlock
   ProxyJump warfa
-
-Host leviathan
-  HostName 73.97.28.180
-  User ztatlock
 
 Host uwplse
   HostName uwplse.org
@@ -53,10 +54,6 @@ Host bam
 
 Host ztatlock.net
   HostName ztatlock.net
-  User ztatlock
-
-Host goto
-  HostName goto.ucsd.edu
   User ztatlock
 
 Host *

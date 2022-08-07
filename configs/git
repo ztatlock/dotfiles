@@ -1,0 +1,12 @@
+[user]
+  name  = Zachary Tatlock
+  email = ztatlock@cs.washington.edu
+
+[color]
+  ui = auto
+
+[push]
+  default = simple
+
+[init]
+	defaultBranch = main

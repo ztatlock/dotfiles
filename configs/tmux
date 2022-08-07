@@ -6,7 +6,6 @@ set-option default-terminal "tmux-256color"
 # load plugins
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
-set -g @plugin 'tmux-plugins/tmux-battery'
 
 set -g status-left ' #(hostname -s) '
 set -g status-left-length 14
