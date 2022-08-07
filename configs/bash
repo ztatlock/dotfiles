@@ -1,41 +1,73 @@
+###############################################################################
+# misc
+###############################################################################
+
 function source-if {
   if [ -r "$1" ]; then
     source "$1" &> /dev/null
   fi
 }
 
+export EDITOR="vim"
+
 # suppress macOS bash warning
 export BASH_SILENCE_DEPRECATION_WARNING=1
+
+###############################################################################
+# locale
+###############################################################################
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
-export PATH="/usr/local/sbin:$PATH" # homebrew
-export PATH="/usr/local/bin:$PATH"  # homebrew
+###############################################################################
+# PATH
+###############################################################################
+
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/local/bin:$PATH" # personal builds
 export PATH="$HOME/bin:$PATH"       # personal scripts
 
-# if not interactive, stop
+###############################################################################
+# package managers and tool configurations
+###############################################################################
+
+source-if "$(which env_parallel).bash"    # gnu parallel
+source-if "$HOME/.opam/opam-init/init.sh" # ocaml opam
+source-if "$HOME/.cargo/env"              # rust cargo
+source-if "$HOME/local/z/z.sh"            # https://github.com/rupa/z
+
+###############################################################################
+# begin interative-only settings
+###############################################################################
+
 if [ -z "$PS1" ]; then
   return
 fi
 
-export EDITOR="vim"
+###############################################################################
+# use colors
+###############################################################################
 
-source-if "$HOME/.opam/opam-init/init.sh" # ocaml opam
-source-if "$(which env_parallel).bash"    # gnu parallel
-source-if "$HOME/.cargo/env"              # rust cargo
-source-if "$HOME/local/z/z.sh"            # https://github.com/rupa/z
+[ "$(uname)" = "Darwin" ] \
+  && alias ls='ls -G' \
+  || alias ls='ls --color=auto'
 
-# cygwin-style prompt
+alias grep='grep --color=auto'
+
+###############################################################################
+# cygwin-style PS1 prompt
+###############################################################################
+
 if [ -n "$(command -v brew)" ]; then
-  # __git_ps1 provided by bash_completion
+  # __git_ps1 provided by homebrew bash_completion
   source-if "$(brew --prefix)/etc/bash_completion.d/git-completion.bash"
   source-if "$(brew --prefix)/etc/bash_completion.d/git-prompt.sh"
   export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \e[0;35m\]\t \[\e[33m\]\w\[\e[36m\]\$(__git_ps1)\[\e[0m\]\n\$ "
 elif [ -f /etc/bash_completion ]; then
-  # __git_ps1 provided by bash_completion
+  # __git_ps1 provided by linux bash_completion
   source /etc/bash_completion
   export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \e[0;35m\]\t \[\e[33m\]\w\[\e[36m\]\$(__git_ps1)\[\e[0m\]\n\$ "
 else
@@ -43,14 +75,9 @@ else
   export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[0;35m\]\t \[\e[33m\]\w\[\e[0m\]\n\$ "
 fi
 
-if [ "$(uname)" = "Darwin" ]; then
-  alias ls='ls -G'
-else
-  alias ls='ls --color=auto'
-fi
-alias grep='grep --color=auto'
-
-# ssh completion adapted from https://gist.github.com/fieg/2357723
+###############################################################################
+# ssh completion, see https://gist.github.com/fieg/2357723
+###############################################################################
 
 function comp_ssh_hosts {
   cat ~/.ssh/known_hosts \
