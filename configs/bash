@@ -13,6 +13,10 @@ export EDITOR="vim"
 # suppress macOS bash warning
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
+# use simple TERM for UW CSE servers
+[ "$HOME" = "/homes/gws/ztatlock" ] \
+  && export TERM=xterm
+
 ###############################################################################
 # locale
 ###############################################################################
@@ -34,10 +38,14 @@ export PATH="$HOME/bin:$PATH"       # personal scripts
 # package managers and tool configurations
 ###############################################################################
 
-source-if "$(which env_parallel).bash"    # gnu parallel
 source-if "$HOME/.opam/opam-init/init.sh" # ocaml opam
 source-if "$HOME/.cargo/env"              # rust cargo
 source-if "$HOME/local/z/z.sh"            # https://github.com/rupa/z
+
+# gnu parallel
+if [ -n "$(which env_parallel)" ]; then
+  source-if "$(which env_parallel).bash"
+fi
 
 ###############################################################################
 # begin interative-only settings

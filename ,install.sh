@@ -55,6 +55,7 @@ echo
 echo "CONFIGS"
 cd "$MYDIR/configs"
 install "$(pwd)/profile" "$HOME/.profile"
+install "$(pwd)/profile" "$HOME/.bash_profile"
 install "$(pwd)/bash"    "$HOME/.bashrc"
 install "$(pwd)/git"     "$HOME/.gitconfig"
 install "$(pwd)/ssh"     "$HOME/.ssh/config"
