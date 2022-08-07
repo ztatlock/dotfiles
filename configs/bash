@@ -43,7 +43,7 @@ source-if "$HOME/.cargo/env"              # rust cargo
 source-if "$HOME/local/z/z.sh"            # https://github.com/rupa/z
 
 # gnu parallel
-if [ -n "$(which env_parallel)" ]; then
+if [ -n "$(command -v env_parallel)" ]; then
   source-if "$(which env_parallel).bash"
 fi
 
