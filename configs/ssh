@@ -20,6 +20,16 @@ Host pipsqueak
   User ztatlock
   ProxyJump warfa
 
+Host leviathan-ipv6
+  HostName 2607:4000:200:1e:ae1f:6bff:fead:2b08
+  User ztatlock
+  ProxyJump uwplse
+
+Host pipsqueak-ipv6
+  HostName 2607:4000:200:1e:84fa:3568:f53a:cd0c
+  User ztatlock
+  ProxyJump uwplse
+
 Host tern
   HostName tern.cs.washington.edu
   User ztatlock
