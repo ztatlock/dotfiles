@@ -11,7 +11,7 @@ Host warfa
   User ztatlock
 
 Host leviathan
-  HostName 73.97.28.180
+  HostName whale.cs.washington.edu
   User ztatlock
   ProxyJump warfa
 
@@ -75,4 +75,5 @@ Host attu
   User ztatlock
 
 Host *
-    AddKeysToAgent yes
+  ForwardAgent yes
+  AddKeysToAgent yes
