@@ -71,6 +71,7 @@ alias grep='grep --color=auto'
 
 if [ -n "$(command -v brew)" ]; then
   # __git_ps1 provided by homebrew bash_completion
+  source-if "$(brew --prefix)/etc/profile.d/bash_completion.sh"
   source-if "$(brew --prefix)/etc/bash_completion.d/git-completion.bash"
   source-if "$(brew --prefix)/etc/bash_completion.d/git-prompt.sh"
   export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \e[0;35m\]\t \[\e[33m\]\w\[\e[36m\]\$(__git_ps1)\[\e[0m\]\n\$ "
@@ -84,7 +85,19 @@ else
 fi
 
 ###############################################################################
-# ssh completion, see https://gist.github.com/fieg/2357723
+# make completion, see
+# https://stackoverflow.com/questions/4188324/bash-completion-of-makefile-target
+###############################################################################
+
+if [ "$(uname)" = "Darwin" ]; then
+  complete -W \
+    "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' ?akefile | sed 's/[^a-zA-Z0-9_.-]*$//'\`" \
+    make
+fi
+
+###############################################################################
+# ssh completion, see
+# https://gist.github.com/fieg/2357723
 ###############################################################################
 
 function comp_ssh_hosts {

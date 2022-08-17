@@ -59,6 +59,7 @@ install "$(pwd)/bash"    "$HOME/.bashrc"
 install "$(pwd)/vim"     "$HOME/.vimrc"
 install "$(pwd)/git"     "$HOME/.gitconfig"
 install "$(pwd)/ssh"     "$HOME/.ssh/config"
+install "$(pwd)/ssh-rc"  "$HOME/.ssh/rc"
 install "$(pwd)/tmux"    "$HOME/.tmux.conf"
 
 ###############################################################################
