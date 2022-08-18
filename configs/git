@@ -9,4 +9,4 @@
   default = simple
 
 [init]
-	defaultBranch = main
+  defaultBranch = main

@@ -49,12 +49,13 @@ nmap <Tab><Tab> :b#<CR>
 nmap <Tab>m     :!make<CR>
 
 " highlight trailing whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+highlight TrailingWS ctermbg=red guibg=red
+match TrailingWS /\s\+$/
+autocmd BufWinEnter * match TrailingWS /\s\+$/
+autocmd InsertEnter * match TrailingWS /\s\+\%#\@<!$/
+autocmd InsertLeave * match TrailingWS /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 " remove trailing whitespace
-"autocmd FileType tex,sh,v,ml autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType tex,sh,v,ml,py autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType tex,sh,v,ml,py autocmd BufWritePre <buffer> %s/\($\n\s*\)\+\%$//e
