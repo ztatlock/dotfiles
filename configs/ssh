@@ -1,3 +1,12 @@
+# some ssh installs do not support these
+IgnoreUnknown UseKeychain
+IgnoreUnknown AddKeysToAgent
+
+Host *
+  ForwardAgent yes
+  UseKeychain yes
+  AddKeysToAgent yes
+
 Host ztatlock
   HostName ztatlock.net
   User ztatlock
@@ -73,8 +82,3 @@ Host barb
 Host attu
   HostName attu.cs.washington.edu
   User ztatlock
-
-Host *
-  ForwardAgent yes
-  AddKeysToAgent yes
-  UseKeychain yes
