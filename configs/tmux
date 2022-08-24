@@ -20,10 +20,6 @@ set -g window-status-current-style reverse
 # day of week, month date - hour : minute
 set -g status-right '%a, %b %d - %H:%M '
 
-# help ssh agent work properly on reconnect
-set -g update-environment "DISPLAY SSH_ASKPASS SSH_AGENT_PID SSH_CONNECTION WINDOWID XAUTHORITY"
-setenv -g SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
-
 # initialize tmux plugin manager (keep at bottom!)
 # https://github.com/tmux-plugins/tpm
 run -b '~/.tmux/plugins/tpm/tpm'
