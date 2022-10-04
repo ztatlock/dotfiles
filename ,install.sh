@@ -62,6 +62,12 @@ install "$(pwd)/ssh"     "$HOME/.ssh/config"
 install "$(pwd)/ssh-rc"  "$HOME/.ssh/rc"
 install "$(pwd)/tmux"    "$HOME/.tmux.conf"
 
+# enscript styles
+mkdir -p "$HOME/.enscript"
+for s in $MYDIR/configs/enscript/*; do
+  install "$s" "$HOME/.enscript/$(basename "$s")"
+done
+
 ###############################################################################
 # install scripts
 ###############################################################################
