@@ -127,4 +127,7 @@ fi
 ## complete -F _complete_ssh_hosts ssh
 ## complete -F _complete_ssh_hosts mosh
 
+FORTUNES="$HOME/dotfiles/fortunes"
+[ -d "$FORTUNES" ] && fortune "$FORTUNES"
+
 echo
