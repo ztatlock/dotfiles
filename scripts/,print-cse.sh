@@ -40,7 +40,7 @@ cat "$file" \
   | ssh recycle.cs.washington.edu "lpr -P${printer} -o sides=two-sided-long-edge"
 
 # offer to remove file
-read -p "Remove file? " yn
+read -p "Remove file? (y/N) " yn
 case "$yn" in
   [Yy]*)
     rm "$file"
