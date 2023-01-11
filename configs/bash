@@ -35,11 +35,15 @@ export PATH="$HOME/local/bin:$PATH" # personal builds
 export PATH="$HOME/bin:$PATH"       # personal scripts
 
 ###############################################################################
-# package managers and tool configurations
+# package manager, programming language, and tool configurations
 ###############################################################################
 
-source-if "$HOME/.opam/opam-init/init.sh" # ocaml opam
-source-if "$HOME/.cargo/env"              # rust cargo
+source-if "$HOME/.opam/opam-init/init.sh" # ocaml
+source-if "$HOME/.cargo/env"              # rust
+source-if "$HOME/.ghcup/env"              # haskell
+
+export PATH=/usr/local/smlnj/bin:"$PATH"  # smlnj
+
 source-if "$HOME/local/z/z.sh"            # https://github.com/rupa/z
 
 # gnu parallel
