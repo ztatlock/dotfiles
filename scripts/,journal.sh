@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-code --new-window $HOME/Desktop/journal *.md
+JOURNAL="$HOME/Desktop/journal"
+
+code --new-window  "$JOURNAL" "$JOURNAL"/*.md

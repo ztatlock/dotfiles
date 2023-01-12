@@ -42,7 +42,8 @@ source-if "$HOME/.opam/opam-init/init.sh" # ocaml
 source-if "$HOME/.cargo/env"              # rust
 source-if "$HOME/.ghcup/env"              # haskell
 
-export PATH=/usr/local/smlnj/bin:"$PATH"  # smlnj
+export PATH="$PATH":/usr/local/smlnj/bin  # smlnj
+export PATH="$PATH":$HOME/.local/bin      # haskell stack
 
 source-if "$HOME/local/z/z.sh"            # https://github.com/rupa/z
 
