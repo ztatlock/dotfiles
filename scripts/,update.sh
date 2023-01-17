@@ -23,3 +23,7 @@ rustup update
 BANNER Haskell
 stack update
 stack upgrade
+
+BANNER TeX Live
+tlmgr update --self
+tlmgr update --all

@@ -2,4 +2,8 @@
 
 JOURNAL="$HOME/Desktop/journal"
 
-code --new-window  "$JOURNAL" "$JOURNAL"/*.md
+code --new-window \
+  "$JOURNAL" \
+  "$JOURNAL/journal.md" \
+  "$JOURNAL/todo.md" \
+  "$JOURNAL"/todo-*.md
