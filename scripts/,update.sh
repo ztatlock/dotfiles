@@ -27,3 +27,10 @@ stack upgrade
 BANNER TeX Live
 tlmgr update --self
 tlmgr update --all
+
+BANNER Python3
+pip3 list --outdated
+pip3 list --outdated \
+  | sed 1,2d \
+  | cut -f1 -d' ' \
+  | xargs pip3 install --upgrade
