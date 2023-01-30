@@ -32,20 +32,21 @@ export LANGUAGE=en_US.UTF-8
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/local/bin:$PATH" # personal builds
-export PATH="$HOME/bin:$PATH"       # personal scripts
+export PATH="$HOME/bin:$PATH" # personal scripts
 
 ###############################################################################
 # package manager, programming language, and tool configurations
 ###############################################################################
 
 source-if "$HOME/.opam/opam-init/init.sh" # ocaml
-source-if "$HOME/.cargo/env"              # rust
-source-if "$HOME/.ghcup/env"              # haskell
+source-if "$HOME/.cargo/env" # rust
+source-if "$HOME/.ghcup/env" # haskell
 
-export PATH="$PATH":/usr/local/smlnj/bin  # smlnj
-export PATH="$PATH":$HOME/.local/bin      # haskell stack
+export PATH="$PATH":$HOME/Library/Racket/8.7/bin # racket
+export PATH="$PATH":$HOME/.local/bin # haskell stack
+export PATH="$PATH":/usr/local/smlnj/bin # smlnj
 
-source-if "$HOME/local/z/z.sh"            # https://github.com/rupa/z
+source-if "$HOME/local/z/z.sh" # https://github.com/rupa/z
 
 # gnu parallel
 if [ -n "$(command -v env_parallel)" ]; then
@@ -93,44 +94,9 @@ else
   export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[0;35m\]\t \[\e[33m\]\w\[\e[0m\]\n\$ "
 fi
 
-## ###############################################################################
-## # make completion, see
-## # https://stackoverflow.com/questions/4188324/bash-completion-of-makefile-target
-## ###############################################################################
-##
-## if [ "$(uname)" = "Darwin" ]; then
-##   complete -W \
-##     "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' ?akefile | sed 's/[^a-zA-Z0-9_.-]*$//'\`" \
-##     make
-## fi
-##
-## ###############################################################################
-## # ssh completion, see
-## # https://gist.github.com/fieg/2357723
-## ###############################################################################
-##
-## function comp_ssh_hosts {
-##   cat ~/.ssh/known_hosts \
-##     | cut -f 1 -d ' '    \
-##     | sed -e s/,.*//g    \
-##     | grep -v '^#'       \
-##     | uniq               \
-##     | grep -v "\["
-##
-##   cat ~/.ssh/config  \
-##     | grep "^Host "  \
-##     | awk '{print $2}'
-## }
-##
-## function _complete_ssh_hosts {
-##   COMPREPLY=()
-##   cur="${COMP_WORDS[COMP_CWORD]}"
-##   COMPREPLY=( $(compgen -W "$(comp_ssh_hosts)" -- $cur))
-##   return 0
-## }
-##
-## complete -F _complete_ssh_hosts ssh
-## complete -F _complete_ssh_hosts mosh
+###############################################################################
+# end with a fortune
+###############################################################################
 
 echo
 

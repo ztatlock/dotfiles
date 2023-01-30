@@ -17,6 +17,9 @@ BANNER OCaml
 opam update
 opam upgrade
 
+BANNER Racket
+raco pkg update --all
+
 BANNER Rust
 rustup update
 
@@ -34,3 +37,7 @@ pip3 list --outdated \
   | sed 1,2d \
   | cut -f1 -d' ' \
   | xargs pip3 install --upgrade
+
+BANNER npm
+npm update
+npm update -g

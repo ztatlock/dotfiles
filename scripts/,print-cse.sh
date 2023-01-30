@@ -37,7 +37,7 @@ echo
 
 # actually print (two-sided)
 cat "$file" \
-  | ssh recycle.cs.washington.edu "lpr -P${printer} -o sides=two-sided-long-edge"
+  | ssh tricycle.cs.washington.edu "lpr -P${printer} -o sides=two-sided-long-edge"
 
 # offer to remove file
 read -p "Remove file? (y/N) " yn
