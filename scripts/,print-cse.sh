@@ -42,7 +42,10 @@ cat "$file" \
 # offer to remove file
 read -p "Remove file? (y/N) " yn
 case "$yn" in
-  [Yy]*)
+  [yY])
+    echo "Removing '$file'"
     rm "$file"
     ;;
+  *)
+    echo "Document '$file' left in place."
 esac
