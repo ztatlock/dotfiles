@@ -32,12 +32,22 @@ if [ -z "$i" ]; then
   i=0
 fi
 printer="${printers[$i]}"
-echo "OK, printing on $printer."
 echo
 
-# actually print (two-sided)
+# get options
+read -p "Two-sided? (Y/n) " yn
+case "$yn" in
+  [nN])
+    options=""
+    ;;
+  *)
+    options="-o sides=two-sided-long-edge"
+esac
+echo
+
+echo "Printing '${file}' on ${printer} with options '${options}'."
 cat "$file" \
-  | ssh tricycle.cs.washington.edu "lpr -P${printer} -o sides=two-sided-long-edge"
+  | ssh tricycle.cs.washington.edu "lpr -P${printer} ${options}"
 
 # offer to remove file
 read -p "Remove file? (y/N) " yn
@@ -49,3 +59,4 @@ case "$yn" in
   *)
     echo "Document '$file' left in place."
 esac
+echo
