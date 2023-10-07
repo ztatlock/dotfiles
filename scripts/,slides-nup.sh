@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 pdfjam \
-  --nup 2x2 \
+  --paper letterpaper \
   --landscape \
+  --nup 2x2 \
   --suffix '4up' \
   --frame true \
   --scale 0.9 \

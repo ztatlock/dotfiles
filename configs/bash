@@ -29,6 +29,7 @@ export LANGUAGE=en_US.UTF-8
 # PATH
 ###############################################################################
 
+export PATH="/usr/local/opt/ruby/bin:$PATH" # need to shadow macos ruby
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/local/bin:$PATH" # personal builds
@@ -100,5 +101,5 @@ fi
 
 echo
 
-FORTUNES="$HOME/dotfiles/fortunes"
-[ -d "$FORTUNES" ] && fortune "$FORTUNES"
+#FORTUNES="$HOME/dotfiles/fortunes"
+#[ -d "$FORTUNES" ] && fortune "$FORTUNES"

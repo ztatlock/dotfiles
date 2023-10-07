@@ -17,7 +17,7 @@ if [ ! -f "$file" ]; then
 fi
 
 # prompt for which printer
-printers=(pg224 pgc224 pg270 pgc270)
+printers=(Brother_HL_2280DW)
 echo
 for i in ${!printers[@]}; do
   if [ $i -eq 0 ]; then
@@ -44,10 +44,18 @@ case "$yn" in
     options="$options -o sides=two-sided-long-edge"
 esac
 echo
+read -p "Landscape? (y/N) " yn
+case "$yn" in
+  [yY])
+    options="$options -o orientation-requested=4"
+    ;;
+esac
+echo
+
 
 echo "Printing '${file}' on ${printer} with options '${options}'."
-cat "$file" \
-  | ssh tricycle.cs.washington.edu "lpr -P${printer} ${options}"
+echo lpr -P${printer} ${options}
+lpr -P${printer} ${options} "$file"
 echo
 
 # offer to remove file
