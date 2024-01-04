@@ -29,25 +29,19 @@ export LANGUAGE=en_US.UTF-8
 # PATH
 ###############################################################################
 
-export PATH="/usr/local/opt/ruby/bin:$PATH" # need to shadow macos ruby
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/local/bin:$PATH" # personal builds
-export PATH="$HOME/bin:$PATH" # personal scripts
+export PATH="$HOME/bin:$PATH"       # personal scripts
 
 ###############################################################################
 # package manager, programming language, and tool configurations
 ###############################################################################
 
 source-if "$HOME/.opam/opam-init/init.sh" # ocaml
-source-if "$HOME/.cargo/env" # rust
-source-if "$HOME/.ghcup/env" # haskell
+source-if "$HOME/.cargo/env"              # rust
+source-if "$HOME/.ghcup/env"              # haskell
 
-export PATH="$PATH":$HOME/Library/Racket/8.7/bin # racket
-export PATH="$PATH":$HOME/.local/bin # haskell stack
-export PATH="$PATH":/usr/local/smlnj/bin # smlnj
-
-source-if "$HOME/local/z/z.sh" # https://github.com/rupa/z
+# haskell stack
+export PATH="$PATH":$HOME/.local/bin
 
 # gnu parallel
 if [ -n "$(command -v env_parallel)" ]; then
@@ -78,9 +72,6 @@ alias grep='grep --color=auto'
 
 if [ -n "$(command -v brew)" ]; then
   source-if "$(brew --prefix)/etc/profile.d/bash_completion.sh"
-  #source-if "$(brew --prefix)/etc/bash_completion.d/git-completion.bash"
-  #source-if "$(brew --prefix)/etc/bash_completion.d/git-prompt.sh"
-  source-if "$(brew --prefix)/etc/profile.d/z.sh"
 else
   source-if "/etc/bash_completion"
 fi

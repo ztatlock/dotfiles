@@ -1,3 +1,6 @@
+set bg=light
+"set bg=dark
+
 " syntax highlighting
 if has("syntax")
   syntax on
@@ -23,13 +26,10 @@ set ignorecase     " case insensitive matching
 set smartcase      " smart case matching
 set incsearch      " incremental search
 set hlsearch       " highlight search matches
-set colorcolumn=80 " highlight lines over 80 characters
 set showcmd        " command in status line
 set showmatch      " show matching brackets
 set autowrite      " auto save before commands like :next and :make
 set hidden         " do not require saving buffers to change between them
-"set bg=light        " assume a dark background
-set bg=dark        " assume a dark background
 set backspace=2    " make backspace work as in most other apps
 
 " quickly enter command mode from insert

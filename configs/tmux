@@ -1,12 +1,11 @@
-# ensure tmux terminal type
-set-option default-terminal "tmux-256color"
-
-set-option default-terminal "tmux-256color"
-
 # load plugins
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 
+# ensure tmux terminal type
+set-option default-terminal "tmux-256color"
+
+# LHS : where are we?
 set -g status-left ' #(hostname -s) '
 set -g status-left-length 14
 
@@ -17,6 +16,7 @@ setw -g window-status-current-format ' #I:#W#F '
 # highlight current window
 set -g window-status-current-style reverse
 
+# RHS : when are we?
 # day of week, month date - hour : minute
 set -g status-right '%a, %b %d - %H:%M '
 

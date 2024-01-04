@@ -9,42 +9,61 @@ function BANNER {
   figlet "$@"
 }
 
-BANNER Homebrew
-brew update
-brew upgrade
+function cmd_exists {
+  [ -n command -v "$1" ]
+}
 
-BANNER OCaml
-opam update
-opam upgrade
+if cmd_exists "brew"; then
+  BANNER Homebrew
+  brew update
+  brew upgrade
+fi
 
-BANNER Racket
-raco pkg update --all
+if cmd_exists "opam"; then
+  BANNER OCaml
+  opam update
+  opam upgrade
+fi
 
-BANNER Rust
-rustup update
+if cmd_exists "raco"; then
+  BANNER Racket
+  raco pkg update --all
+fi
 
-BANNER Haskell
-stack update
-stack upgrade
+if cmd_exists "rustup"; then
+  BANNER Rust
+  rustup update
+fi
 
-BANNER TeX Live
-# To update without root:
-# https://tex.stackexchange.com/questions/288667/tex-live-permissions-on-os-x
-# sudo chown -R ztatlock /usr/local/texlive
-#
-# To fix "package forcibly removed" stuff:
-# https://tex.stackexchange.com/questions/107286/what-does-skipping-forcibly-removed-package-xxx-mean-should-i-care-about-it
-# tlmgr update --all --reinstall-forcibly-removed
-tlmgr update --self
-tlmgr update --all
+if cmd_exists "stack"; then
+  BANNER Haskell
+  stack update
+  stack upgrade
+fi
 
-BANNER Python3
-pip3 list --outdated
-pip3 list --outdated \
-  | sed 1,2d \
-  | cut -f1 -d' ' \
-  | xargs pip3 install --upgrade
+if cmd_exists "tlmgr"; then
+  BANNER TeX Live
+  # To update without root:
+  # https://tex.stackexchange.com/questions/288667/tex-live-permissions-on-os-x
+  # sudo chown -R ztatlock /usr/local/texlive
+  #
+  # To fix "package forcibly removed" stuff:
+  # https://tex.stackexchange.com/questions/107286/what-does-skipping-forcibly-removed-package-xxx-mean-should-i-care-about-it
+  # tlmgr update --all --reinstall-forcibly-removed
+  tlmgr update --self
+  tlmgr update --all
+fi
 
-BANNER npm
-npm update
-npm update -g
+if cmd_exists "pip3"; then
+  BANNER Python3
+  pip3 list --outdated
+  pip3 list --outdated \
+    | sed 1,2d \
+    | cut -f1 -d' ' \
+    | xargs pip3 install --upgrade
+fi
+
+if cmd_exists "npm"; then
+  BANNER npm
+  npm update -g
+fi

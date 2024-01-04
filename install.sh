@@ -40,17 +40,7 @@ echo
 echo "FORTUNES"
 cd "$MYDIR/fortunes"
 
-for f in *; do
-  case $f in
-    *.dat)
-      continue
-      ;;
-    *)
-      echo "$f"
-      strfile -s "$f"
-      ;;
-  esac
-done
+make
 
 ###############################################################################
 # chatty symbolic linker
@@ -73,24 +63,26 @@ function install {
 echo
 echo "CONFIGS"
 cd "$MYDIR/configs"
+
+install "$(pwd)/zsh"     "$HOME/.zshrc"
 install "$(pwd)/profile" "$HOME/.profile"
 install "$(pwd)/profile" "$HOME/.bash_profile"
 install "$(pwd)/bash"    "$HOME/.bashrc"
 install "$(pwd)/vim"     "$HOME/.vimrc"
 install "$(pwd)/git"     "$HOME/.gitconfig"
 install "$(pwd)/ssh"     "$HOME/.ssh/config"
-install "$(pwd)/ssh-rc"  "$HOME/.ssh/rc"
 install "$(pwd)/tmux"    "$HOME/.tmux.conf"
 
 ###############################################################################
 # install scripts
 ###############################################################################
 
-mkdir -p "$HOME/bin"
-
 echo
 echo "SCRIPTS"
 cd "$MYDIR/scripts"
+
+mkdir -p "$HOME/bin"
+
 for s in *; do
   install "$(pwd)/$s" "$HOME/bin/$(basename "$s")"
 done

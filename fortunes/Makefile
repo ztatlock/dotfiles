@@ -2,7 +2,7 @@ COOKIEJARS = jokes quotes art-of-living
 DATS = $(patsubst %,%.dat,$(COOKIEJARS))
 
 %.dat: %
-	strfile $< $@
+	strfile -s $< $@
 
 all: $(DATS)
 

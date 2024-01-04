@@ -1,0 +1,20 @@
+autoload -Uz colors && colors
+autoload -Uz compinit && compinit
+
+alias ls='ls -G'
+
+# some magic to for git branch in prompt
+autoload -Uz vcs_info
+precmd_vcs_info() {
+  vcs_info
+}
+precmd_functions+=(
+  precmd_vcs_info
+)
+setopt prompt_subst
+zstyle ':vcs_info:git:*' formats '(%b)'
+
+PROMPT='
+%B%{$fg[green]%}%n@%m %{$fg[magenta]%}%* %{$fg[yellow]%}%~ %{$fg[red]%}${vcs_info_msg_0_}
+%b%{$fg[default]%}%# '
+
