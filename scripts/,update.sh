@@ -10,7 +10,7 @@ function BANNER {
 }
 
 function cmd_exists {
-  [ -n command -v "$1" ]
+  [ -n "$(command -v "$1")" ]
 }
 
 if cmd_exists "brew"; then
