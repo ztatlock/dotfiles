@@ -1,4 +1,4 @@
-COOKIEJARS = jokes quotes art-of-living
+COOKIEJARS = daily jokes quotes art-of-living
 DATS = $(patsubst %,%.dat,$(COOKIEJARS))
 
 %.dat: %
