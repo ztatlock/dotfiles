@@ -29,6 +29,9 @@ export LANGUAGE=en_US.UTF-8
 # PATH
 ###############################################################################
 
+export PATH="/usr/local/opt/ruby/bin:$PATH"            # ruby
+export PATH="/usr/local/lib/ruby/gems/3.3.0/bin:$PATH" # ruby gems
+
 export PATH="$HOME/Library/Python/3.9/bin:$PATH" # tools installed by python pip
 
 export PATH="$HOME/local/bin:$PATH" # personal builds
