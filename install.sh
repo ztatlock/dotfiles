@@ -64,14 +64,15 @@ echo
 echo "CONFIGS"
 cd "$MYDIR/configs"
 
-install "$(pwd)/zsh"     "$HOME/.zshrc"
-install "$(pwd)/profile" "$HOME/.profile"
+install "$(pwd)/bashrc" "$HOME/.bashrc"
+install "$(pwd)/gitattributes" "$HOME/.gitattributes"
+install "$(pwd)/gitconfig" "$HOME/.gitconfig"
 install "$(pwd)/profile" "$HOME/.bash_profile"
-install "$(pwd)/bash"    "$HOME/.bashrc"
-install "$(pwd)/vim"     "$HOME/.vimrc"
-install "$(pwd)/git"     "$HOME/.gitconfig"
-install "$(pwd)/ssh"     "$HOME/.ssh/config"
-install "$(pwd)/tmux"    "$HOME/.tmux.conf"
+install "$(pwd)/profile" "$HOME/.profile"
+install "$(pwd)/ssh-config" "$HOME/.ssh/config"
+install "$(pwd)/tmux.conf" "$HOME/.tmux.conf"
+install "$(pwd)/vimrc" "$HOME/.vimrc"
+install "$(pwd)/zshrc" "$HOME/.zshrc"
 
 ###############################################################################
 # install scripts
