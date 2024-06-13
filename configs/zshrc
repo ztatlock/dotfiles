@@ -23,6 +23,10 @@ source-if "$HOME/.opam/opam-init/init.zsh"
 # rust
 source-if "$HOME/.cargo/env"
 
+# ruby (homebrew version)
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH"
+
 ###########################################################################
 #                                                                         #
 #                          INTERACTIVE SETTINGS                           #
