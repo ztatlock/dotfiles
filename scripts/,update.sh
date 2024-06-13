@@ -47,7 +47,7 @@ if cmd_exists "tlmgr"; then
   # https://tex.stackexchange.com/questions/288667/tex-live-permissions-on-os-x
   # sudo chown -R ztatlock /usr/local/texlive
   #
-  # To fix "package forcibly removed" stuff:
+  # To fix "package forcibly removed":
   # https://tex.stackexchange.com/questions/107286/what-does-skipping-forcibly-removed-package-xxx-mean-should-i-care-about-it
   # tlmgr update --all --reinstall-forcibly-removed
   tlmgr update --self

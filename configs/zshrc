@@ -1,49 +1,42 @@
-###############################################################################
-# misc
-###############################################################################
+# locale
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
 
+# local builds and personal scripts
+export PATH="$HOME/local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+
+# homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# source file if it exists
 function source-if {
   if [ -r "$1" ]; then
     source "$1" &> /dev/null
   fi
 }
 
-export EDITOR="vim" # tell programs to open vim for editing
-set -o emacs        # use readline style keybindings in zsh
+# ocaml
+source-if "$HOME/.opam/opam-init/init.zsh"
 
-###############################################################################
-# locale
-###############################################################################
+# rust
+source-if "$HOME/.cargo/env"
 
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
+###########################################################################
+#                                                                         #
+#                          INTERACTIVE SETTINGS                           #
+#                                                                         #
+###########################################################################
 
-###############################################################################
-# PATH
-###############################################################################
+export EDITOR="vim"
 
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"            # ruby
-export PATH="/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH" # ruby gems
-export PATH="$HOME/Library/Python/3.9/bin:$PATH"          # python
+set -o emacs # use readline style keybindings
 
-export PATH="$HOME/local/bin:$PATH" # personal builds
-export PATH="$HOME/bin:$PATH"       # personal scripts
-
-###############################################################################
-# package manager, programming language, and tool configurations
-###############################################################################
-
-source-if "$HOME/.opam/opam-init/init.zsh" # ocaml
-
-###############################################################################
-# interactive settings
-###############################################################################
+alias ls='ls -G'
 
 autoload -Uz colors && colors
 autoload -Uz compinit && compinit
-
-alias ls='ls -G'
 
 # some magic to for git branch in prompt
 autoload -Uz vcs_info
@@ -56,6 +49,7 @@ precmd_functions+=(
 setopt prompt_subst
 zstyle ':vcs_info:git:*' formats '(%b)'
 
+# cygwin style prompt
 PROMPT='
 %B%{$fg[green]%}%n@%m %{$fg[magenta]%}%* %{$fg[yellow]%}%~ %{$fg[red]%}${vcs_info_msg_0_}
 %b%{$fg[default]%}%# '

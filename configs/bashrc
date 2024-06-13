@@ -1,69 +1,48 @@
-###############################################################################
-# misc
-###############################################################################
+# locale
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
 
+# local builds and personal scripts
+export PATH="$HOME/local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+
+# homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# source file if it exists
 function source-if {
   if [ -r "$1" ]; then
     source "$1" &> /dev/null
   fi
 }
 
-export EDITOR="vim"
+# ocaml
+source-if "$HOME/.opam/opam-init/init.sh"
 
-# suppress macOS bash warning
-export BASH_SILENCE_DEPRECATION_WARNING=1
-
-# use simple TERM for UW CSE servers
-[ "$HOME" = "/homes/gws/ztatlock" ] \
-  && export TERM=xterm
-
-###############################################################################
-# locale
-###############################################################################
-
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
-
-###############################################################################
-# PATH
-###############################################################################
-
-export PATH="/usr/local/opt/ruby/bin:$PATH"            # ruby
-export PATH="/usr/local/lib/ruby/gems/3.3.0/bin:$PATH" # ruby gems
-
-export PATH="$HOME/Library/Python/3.9/bin:$PATH" # tools installed by python pip
-
-export PATH="$HOME/local/bin:$PATH" # personal builds
-export PATH="$HOME/bin:$PATH"       # personal scripts
-
-###############################################################################
-# package manager, programming language, and tool configurations
-###############################################################################
-
-source-if "$HOME/.opam/opam-init/init.sh" # ocaml
-source-if "$HOME/.cargo/env"              # rust
-source-if "$HOME/.ghcup/env"              # haskell
-
-# haskell stack
-export PATH="$PATH":$HOME/.local/bin
+# rust
+source-if "$HOME/.cargo/env"
 
 # gnu parallel
 if [ -n "$(command -v env_parallel)" ]; then
   source-if "$(which env_parallel).bash"
 fi
 
-###############################################################################
-# begin interative-only settings
-###############################################################################
+# use simple TERM for UW CSE servers
+[ "$HOME" = "/homes/gws/ztatlock" ] \
+  && export TERM=xterm
+
+###########################################################################
+#                                                                         #
+#                          INTERACTIVE SETTINGS                           #
+#                                                                         #
+###########################################################################
 
 if [ -z "$PS1" ]; then
   return
 fi
 
-###############################################################################
-# use colors
-###############################################################################
+export EDITOR="vim"
 
 [ "$(uname)" = "Darwin" ] \
   && alias ls='ls -G' \
@@ -71,31 +50,16 @@ fi
 
 alias grep='grep --color=auto'
 
-###############################################################################
 # completions
-###############################################################################
-
 if [ -n "$(command -v brew)" ]; then
   source-if "$(brew --prefix)/etc/profile.d/bash_completion.sh"
 else
   source-if "/etc/bash_completion"
 fi
 
-###############################################################################
-# cygwin-style PS1 prompt
-###############################################################################
-
+# cygwin style prompt
 if [ -n "$(command -v __git_ps1)" ]; then
   export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \e[0;35m\]\t \[\e[33m\]\w\[\e[36m\]\$(__git_ps1)\[\e[0m\]\n\$ "
 else
   export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[0;35m\]\t \[\e[33m\]\w\[\e[0m\]\n\$ "
 fi
-
-###############################################################################
-# end with a fortune
-###############################################################################
-
-echo
-
-#FORTUNES="$HOME/dotfiles/fortunes"
-#[ -d "$FORTUNES" ] && fortune "$FORTUNES"
