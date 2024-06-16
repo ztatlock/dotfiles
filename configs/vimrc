@@ -1,5 +1,5 @@
-set bg=light
-"set bg=dark
+"set bg=light
+set bg=dark
 
 " syntax highlighting
 if has("syntax")
