@@ -54,16 +54,17 @@ if cmd_exists "tlmgr"; then
   tlmgr update --all
 fi
 
-if cmd_exists "pip3"; then
-  BANNER Python3
-  pip3 list --outdated
-  pip3 list --outdated \
-    | sed 1,2d \
-    | cut -f1 -d' ' \
-    | xargs pip3 install --upgrade
-fi
-
 if cmd_exists "npm"; then
   BANNER npm
   npm update -g
+fi
+
+if cmd_exists "pip3"; then
+  BANNER Python3
+  python3 -m pip install --user --upgrade pip
+  python3 -m pip list --user --outdated
+  python3 -m pip list --user --outdated \
+    | sed 1,2d \
+    | cut -f1 -d' ' \
+    | xargs python3 -m pip install --user --upgrade
 fi
