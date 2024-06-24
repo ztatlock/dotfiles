@@ -58,13 +58,3 @@ if cmd_exists "npm"; then
   BANNER npm
   npm update -g
 fi
-
-if cmd_exists "pip3"; then
-  BANNER Python3
-  python3 -m pip install --user --upgrade pip
-  python3 -m pip list --user --outdated
-  python3 -m pip list --user --outdated \
-    | sed 1,2d \
-    | cut -f1 -d' ' \
-    | xargs python3 -m pip install --user --upgrade
-fi

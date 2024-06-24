@@ -65,13 +65,11 @@ echo "CONFIGS"
 cd "$MYDIR/configs"
 
 # ensure necessary directories exist
-mkdir -p "$HOME/.config/pip"
 mkdir -p "$HOME/.ssh"
 
 install "$(pwd)/bashrc" "$HOME/.bashrc"
 install "$(pwd)/gitattributes" "$HOME/.gitattributes"
 install "$(pwd)/gitconfig" "$HOME/.gitconfig"
-install "$(pwd)/pip.conf" "$HOME/.config/pip/pip.conf"
 install "$(pwd)/profile" "$HOME/.bash_profile"
 install "$(pwd)/profile" "$HOME/.profile"
 install "$(pwd)/ssh-config" "$HOME/.ssh/config"
