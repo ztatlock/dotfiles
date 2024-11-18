@@ -17,7 +17,7 @@ if [ ! -f "$file" ]; then
 fi
 
 # prompt for which printer
-printers=(pg224 pgc224 pg270 pgc270)
+printers=(pg224 pgc224 pg270 pgc270 pgclarge)
 echo
 for i in ${!printers[@]}; do
   if [ $i -eq 0 ]; then
@@ -47,7 +47,7 @@ echo
 
 echo "Printing '${file}' on ${printer} with options '${options}'."
 cat "$file" \
-  | ssh tricycle.cs.washington.edu "lpr -P${printer} ${options}"
+  | ssh barb.cs.washington.edu "lpr -P${printer} ${options}"
 echo
 
 # offer to remove file
