@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-OUTPUT="project-code.txt"
+OUTPUT="$HOME/Downloads/project-code.txt"
 
 # clear any old output
 rm -rf "$OUTPUT"

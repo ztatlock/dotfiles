@@ -17,7 +17,7 @@ if [ ! -f "$file" ]; then
 fi
 
 # prompt for which printer
-printers=(pg224 pgc224 pg270 pgc270 pgclarge)
+printers=(pg224 pgc224 pg270 pgc270 psc622 pgclarge)
 echo
 for i in ${!printers[@]}; do
   if [ $i -eq 0 ]; then
