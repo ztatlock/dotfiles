@@ -13,3 +13,12 @@
 
 [diff "csvdiff"]
 	wordRegex = .
+
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+
+[alias]
+	history = "log --oneline --graph --pretty=format:'%C(auto)%h %ad %an : %s' --date=short"
