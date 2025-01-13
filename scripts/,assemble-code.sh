@@ -9,12 +9,30 @@ rm -rf "$OUTPUT"
 echo "===================================" >> "$OUTPUT"
 echo "PROJECT DIRECTORY STRUCTURE        " >> "$OUTPUT"
 echo "===================================" >> "$OUTPUT"
-tree --prune -I ".venv" >> "$OUTPUT"
+tree --prune \
+  -I "_build" \
+  -I ".venv" \
+  -I "__pycache__" \
+  -I "dist" \
+  -I "node_modules" \
+  -I "eslint.config.js" \
+  -I "package-lock.json" \
+  -I "package.json" \
+  -I "vite-env.d.ts" \
+  -I "tsconfig.app.json" \
+  -I "tsconfig.json" \
+  -I "tsconfig.node.json" \
+  -I "vite.config.ts" \
+  -I '*.log' \
+  >> "$OUTPUT"
 echo -e "\n\n" >> "$OUTPUT"
 
-# find source files, but ignore .venv
+# find source files
 find . \
-  -type d -name ".venv" -prune -o \
+  -type d -name "_build"       -prune -o \
+  -type d -name ".venv"        -prune -o \
+  -type d -name "__pycache__"  -prune -o \
+  -type d -name "dist"         -prune -o \
   -type d -name "node_modules" -prune -o \
   -type f \( \
     -name "*.c"    -o \
