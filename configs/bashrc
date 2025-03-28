@@ -25,6 +25,9 @@ source-if "$HOME/.opam/opam-init/init.sh"
 # rust
 source-if "$HOME/.cargo/env"
 
+# haskell
+source-if "/Users/ztatlock/.ghcup/env"
+
 # pipx
 export PATH="$HOME/.local/bin:$PATH"
 
