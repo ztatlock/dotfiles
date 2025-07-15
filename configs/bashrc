@@ -28,12 +28,12 @@ source-if "$HOME/.cargo/env"
 # haskell
 source-if "/Users/ztatlock/.ghcup/env"
 
-# pipx
-export PATH="$HOME/.local/bin:$PATH"
-
 # ruby (homebrew version)
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH"
+
+# local
+export PATH="$HOME/.local/bin:$PATH"
 
 # gnu parallel
 if [ -n "$(command -v env_parallel)" ]; then
