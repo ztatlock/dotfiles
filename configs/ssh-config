@@ -11,50 +11,6 @@ Host ztatlock
   HostName ztatlock.net
   User ztatlock
 
-Host uwplse
-  HostName uwplse.org
-  User ztatlock
-
-Host warfa
-  HostName warfa.cs.washington.edu
-  User ztatlock
-
-Host leviathan
-  HostName whale.cs.washington.edu
-  User ztatlock
-  ProxyJump warfa
-
-Host pipsqueak
-  HostName pipsqueak.cs.washington.edu
-  User ztatlock
-  ProxyJump warfa
-
-Host leviathan-ipv6
-  HostName 2607:4000:200:1e:ae1f:6bff:fead:2b08
-  User ztatlock
-  ProxyJump uwplse
-
-Host pipsqueak-ipv6
-  HostName 2607:4000:200:1e:84fa:3568:f53a:cd0c
-  User ztatlock
-  ProxyJump uwplse
-
-Host tern
-  HostName tern.cs.washington.edu
-  User ztatlock
-
-Host buffalo
-  HostName buffalo.cs.washington.edu
-  User ztatlock
-
-Host caribou
-  HostName caribou.cs.washington.edu
-  User ztatlock
-
-Host plover
-  HostName plover.cs.washington.edu
-  User ztatlock
-
 Host recycle
   HostName recycle.cs.washington.edu
   User ztatlock
@@ -82,3 +38,13 @@ Host barb
 Host attu
   HostName attu.cs.washington.edu
   User ztatlock
+
+Host leviathan
+  HostName whale.cs.washington.edu
+  User ztatlock
+  ProxyJump barb
+
+Host pipsqueak
+  HostName pipsqueak.cs.washington.edu
+  User ztatlock
+  ProxyJump barb
