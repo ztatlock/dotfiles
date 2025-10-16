@@ -47,8 +47,12 @@ set -o emacs # use readline style keybindings
 
 alias ls='ls -G'
 
-autoload -Uz colors && colors
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+fi
+
 autoload -Uz compinit && compinit
+autoload -Uz colors && colors
 
 # some magic to for git branch in prompt
 autoload -Uz vcs_info
@@ -65,19 +69,3 @@ zstyle ':vcs_info:git:*' formats '(%b)'
 PROMPT='
 %B%{$fg[green]%}%n@%m %{$fg[magenta]%}%* %{$fg[yellow]%}%~ %{$fg[red]%}${vcs_info_msg_0_}
 %b%{$fg[default]%}%# '
-
-## # >>> conda initialize >>>
-## # !! Contents within this block are managed by 'conda init' !!
-## __conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-## if [ $? -eq 0 ]; then
-##     eval "$__conda_setup"
-## else
-##     if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-##         . "/opt/anaconda3/etc/profile.d/conda.sh"
-##     else
-##         export PATH="/opt/anaconda3/bin:$PATH"
-##     fi
-## fi
-## unset __conda_setup
-## # <<< conda initialize <<<
-
